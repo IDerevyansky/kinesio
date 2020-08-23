@@ -32,7 +32,14 @@
   border-radius: 10px;
 }
 
-
+.popUpContent{
+  position: absolute;
+  left: 8.33%;
+  right: 8.33%;
+  top: 18.52%;
+  bottom: 18.52%;
+  background:red;
+}
 
 
 

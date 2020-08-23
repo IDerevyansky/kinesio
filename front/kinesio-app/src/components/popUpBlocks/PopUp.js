@@ -14,7 +14,9 @@ function PopUp() {
       <div className="bgPopUp">
         <div className="popUpContainer">
           <div className="popUpBlock">
-            <p>Hello!</p>
+            <div className="popUpContent">
+              <p>Hello!</p>
+            </div>
           </div>
         </div>
       </div>
