@@ -1,0 +1,48 @@
+.bgPopUp{
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+
+
+  background: rgba(196, 196, 196, 0.5);
+  backdrop-filter: blur(10px);
+}
+
+.popUpContainer{
+  position: absolute;
+  width: 540px;
+  height: 216px;
+  margin-left:-270px;
+  top:20%;
+  left:50%;
+
+
+}
+
+.popUpBlock{
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+
+  background: #D4D3D1;
+  border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+/* Class for test mock up site */
+.BGtest{
+  background-image: url("mainPage.png");
+  background-size: 100%;
+  height: 8558px;
+}
