@@ -7,7 +7,13 @@
 
 
   background: rgba(196, 196, 196, 0.5);
+
   backdrop-filter: blur(10px);
+  -moz-backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  -o-backdrop-filter: blur(10px);
+  -ms-backdrop-filter: blur(10px);
+
 }
 
 .popUpContainer{
