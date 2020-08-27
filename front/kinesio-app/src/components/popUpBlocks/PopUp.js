@@ -15,7 +15,7 @@ function PopUp() {
         <div className="popUpContainer">
           <div className="popUpBlock">
             <div className="popUpContent">
-              <p>Hello!</p>
+              <p>Записаться</p>
             </div>
           </div>
         </div>

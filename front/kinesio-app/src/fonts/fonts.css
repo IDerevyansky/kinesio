@@ -1,0 +1,53 @@
+/* cyrillic */
+@font-face {
+  font-family: 'AvenirNextCyr';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('Avenir/AvenirNextCyr-Light.ttf');
+}
+
+/* cyrillic */
+@font-face {
+  font-family: 'AvenirNextCyr';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('Avenir/AvenirNextCyr-Regular.ttf');
+}
+
+/* cyrillic */
+@font-face {
+  font-family: 'AvenirNextCyr';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('Avenir/AvenirNextCyr-Medium.ttf');
+}
+
+/* cyrillic */
+@font-face {
+  font-family: 'AvenirNextCyr';
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url('Avenir/AvenirNextCyr-MediumItalic.ttf');
+}
+
+/* cyrillic */
+@font-face {
+  font-family: 'AvenirNextCyr';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('Avenir/AvenirNextCyr-Demi.ttf');
+}
+
+/* cyrillic */
+@font-face {
+  font-family: 'AvenirNextCyr';
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: url('Avenir/AvenirNextCyr-DemiItalic.ttf');
+}

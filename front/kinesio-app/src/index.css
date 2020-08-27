@@ -1,7 +1,18 @@
+@import "fonts/fonts.css";
+
 *{
   margin: 0em;
   padding:0em;
 }
+
+
+
+
+/* закончить подключение шрифьов  */
+
+
+
+
 
 body {
   margin: 0;
@@ -10,7 +21,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
+
 }
 
 code {
