@@ -19,7 +19,7 @@
 .popUpContainer{
   position: absolute;
   width: 540px;
-  height: 216px;
+  /* height: 216px; */
   margin-left:-270px;
   top:20%;
   left:50%;
@@ -28,24 +28,97 @@
 }
 
 .popUpBlock{
-  position: absolute;
-  left: 0%;
-  right: 0%;
-  top: 0%;
-  bottom: 0%;
-
   background: #D4D3D1;
   border-radius: 10px;
+
+  padding-top:40px;
+  padding-left:45px;
+  padding-right:45px;
+  padding-bottom:40px;
 }
 
 .popUpContent{
-  position: absolute;
-  left: 8.33%;
-  right: 8.33%;
-  top: 18.52%;
-  bottom: 18.52%;
-  background:red;
+
 }
+
+.crossClosed{
+  position: absolute;
+  width:13px;
+  height:13px;
+  left: 95%;
+  top: 5%;
+  background-image:url(img/crossClosed.svg);
+  background-size: 100%;
+}
+
+.containerButton p{
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+
+  display: flex;
+  align-items: center;
+
+  color: #525862;
+}
+
+.inlineBlock{
+  display: inline-block;
+}
+
+.left{
+  width:49%;
+}
+
+.right{
+  position: absolute;
+  /* background:green; */
+  width:50%;
+}
+
+.singUp{
+  width:180px;
+  height:40px;
+  margin-top:13px;
+  background-image:url(img/btnSingUp.svg);
+}
+
+.messageBox{
+  border-right: 1px solid rgba(82, 88, 98, 0.1);
+}
+
+.whatsapp{
+  width:40px;
+  height:40px;
+  margin-top:13px;
+  background-image:url(img/whatsapp.svg);
+  background-size: 99%;
+  background-repeat: no-repeat;
+}
+
+.telegram{
+  width:40px;
+  height:40px;
+  margin-top:13px;
+  background-image:url(img/telegram.svg);
+  background-size: 99%;
+  background-repeat: no-repeat;
+}
+
+.viber{
+  width:40px;
+  height:40px;
+  margin-top:13px;
+  background-image:url(img/viber.svg);
+  background-size: 97%;
+  background-repeat: no-repeat;
+}
+
+
+
+
+
 
 
 
