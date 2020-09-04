@@ -1,21 +1,27 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './PopUp.css';
 
 
-document.body.style.overflowY="hidden";
+class PopUp extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+
+    }
+  }
 
 
-function PopUp() {
+  render(){
 
-  return (
+    // Убираем скрол, страница замерает
+    document.body.style.overflowY="hidden";
 
-    //Background for test view mock up site
-    <div className="BGtest">
+    return (
 
       <div className="bgPopUp">
         <div className="popUpContainer">
           <div className="popUpBlock">
-            <div className="crossClosed"></div>
+            <div onClick={()=>{this.props.statusPopUp(false)}} className="crossClosed"></div>
               <div className="popUpContent">
                 <p className="textCenter m24-b f-22 f-w-600">Записаться</p>
                 <div className="containerButton">
@@ -49,9 +55,10 @@ function PopUp() {
         </div>
       </div>
 
-    </div>
+    )
 
-  );
+  }
+
 }
 
 export default PopUp;
