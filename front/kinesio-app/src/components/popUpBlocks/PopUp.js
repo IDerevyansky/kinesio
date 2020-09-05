@@ -9,6 +9,7 @@ class PopUp extends Component {
 
     }
   }
+
   
   render(){
 
