@@ -10,7 +10,9 @@ class PopUp extends Component {
     }
   }
 
-  
+
+
+
   render(){
 
     // Убираем скрол, страница замерает
