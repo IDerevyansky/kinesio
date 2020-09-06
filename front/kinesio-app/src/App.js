@@ -7,8 +7,9 @@ import PopUp from './components/popUpBlocks/PopUp';
 class App extends Component {
   constructor(props){
     super(props)
+    this.statusPopUp = this.statusPopUp.bind(this);
     this.state={
-      statusPopUp:true
+      statusPopUp:false
     }
 
   }
@@ -16,7 +17,7 @@ class App extends Component {
 
   statusPopUp = (q) => {
     this.setState({statusPopUp:q});
-    console.log(this.state.statusPopUp);
+    q?document.body.style.overflowY="hidden":document.body.style.overflowY="auto"; //Добовляем или убираем скрол
   };
 
 
@@ -24,12 +25,12 @@ class App extends Component {
 
     return (
 
-            <>
 
-            <PopUp statusPopUp={this.statusPopUp}/>
-            <div className="BGtest"></div>
+      <>
+            {this.state.statusPopUp?<PopUp statusPopUp={this.statusPopUp}  />:''}
+            <div onClick={()=>{this.statusPopUp(true)}} className="BGtest"></div>
+      </>
 
-            </>
 
     );
 

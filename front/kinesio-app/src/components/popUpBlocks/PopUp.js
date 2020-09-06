@@ -10,17 +10,13 @@ class PopUp extends Component {
     }
   }
 
-
-
-
   render(){
 
-    // Убираем скрол, страница замерает
-    document.body.style.overflowY="hidden";
 
     return (
 
-      <div className="bgPopUp">
+    <>
+    <div onClick={()=>{this.props.statusPopUp(false)}} className="bgPopUp"></div>
         <div className="popUpContainer">
           <div className="popUpBlock">
             <div onClick={()=>{this.props.statusPopUp(false)}} className="crossClosed"></div>
@@ -55,7 +51,8 @@ class PopUp extends Component {
               </div>
           </div>
         </div>
-      </div>
+
+    </>
 
     )
 
