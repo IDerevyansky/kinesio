@@ -1,9 +1,11 @@
 .bgPopUp{
   position: absolute;
-  left: 0%;
+  width:100vw;
+  height:100vh;
+  /* left: 0%;
   right: 0%;
   top: 0%;
-  bottom: 0%;
+  bottom: 0%; */
 
 
   background: rgba(196, 196, 196, 0.5);
@@ -21,7 +23,7 @@
   width: 540px;
   /* height: 216px; */
   margin-left:-270px;
-  top:20%;
+  /* top:20%; */
   left:50%;
 
 
@@ -43,6 +45,7 @@
 
 .crossClosed{
   position: absolute;
+  cursor:pointer;
   width:13px;
   height:13px;
   left: 95%;

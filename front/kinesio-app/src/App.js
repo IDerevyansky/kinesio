@@ -14,7 +14,7 @@ class App extends Component {
 
   }
 
-
+  //Функция управления статусом всплывающего окна
   statusPopUp = (q) => {
     this.setState({statusPopUp:q});
     q?document.body.style.overflowY="hidden":document.body.style.overflowY="auto"; //Добовляем или убираем скрол
