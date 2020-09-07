@@ -10,10 +10,6 @@ class PopUp extends Component {
     }
   }
 
-
-
-
-
   render(){
 
     var scrollTop = window.pageYOffset || document.documentElement.scrollTop; //Узнаем величину прокрутки страницы
