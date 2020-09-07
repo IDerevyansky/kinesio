@@ -10,15 +10,15 @@ class PopUp extends Component {
     }
   }
 
+
   render(){
+
 
     var scrollTop = window.pageYOffset || document.documentElement.scrollTop; //Узнаем величину прокрутки страницы
     var heightWindow = window.innerHeight / 100 * 20; //Получаем 2% от высоты видемой области страницы
 
 
     return (
-
-
 
     <>
 
@@ -58,8 +58,6 @@ class PopUp extends Component {
                       </div>
                   </div>
                 </div>
-
-
 
     </>
 
