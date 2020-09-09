@@ -18,15 +18,67 @@
 
 }
 
+
+
+
+
+@media screen and (max-width: 540px) {
+
+  .popUpContainer{
+    position: absolute;
+    width: 280px !important;
+    margin-left:-140px !important;
+    left:50%;
+  }
+
+  .crossClosed{
+    left: 90% !important;
+    top: 4% !important;
+  }
+
+  .containerButton{
+    display: flex;
+    align-items: center;
+    flex-direction:column;
+  }
+
+  .containerButton p{
+    text-align: center !important;
+  }
+
+  .messageBox{
+    border-bottom: 1px solid rgba(82, 88, 98, 0.1);
+    border-right: 0px solid rgba(82, 88, 98, 0.1) !important;
+    margin-bottom:24px;
+    padding-bottom:24px;
+    display: flex;
+    justify-content: center
+  }
+
+  .left{
+    width:100% !important;
+  }
+
+  .right{
+    width:100% !important;
+  }
+
+  .margin{
+    margin-left:0px !important;
+  }
+
+}
+
+
+
+
+
+
 .popUpContainer{
   position: absolute;
   width: 540px;
-  /* height: 216px; */
   margin-left:-270px;
-  /* top:20%; */
   left:50%;
-
-
 }
 
 .popUpBlock{
@@ -59,26 +111,33 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 22px;
-
-  display: flex;
-  align-items: center;
-
+  text-align: left;
   color: #525862;
 }
+
+.containerButton{
+  display: flex;
+}
+
+
 
 .inlineBlock{
   display: inline-block;
 }
 
 .left{
-  width:49%;
+  width:225px;
 }
 
+
 .right{
-  position: absolute;
-  /* background:green; */
-  width:50%;
+  width:225px;
 }
+
+.margin{
+  margin-left:45px;
+}
+
 
 .singUp{
   width:180px;
@@ -89,6 +148,8 @@
 
 .messageBox{
   border-right: 1px solid rgba(82, 88, 98, 0.1);
+  display: flex;
+  flex-direction:row;
 }
 
 .whatsapp{
@@ -96,7 +157,7 @@
   height:40px;
   margin-top:13px;
   background-image:url(img/whatsapp.svg);
-  background-size: 99%;
+  background-size: 98%;
   background-repeat: no-repeat;
 }
 
@@ -105,7 +166,7 @@
   height:40px;
   margin-top:13px;
   background-image:url(img/telegram.svg);
-  background-size: 99%;
+  background-size: 98%;
   background-repeat: no-repeat;
 }
 
@@ -114,13 +175,9 @@
   height:40px;
   margin-top:13px;
   background-image:url(img/viber.svg);
-  background-size: 97%;
+  background-size: 96%;
   background-repeat: no-repeat;
 }
-
-
-
-
 
 
 

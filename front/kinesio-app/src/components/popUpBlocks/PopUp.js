@@ -15,7 +15,7 @@ class PopUp extends Component {
 
 
     var scrollTop = window.pageYOffset || document.documentElement.scrollTop; //Узнаем величину прокрутки страницы
-    var heightWindow = window.innerHeight / 100 * 20; //Получаем 2% от высоты видемой области страницы
+    var heightWindow = window.innerHeight / 100 * 20; //Получаем 20% от высоты видемой области страницы
 
 
     return (
@@ -31,20 +31,20 @@ class PopUp extends Component {
                         <p className="textCenter m24-b f-22 f-w-600">Записаться</p>
                         <div className="containerButton">
 
-                            <div className="left inlineBlock">
+                            <div className="left">
 
                                 <p className="textCenter">Записаться в один клик</p>
                                   <div className="messageBox">
-                                    <div className="whatsapp inlineBlock"></div>
-                                    <div className="telegram inlineBlock m24-l"></div>
-                                    <div className="viber inlineBlock m24-l"></div>
+                                    <div className="whatsapp"></div>
+                                    <div className="telegram m24-l"></div>
+                                    <div className="viber m24-l"></div>
                                   </div>
 
                             </div>
+                            
+                            <div className="right" >
 
-                            <div className="right inlineBlock" >
-
-                              <div style={{marginLeft:"46px"}}>
+                              <div className="margin">
                                 <p className="textCenter">Запись через Email</p>
                                 <a href="mailto:iderevyansky@yandex.ru" rel="noopener noreferrer" target="_blank"><div className="singUp"></div></a>
                               </div>
@@ -53,8 +53,10 @@ class PopUp extends Component {
 
 
                         </div>
+                        <div>
                         <p className="textCenter m24-t f-16">или</p>
                         <a  href="tel:8-977-414-74-77" rel="noopener noreferrer" target="_blank" ><p className="textCenter m24-t f-22 f-w-600">8 977 414 74 77</p></a>
+                        </div>
                       </div>
                   </div>
                 </div>
