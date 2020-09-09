@@ -41,7 +41,7 @@ class PopUp extends Component {
                                   </div>
 
                             </div>
-                            
+
                             <div className="right" >
 
                               <div className="margin">
