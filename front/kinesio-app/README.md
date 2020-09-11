@@ -69,6 +69,10 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 
 ----------------------------------------------
 
-1.Make correctly link for messages.
-2.Make correctly initialization end accompanying output link for viber.
-3.Make json file with data for input in components.  
++1.Make correctly link for messages.
+
++2.Make correctly initialization end accompanying output link for viber.
+
+ -3.(not need) Make json file with data for input in components.  
+
+4. make menu component 
