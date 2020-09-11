@@ -66,3 +66,9 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+----------------------------------------------
+
+1.Make correctly link for messages.
+2.Make correctly initialization end accompanying output link for viber.
+3.Make json file with data for input in components.  

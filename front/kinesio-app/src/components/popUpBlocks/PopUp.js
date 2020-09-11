@@ -36,9 +36,10 @@ class PopUp extends Component {
                                 <p className="textCenter">Записаться в один клик</p>
                                   <div className="messageBox">
                                     <a href="https://wa.me/+79653121776?text=urlencodedtext" rel="noopener noreferrer" target="_blank"><div className="whatsapp"></div></a>
-                                    <a href="tg://resolve?domain=@IDerevyansky" rel="noopener noreferrer" target="_blank"><div className="telegram m24-l"></div></a>
-                                    <a href="viber://chat?nnumber=+79653121776?text=qqqqqqq" rel="noopener noreferrer" target="_blank"><div className="viber m24-l"></div></a>
+                                    <a href="tg://resolve?domain=NataDerevyanskaya" rel="noopener noreferrer" target="_blank"><div className="telegram m24-l"></div></a>
+                                    <a href="viber://chat?number=79774147477" rel="noopener noreferrer" target="_blank"><div className="viber m24-l"></div></a>
                                   </div>
+
 
                             </div>
 
