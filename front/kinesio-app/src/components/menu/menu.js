@@ -9,14 +9,36 @@ constructor(props){
 
 }
 
+
+
 render(){
+
   return(
     <>
 
       <div className="menuContainer">
         <div className="menuContent">
-          <div className="logoBox"></div>
-          <div className="itemBox"></div>
+
+
+
+              <div className="logoBox"></div>
+
+              <div className="itemBox">
+
+                  <ul className="f-w-600">
+                    <li>Item</li>
+                    <li>Item</li>
+                    <li>Item</li>
+                    <li>Item</li>
+                    <li>Item</li>
+                  </ul>
+
+                  <div className="mobileMenu"></div>
+
+              </div>
+
+
+
         </div>
       </div>
 

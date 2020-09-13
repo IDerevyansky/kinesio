@@ -1,6 +1,10 @@
 .menuContainer{
-  border:1px solid red;
-  height:70px;
+  position: absolute;
+  /* background-image:url(img/DEREVYANSKAYA.svg); */
+
+  background: linear-gradient(180deg, #F5F3ED 0%, rgba(245, 243, 237, 0) 100%);
+  /* border:1px solid red; */
+  height:150px;
   left:0;
   right:0;
 }
@@ -9,6 +13,8 @@
   border:1px solid orange;
   display:flex;
   justify-content: space-between;
+  flex-direction:row;
+  align-items:center;
   position:relative;
   max-width:1330px;
   margin: auto;
@@ -28,6 +34,33 @@
 
 .itemBox{
   border:1px solid red;
-  width:400px;
+  display: flex;
+  flex-direction:row;
+  align-items:center;
+  /* width:400px; */
   height:40px;
+}
+
+ul{
+  text-decoration: none;
+  display:flex;
+  }
+
+li{
+  list-style-type: none;
+  margin-left: 50px;
+  /* margin-top: 10px; */
+  }
+
+.mobileMenu{
+  border:1px solid red;
+  display: inline-block;
+  float:right;
+  width:20px;
+  height:16px;
+  margin-left: 20px;
+  background-image:url(img/mobileMenu.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
 }
