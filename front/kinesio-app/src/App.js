@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './App.css';
 import PopUp from './components/popUpBlocks/PopUp';
+import Menu from './components/menu/menu';
 
 
 
@@ -27,6 +28,7 @@ class App extends Component {
 
 
       <>
+            <Menu />
             {this.state.statusPopUp?<PopUp statusPopUp={this.statusPopUp}  />:''}
             <div onClick={()=>{this.statusPopUp(true)}} className="BGtest"></div>
       </>
