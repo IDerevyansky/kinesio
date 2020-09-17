@@ -17,25 +17,20 @@ componentDidMount(){
 
   var resize = () =>{
 
-    var menuContent, logoBox, itemBox, sumTwoBox, ul;
+    var menuContent, logoBox, itemBox, sumTwoBox;
 
     itemBox =     document.getElementsByClassName('itemBox');
     logoBox =     document.getElementsByClassName('logoBox');
     menuContent = document.getElementsByClassName('menuContent');
-    ul =          document.getElementsByClassName('ul');
     sumTwoBox =   itemBox[0].clientWidth + logoBox[0].clientWidth;
 
-    // if(menuContent[0].clientWidth <= sumTwoBox){
-    //   console.log('меньше');
-    // }
-    //
-    // var li = () =>{
-    //
-    //   for (var i = 0; i < ul[0].childElementCount; i++) {
-    //     <li>Item</li>
-    //   }
-    //
-    // }
+
+    if(menuContent[0].clientWidth <= sumTwoBox){
+      console.log('меньше');
+    }
+
+
+
 
 
 
@@ -54,6 +49,13 @@ componentDidMount(){
 
 render(){
 
+  var listLi = ['item1', 'item2', 'item3', 'item4', 'item5'];
+
+  var list = listLi.map((item, i)=>
+
+  <li key={i} >{item}</li>
+
+  );
 
 
   return(
@@ -69,7 +71,7 @@ render(){
               <div className="itemBox">
 
                   <ul className="f-w-600 ul">
-
+                  {list}
                   </ul>
 
                   <div className="mobileMenu"></div>
