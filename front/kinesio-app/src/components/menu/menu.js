@@ -49,22 +49,21 @@ componentDidMount(){
   var resize = () =>{
 
 
+    for (var i = 0; i < listItem.length; i++) {
 
 
-        if(menuContent[0].clientWidth >= sumTwoBox){
-
-        
-
-        }else{
+      if(menuContent[0].clientWidth >= sumTwoBox){
 
 
 
-             }
+      }else{
 
 
 
+           }
 
 
+    }
 
 
 
