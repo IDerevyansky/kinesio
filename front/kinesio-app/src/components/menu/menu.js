@@ -5,7 +5,9 @@ import './menu.css';
 class Menu extends Component {
 constructor(props){
   super(props);
-  this.state = {}
+  this.state = {
+    listItemMain:[]
+  }
 
 }
 
@@ -14,6 +16,8 @@ constructor(props){
 
 
 componentDidMount(){
+
+
 
   var menuContent, logoBox, itemBox, sumTwoBox, listItem, listItemMain = [], listItemMobile = [];
 
@@ -44,7 +48,7 @@ componentDidMount(){
     }
   ];
 
-
+this.setState({listItemMain:listItem[0].name});
 
   var resize = () =>{
 
@@ -69,8 +73,7 @@ componentDidMount(){
 
 
 
-console.log('Главное '+listItemMain);
-console.log('Мобильное '+listItemMobile);
+
 
                   }
 
@@ -86,6 +89,9 @@ window.addEventListener('resize', ()=>{resize()});
 
 
 render(){
+
+  console.log('Главное '+this.listItemMain);
+  console.log('Мобильное '+this.listItemMobile);
 
 // var item = this.state.listItemMain.map((item, i)=>
 //   <li key={i} >{item.name}</li>
@@ -104,7 +110,7 @@ render(){
               <div className="itemBox">
 
                   <ul className="f-w-600 ul">
-
+                    {this.state.listItemMain}
                   </ul>
 
                   <div className="mobileMenu"></div>
