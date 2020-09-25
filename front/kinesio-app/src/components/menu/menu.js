@@ -48,23 +48,44 @@ componentDidMount(){
     }
   ];
 
-
+// this.setState({ listItemMain:listItem });
 
   var resize = () =>{
 
 
     for (var i = 0; i < listItem.length; i++) {
 
-      this.setState({ listItemMain:listItem });
 
-      if(menuContent[0].clientWidth >= sumTwoBox){
+      if(menuContent[0].clientWidth > sumTwoBox){
 
+        listItemMain[i] = listItem[i];
+        listItemMobile.splice() ;
+        console.log('-----------------');
+        console.log('Основное меню');
+        console.log(listItemMain);
+        console.log('Мобильное меню');
+        console.log(listItemMobile);
+        console.log('-----------------');
+
+        this.setState({ listItemMain:listItemMain });
+        // listItemMain[i] = listItem[i];
+        // // listItemMobile[i] = listItemMain.shift()
+        // // console.log(listItemMain);
+        // this.setState({ listItemMain:listItemMain });
 
       }else{
 
+        // listItemMobile = listItem[i];
+        // listItemMain.pop();
+        // console.log('Мобиьное меню');
+        // console.log(listItemMobile);
 
+          // listItemMain = listItemMain.pop();
+          // console.log(listItemMain);
+          // this.setState({ listItemMain:listItemMain });
 
            }
+
 
 
     }
@@ -92,7 +113,7 @@ window.addEventListener('resize', ()=>{resize()});
 render(){
 
 
-  console.log(this.state.listItemMain);
+  // console.log(this.state.listItemMain);
   // console.log('Мобильное '+this.listItemMobile);
 
 var item = this.state.listItemMain.map((item, i)=>
