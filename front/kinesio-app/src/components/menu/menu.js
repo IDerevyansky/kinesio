@@ -28,36 +28,36 @@ componentDidMount(){
   listItem = [
     {
       name:'Item1',
-      url:'#',
+      url:'#'
     },
     {
       name:'Item2',
-      url:'#',
+      url:'#'
     },
     {
       name:'Item3',
-      url:'#',
+      url:'#'
     },
     {
       name:'Item4',
-      url:'#',
+      url:'#'
     },
     {
       name:'Item5',
-      url:'#',
+      url:'#'
     }
   ];
 
-this.setState({listItemMain:listItem[0].name});
+
 
   var resize = () =>{
 
 
     for (var i = 0; i < listItem.length; i++) {
 
+      this.setState({ listItemMain:listItem });
 
       if(menuContent[0].clientWidth >= sumTwoBox){
-
 
 
       }else{
@@ -81,6 +81,7 @@ this.setState({listItemMain:listItem[0].name});
 // listItem.splice(listItem.length - 1, 1);
 // console.log(listItem);
 
+
 resize();
 window.addEventListener('resize', ()=>{resize()});
 
@@ -90,12 +91,13 @@ window.addEventListener('resize', ()=>{resize()});
 
 render(){
 
-  console.log('Главное '+this.listItemMain);
-  console.log('Мобильное '+this.listItemMobile);
 
-// var item = this.state.listItemMain.map((item, i)=>
-//   <li key={i} >{item.name}</li>
-// );
+  console.log(this.state.listItemMain);
+  // console.log('Мобильное '+this.listItemMobile);
+
+var item = this.state.listItemMain.map((item, i)=>
+  <li key={i} >{item.name}</li>
+);
 
   return(
     <>
@@ -110,7 +112,7 @@ render(){
               <div className="itemBox">
 
                   <ul className="f-w-600 ul">
-                    {this.state.listItemMain}
+                    {item}
                   </ul>
 
                   <div className="mobileMenu"></div>
