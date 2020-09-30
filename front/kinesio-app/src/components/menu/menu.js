@@ -6,7 +6,7 @@ class Menu extends Component {
 constructor(props){
   super(props);
   this.state = {
-    listItem:[]
+    listItemMain:[]
   }
 
 }
@@ -17,12 +17,13 @@ constructor(props){
 
 componentDidMount(){
 
-  var menuContent, logoBox, itemBox, sumTwoBox, listItem;
+  var menuContent, logoBox, itemBox, sumTwoBox, listItem, resize, sizeWindow, listItemMain = [], listItemMob = [];
 
   itemBox =     document.getElementsByClassName('itemBox');
   logoBox =     document.getElementsByClassName('logoBox');
   menuContent = document.getElementsByClassName('menuContent');
-  sumTwoBox =   itemBox[0].clientWidth + logoBox[0].clientWidth;
+  sizeWindow =  document.documentElement.clientWidth;
+
 
   listItem = [
     {
@@ -47,14 +48,34 @@ componentDidMount(){
     }
   ];
 
-  this.setState({listItem:listItem});
+  this.setState({listItemMain:listItem});
+
+  resize = () =>{
+
+    sumTwoBox =   itemBox[0].clientWidth + logoBox[0].clientWidth;
+
+    // console.log('Блок с контентом: '+menuContent[0].clientWidth);
+    // console.log('Блок с лого: '+logoBox[0].clientWidth);
+    // console.log('Блок с текстом: '+itemBox[0].clientWidth);
+    console.log('Сумма двух блоков: '+sumTwoBox);
+    console.log(document.documentElement.clientWidth);
+
+        if( sizeWindow > sumTwoBox ){
+          console.log('main');
+        }else{
+          console.log('mob');
+          }
 
 
 
 
-  // var resize = () =>{}
-  // resize();
-  // window.addEventListener('resize', ()=>{resize()});
+  }
+
+  window.onload = () => {
+    resize();
+    window.addEventListener('resize', ()=>{resize()});
+  };
+
 
 }
 
@@ -63,7 +84,7 @@ componentDidMount(){
 
 render(){
 
-var item = this.state.listItem.map((item, i)=>
+var item = this.state.listItemMain.map((item, i)=>
   <li key={i} >{item.name}</li>
 );
 
@@ -80,10 +101,10 @@ var item = this.state.listItem.map((item, i)=>
               <div className="itemBox">
 
                   <ul className="f-w-600 ul">
-{item}
+                    {item}
                   </ul>
 
-                  <div className="mobileMenu"></div>
+                <div className="mobileMenu"></div>
 
               </div>
 

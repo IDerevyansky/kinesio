@@ -36,7 +36,7 @@
 .itemBox{
   border:1px solid red;
   display: flex;
-  flex-direction:row;
+  /* flex-direction:row; */
   align-items:center;
   /* width:auto; */
   height:40px;
