@@ -6,7 +6,7 @@ class Menu extends Component {
 constructor(props){
   super(props);
   this.state = {
-    listItem:'пусто'
+    listItem:[]
   }
 
 }
@@ -47,7 +47,9 @@ componentDidMount(){
     }
   ];
 
-  // this.setState({listItem:'qwe'});
+  this.setState({listItem:listItem});
+
+
 
 
   // var resize = () =>{}
@@ -61,9 +63,9 @@ componentDidMount(){
 
 render(){
 
-// var item = this.state.listItem.map((item, i)=>
-//   <li key={i} >{item.name}</li>
-// );
+var item = this.state.listItem.map((item, i)=>
+  <li key={i} >{item.name}</li>
+);
 
   return(
     <>
@@ -78,7 +80,7 @@ render(){
               <div className="itemBox">
 
                   <ul className="f-w-600 ul">
-{this.state.listItem}
+{item}
                   </ul>
 
                   <div className="mobileMenu"></div>
