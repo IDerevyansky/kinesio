@@ -7,7 +7,8 @@ constructor(props){
   super(props);
   this.state = {
     listItemMain:[],
-    test:''
+    listItemMob:[],
+    visible:true
   }
 
 }
@@ -18,15 +19,10 @@ constructor(props){
 
 componentDidMount(){
 
-  var menuContent, logoBox, itemBox, sumTwoBox, listItem, resize, sizeWindow, listItemMain = [], listItemMob = [], check, _768, _475;
-
-  itemBox =     document.getElementsByClassName('itemBox');
-  logoBox =     document.getElementsByClassName('logoBox');
-  menuContent = document.getElementsByClassName('menuContent');
-  sizeWindow =  document.documentElement.clientWidth;
+  var listItem, resize, sizeWindow, listItemMain = [], listItemMob = [];
 
 
-  var listItem = [
+  listItem = [
     {
       name:'Item1',
       url:'#'
@@ -50,30 +46,64 @@ componentDidMount(){
   ];
 
 
-
   resize = () =>{
 
-  sumTwoBox =   itemBox[0].clientWidth + logoBox[0].clientWidth;
-  _768 = menuContent[0].clientWidth <= 768;
-  _475 = menuContent[0].clientWidth <= 475;
+  sizeWindow =  document.documentElement.clientWidth;
+  var logoBox = document.getElementsByClassName('logoBox');
+  var itemBox = document.getElementsByClassName('itemBox');
+  var sum = logoBox[0].clientWidth + itemBox[0].clientWidth;
 
-listItemMain = [];
-  if(_768){
-      for (var i = 0; i < 3; i++) {
+  console.log( 'Ширина окна: '+sizeWindow );
+  console.log( 'Сумма блоков: '+sum );
+
+  var after_768 = sizeWindow > 768;
+  var befor_768 = sizeWindow < 768 & sizeWindow > 475;
+
+  listItemMain=[];
+
+  if(after_768){
+
+      for (let i = 0; i < listItem.length; i++) {
 
         listItemMain[i] = listItem[i];
+        listItemMob=[];
 
       }
+
+      this.setState({ visible:false });
+
     }
-  else{
-    for (var i = 0; i < listItem.length; i++) {
+  else if(befor_768){
+
+    for (let i = 0; i < 3; i++) {
 
       listItemMain[i] = listItem[i];
 
     }
-  }
 
-  this.setState({ listItemMain:listItemMain });
+    for (let i = 3; i < listItem.length; i++) {
+
+      listItemMob[i] = listItem[i];
+
+    }
+
+    this.setState({ visible:true });
+
+  }
+  else{
+
+    for (let i = 0; i < listItem.length; i++) {
+
+      listItemMob[i]=listItem[i];
+      listItemMain = [];
+
+    }
+
+      this.setState({ visible:true });
+
+    }
+
+  this.setState({ listItemMain:listItemMain, listItemMob:listItemMob });
 
 
   }
@@ -90,6 +120,12 @@ listItemMain = [];
 
 
 render(){
+
+  var mobileMenu = (
+
+    <div className="mobileMenu"></div>
+
+  );
 
   var item = this.state.listItemMain.map(
     (item, i) =>{
@@ -113,7 +149,7 @@ render(){
                     {item}
                   </ul>
 
-                <div className="mobileMenu"></div>
+                    {this.state.visible?mobileMenu:''}
 
               </div>
 
