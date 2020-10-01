@@ -6,7 +6,8 @@ class Menu extends Component {
 constructor(props){
   super(props);
   this.state = {
-    listItemMain:[]
+    listItemMain:[],
+    test:''
   }
 
 }
@@ -17,7 +18,7 @@ constructor(props){
 
 componentDidMount(){
 
-  var menuContent, logoBox, itemBox, sumTwoBox, listItem, resize, sizeWindow, listItemMain = [], listItemMob = [];
+  var menuContent, logoBox, itemBox, sumTwoBox, listItem, resize, sizeWindow, listItemMain = [], listItemMob = [], check, _768, _475;
 
   itemBox =     document.getElementsByClassName('itemBox');
   logoBox =     document.getElementsByClassName('logoBox');
@@ -25,7 +26,7 @@ componentDidMount(){
   sizeWindow =  document.documentElement.clientWidth;
 
 
-  listItem = [
+  var listItem = [
     {
       name:'Item1',
       url:'#'
@@ -48,25 +49,31 @@ componentDidMount(){
     }
   ];
 
-  this.setState({listItemMain:listItem});
+
 
   resize = () =>{
 
-    sumTwoBox =   itemBox[0].clientWidth + logoBox[0].clientWidth;
+  sumTwoBox =   itemBox[0].clientWidth + logoBox[0].clientWidth;
+  _768 = menuContent[0].clientWidth <= 768;
+  _475 = menuContent[0].clientWidth <= 475;
 
-    // console.log('Блок с контентом: '+menuContent[0].clientWidth);
-    // console.log('Блок с лого: '+logoBox[0].clientWidth);
-    // console.log('Блок с текстом: '+itemBox[0].clientWidth);
-    console.log('Сумма двух блоков: '+sumTwoBox);
-    console.log(document.documentElement.clientWidth);
+listItemMain = [];
+  if(_768){
+      for (var i = 0; i < 3; i++) {
 
-        if( sizeWindow > sumTwoBox ){
-          console.log('main');
-        }else{
-          console.log('mob');
-          }
+        listItemMain[i] = listItem[i];
 
+      }
+    }
+  else{
+    for (var i = 0; i < listItem.length; i++) {
 
+      listItemMain[i] = listItem[i];
+
+    }
+  }
+
+  this.setState({ listItemMain:listItemMain });
 
 
   }
@@ -84,9 +91,11 @@ componentDidMount(){
 
 render(){
 
-var item = this.state.listItemMain.map((item, i)=>
-  <li key={i} >{item.name}</li>
-);
+  var item = this.state.listItemMain.map(
+    (item, i) =>{
+      return  <li key={i} >{item.name}</li>
+    }
+  );
 
   return(
     <>
