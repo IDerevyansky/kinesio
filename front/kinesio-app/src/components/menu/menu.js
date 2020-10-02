@@ -19,9 +19,10 @@ constructor(props){
 
 componentDidMount(){
 
-  var listItem, resize, sizeWindow, listItemMain = [], listItemMob = [];
+  var listItem, resize, listItemMain = [], listItemMob = [];
 
-
+//В данный момент ограничение на 5 пнктах
+//Далее меняются значения sizeMax и sizeMin
   listItem = [
     {
       name:'Item1',
@@ -48,20 +49,20 @@ componentDidMount(){
 
   resize = () =>{
 
-  sizeWindow =  document.documentElement.clientWidth;
+  var sizeWindow =  document.documentElement.clientWidth;
   var logoBox = document.getElementsByClassName('logoBox');
-  var itemBox = document.getElementsByClassName('itemBox');
-  var sum = logoBox[0].clientWidth + itemBox[0].clientWidth;
 
-  console.log( 'Ширина окна: '+sizeWindow );
-  console.log( 'Сумма блоков: '+sum );
-
-  var after_768 = sizeWindow > 700;
-  var befor_768 = sizeWindow < 700 & sizeWindow > 450;
+  var sizeMax = 700;
+  var sizeMin = 450;
+  var after = sizeWindow > sizeMax;
+  var befor = sizeWindow < sizeMax & sizeWindow > sizeMin;
 
   listItemMain=[];
 
-  if(after_768){
+
+  if(after){
+
+      logoBox[0].style.width='216px';
 
       for (let i = 0; i < listItem.length; i++) {
 
@@ -73,7 +74,9 @@ componentDidMount(){
       this.setState({ visible:false });
 
     }
-  else if(befor_768){
+  else if(befor){
+
+    logoBox[0].style.width='130px';
 
     for (let i = 0; i < 3; i++) {
 
@@ -92,6 +95,8 @@ componentDidMount(){
   }
   else{
 
+    logoBox[0].style.width='130px';
+
     for (let i = 0; i < listItem.length; i++) {
 
       listItemMob[i]=listItem[i];
@@ -104,7 +109,6 @@ componentDidMount(){
     }
 
   this.setState({ listItemMain:listItemMain, listItemMob:listItemMob });
-
 
   }
 
