@@ -56,8 +56,8 @@ componentDidMount(){
   console.log( 'Ширина окна: '+sizeWindow );
   console.log( 'Сумма блоков: '+sum );
 
-  var after_768 = sizeWindow > 768;
-  var befor_768 = sizeWindow < 768 & sizeWindow > 475;
+  var after_768 = sizeWindow > 700;
+  var befor_768 = sizeWindow < 700 & sizeWindow > 450;
 
   listItemMain=[];
 
