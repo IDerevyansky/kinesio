@@ -9,6 +9,28 @@
   right:0;
 }
 
+.popUpMenuContainer{
+margin-top: 58px;
+position: absolute;
+/* height: 215px; */
+/* width: 345px; */
+padding:24px;
+border-radius: 10px;
+right:16px;
+
+
+background: #F5F3ED;
+box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+}
+
+.popUpMenuContainer ul {
+  display:block;
+}
+
+.popUpMenuContainer li {
+  margin:8px;
+}
+
 .menuContent{
   border:1px solid orange;
   display:flex;

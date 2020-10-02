@@ -137,7 +137,14 @@ render(){
     }
   );
 
+  var itemMob = this.state.listItemMob.map(
+    (item, i) =>{
+      return  <li key={i} >{item.name}</li>
+    }
+  );
+
   return(
+
     <>
 
       <div className="menuContainer">
@@ -158,11 +165,17 @@ render(){
               </div>
 
 
-
         </div>
       </div>
 
+      <div className="popUpMenuContainer">
+        <ul className="f-w-600 ul">
+          {itemMob}
+        </ul>
+      </div>
+
     </>
+
   )
 }
 
