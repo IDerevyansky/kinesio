@@ -142,13 +142,13 @@ render(){
 
   var item = this.state.listItemMain.map(
     (item, i) =>{
-      return  <a key={i} href={item.url}><li key={i} >{item.name}</li></a>
+      return  <a key={i} href={item.url} rel="noopener noreferrer"><li key={i} >{item.name}</li></a>
     }
   );
 
   var itemMob = this.state.listItemMob.map(
     (item, i) =>{
-      return  <a key={i} href={item.url}><li key={i} >{item.name}</li></a>
+      return  <a key={i} href={item.url} rel="noopener noreferrer"><li key={i} >{item.name}</li></a>
     }
   );
 
