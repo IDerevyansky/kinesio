@@ -19,8 +19,6 @@ componentDidMount(){
 
   var listItem, resize, visible, listItemMain = [], listItemMob = [];
 
-
-
 //В данный момент ограничение на 5 пунктах
 //Далее меняются значения sizeMax и sizeMin
   listItem = [
