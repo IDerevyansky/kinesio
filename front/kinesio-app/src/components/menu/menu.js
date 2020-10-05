@@ -5,23 +5,23 @@ import './menu.css';
 class Menu extends Component {
 constructor(props){
   super(props);
+  this.isOpen = this.isOpen.bind(this);
   this.state = {
     listItemMain:[],
     listItemMob:[],
-    visible:true
+    visible:false,
+    isOpen:false
   }
 
 }
 
-
-
-
-
 componentDidMount(){
 
-  var listItem, resize, listItemMain = [], listItemMob = [];
+  var listItem, resize, visible, listItemMain = [], listItemMob = [];
 
-//В данный момент ограничение на 5 пнктах
+
+
+//В данный момент ограничение на 5 пунктах
 //Далее меняются значения sizeMax и sizeMin
   listItem = [
     {
@@ -45,6 +45,10 @@ componentDidMount(){
       url:'#'
     }
   ];
+
+  visible = (e) => {
+    this.setState({ visible:e, isOpen:false });
+  }
 
 
   resize = () =>{
@@ -71,7 +75,8 @@ componentDidMount(){
 
       }
 
-      this.setState({ visible:false });
+      // this.setState({ visible:false });
+      visible(false);
 
     }
   else if(befor){
@@ -90,7 +95,7 @@ componentDidMount(){
 
     }
 
-    this.setState({ visible:true });
+    visible(true);
 
   }
   else{
@@ -104,7 +109,7 @@ componentDidMount(){
 
     }
 
-      this.setState({ visible:true });
+      visible(true);
 
     }
 
@@ -112,11 +117,21 @@ componentDidMount(){
 
   }
 
-  window.onload = () => {
+
     resize();
     window.addEventListener('resize', ()=>{resize()});
-  };
+    window.addEventListener('scroll', ()=>{ this.setState({ isOpen:false })} );
 
+}
+
+
+isOpen = () => {
+
+  if(this.state.visible === true){
+
+    this.setState( state => ({ isOpen:!state.isOpen }));
+
+  }
 
 }
 
@@ -125,23 +140,37 @@ componentDidMount(){
 
 render(){
 
-  var mobileMenu = (
-
-    <div className="mobileMenu"></div>
-
-  );
-
   var item = this.state.listItemMain.map(
     (item, i) =>{
-      return  <li key={i} >{item.name}</li>
+      return  <a key={i} href={item.url}><li key={i} >{item.name}</li></a>
     }
   );
 
   var itemMob = this.state.listItemMob.map(
     (item, i) =>{
-      return  <li key={i} >{item.name}</li>
+      return  <a key={i} href={item.url}><li key={i} >{item.name}</li></a>
     }
   );
+
+  var mobileMenu = (
+
+    <div onClick={this.isOpen} className="mobileMenu"></div>
+
+  );
+
+  var popUpMenuContainer = (
+
+    <div onClick={ ()=>{ this.setState({ isOpen:false })} } className="bgMobileMenu">
+      <div className="popUpMenuContainer">
+        <ul className="f-w-600 ul">
+          {itemMob}
+        </ul>
+      </div>
+    </div>
+
+  );
+
+
 
   return(
 
@@ -168,11 +197,7 @@ render(){
         </div>
       </div>
 
-      <div className="popUpMenuContainer">
-        <ul className="f-w-600 ul">
-          {itemMob}
-        </ul>
-      </div>
+        {this.state.isOpen?popUpMenuContainer:''}
 
     </>
 
