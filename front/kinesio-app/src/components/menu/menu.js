@@ -83,7 +83,7 @@ componentDidMount(){
       listItemMain[i] = listItem[i];
 
     }
-
+    listItemMob=[];
     for (let i = 3; i < listItem.length; i++) {
 
       listItemMob[i] = listItem[i];
