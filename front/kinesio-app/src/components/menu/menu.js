@@ -7,45 +7,48 @@ constructor(props){
   super(props);
   this.isOpen = this.isOpen.bind(this);
   this.state = {
-    listItemMain:[],
-    listItemMob:[],
-    visible:false,
-    isOpen:false
+    listItem:[],
+    sizeMax:768,
+    sizeMin:450,
+    visibleMobMenu:false,
+    visibleItemMain:true,
+    isOpen:false,
+    iconMenu:'iconMenuOpen'
   }
 
 }
 
 componentDidMount(){
 
-  var listItem, resize, visible, listItemMain = [], listItemMob = [];
+  var listItem, resize, visible;
 
-//В данный момент ограничение на 5 пунктах
-//Далее меняются значения sizeMax и sizeMin
+
   listItem = [
     {
       name:'Item1',
-      url:'#'
+      url:'#1'
     },
     {
       name:'Item2',
-      url:'#'
+      url:'#2'
     },
     {
       name:'Item3',
-      url:'#'
+      url:'#3'
     },
     {
       name:'Item4',
-      url:'#'
+      url:'#4'
     },
     {
       name:'Item5',
-      url:'#'
+      url:'#5'
     }
   ];
+  this.setState({listItem:listItem});
 
-  visible = (e) => {
-    this.setState({ visible:e, isOpen:false });
+  visible = (e, w) => {
+    this.setState({ visibleItemMain:w, visibleMobMenu:e, isOpen:false });
   }
 
 
@@ -54,121 +57,82 @@ componentDidMount(){
   var sizeWindow =  document.documentElement.clientWidth;
   var logoBox = document.getElementsByClassName('logoBox');
 
-  var sizeMax = 700;
-  var sizeMin = 450;
-  var after = sizeWindow > sizeMax;
-  var befor = sizeWindow < sizeMax & sizeWindow > sizeMin;
+  var after = sizeWindow > this.state.sizeMax;
+  var befor = sizeWindow > this.state.sizeMin;
 
-  listItemMain=[];
 
 
   if(after){
 
       logoBox[0].style.width='216px';
+      logoBox[0].style.margin='';
 
-      for (let i = 0; i < listItem.length; i++) {
-
-        listItemMain[i] = listItem[i];
-        listItemMob=[];
-
-      }
-
-      // this.setState({ visible:false });
-      visible(false);
+      visible(false, true);
 
     }
   else if(befor){
 
-    logoBox[0].style.width='130px';
+      logoBox[0].style.width='216px';
+      logoBox[0].style.margin='';
 
-    for (let i = 0; i < 3; i++) {
-
-      listItemMain[i] = listItem[i];
-
-    }
-    listItemMob=[];
-    for (let i = 3; i < listItem.length; i++) {
-
-      listItemMob[i] = listItem[i];
-
-    }
-
-    visible(true);
+      visible(true, false);
 
   }
   else{
 
-    logoBox[0].style.width='130px';
+      logoBox[0].style.width='130px';
+      logoBox[0].style.margin='auto';
 
-    for (let i = 0; i < listItem.length; i++) {
-
-      listItemMob[i]=listItem[i];
-      listItemMain = [];
+      visible(false, false);
 
     }
-
-      visible(true);
-
-    }
-
-  this.setState({ listItemMain:listItemMain, listItemMob:listItemMob });
 
   }
 
-
-    resize();
+    resize()
     window.addEventListener('resize', ()=>{resize()});
-    window.addEventListener('scroll', ()=>{ this.setState({ isOpen:false })} );
+    window.addEventListener('scroll', ()=>{ this.setState({ isOpen:false, iconMenu:'iconMenuOpen' })} );
+
 
 }
 
 
 isOpen = () => {
 
-  if(this.state.visible === true){
-
-    this.setState( state => ({ isOpen:!state.isOpen }));
-
-  }
+  // if(this.state.visibleMobMenu === true){ this.setState( { isOpen:!this.state.isOpen,  iconMenu:'iconMenuClose'}); }
+  this.setState( { isOpen:!this.state.isOpen,  iconMenu:this.state.iconMenu == 'iconMenuOpen'?'iconMenuClose':'iconMenuOpen'}); 
 
 }
 
 
 
-
 render(){
 
-  var item = this.state.listItemMain.map(
+  var item = this.state.listItem.map(
     (item, i) =>{
       return  <a key={i} href={item.url} rel="noopener noreferrer"><li key={i} >{item.name}</li></a>
     }
   );
 
-  var itemMob = this.state.listItemMob.map(
-    (item, i) =>{
-      return  <a key={i} href={item.url} rel="noopener noreferrer"><li key={i} >{item.name}</li></a>
-    }
-  );
+  var cssMobileMenu = 'mobileMenu ' + this.state.iconMenu;
 
   var mobileMenu = (
 
-    <div onClick={this.isOpen} className="mobileMenu"></div>
+    <div onClick={this.isOpen} className={cssMobileMenu}></div>
 
   );
 
   var popUpMenuContainer = (
 
-    <div onClick={ ()=>{ this.setState({ isOpen:false })} } className="bgMobileMenu">
+    <div onClick={ ()=>{ this.setState({ isOpen:false, iconMenu:'iconMenuOpen' })} } className="bgMobileMenu">
       <div className="popUpMenuContainer">
         <ul className="f-w-600 ul">
-          {itemMob}
+          {item}
         </ul>
       </div>
     </div>
 
   );
-
-
 
   return(
 
@@ -184,10 +148,9 @@ render(){
               <div className="itemBox">
 
                   <ul className="f-w-600 ul">
-                    {item}
+                    {this.state.visibleItemMain?item:''}
                   </ul>
-
-                    {this.state.visible?mobileMenu:''}
+                    {this.state.visibleMobMenu?mobileMenu:''}
 
               </div>
 
@@ -196,6 +159,8 @@ render(){
       </div>
 
         {this.state.isOpen?popUpMenuContainer:''}
+
+        <div onClick={this.isOpen} className={this.state.iconMenu + " DownMobileMenu "} ></div>
 
     </>
 
