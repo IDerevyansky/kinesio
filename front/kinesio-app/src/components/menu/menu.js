@@ -99,8 +99,7 @@ componentDidMount(){
 
 isOpen = () => {
 
-  // if(this.state.visibleMobMenu === true){ this.setState( { isOpen:!this.state.isOpen,  iconMenu:'iconMenuClose'}); }
-  this.setState( { isOpen:!this.state.isOpen,  iconMenu:this.state.iconMenu == 'iconMenuOpen'?'iconMenuClose':'iconMenuOpen'}); 
+  this.setState( { isOpen:!this.state.isOpen,  iconMenu:this.state.iconMenu == 'iconMenuOpen'?'iconMenuClose':'iconMenuOpen'});
 
 }
 
