@@ -28,7 +28,7 @@ class App extends Component {
 
 
       <>
-            <Menu />
+            <Menu statusPopUp={this.statusPopUp}/>
             {this.state.statusPopUp?<PopUp statusPopUp={this.statusPopUp}  />:''}
             <div onClick={()=>{this.statusPopUp(true)}} className="BGtest"></div>
       </>

@@ -4,6 +4,9 @@
 
   background: linear-gradient(180deg, #F5F3ED 0%, rgba(245, 243, 237, 0) 100%);
   /* border:1px solid red; */
+  padding-top:16px;
+  padding-left:16px;
+  padding-right:16px;
   height:150px;
   left:0;
   right:0;
@@ -11,9 +14,11 @@
 
 .popUpMenuContainer{
 margin-top: 58px;
+/* top:58px; */
 position: absolute;
 /* height: 215px; */
 /* width: 345px; */
+text-align: right;
 padding:24px;
 border-radius: 10px;
 right:16px;
@@ -21,21 +26,25 @@ right:16px;
 
 background: #F5F3ED;
 box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-animation: show  0.5s;
+animation: showMain  0.7s;
 }
 
-@keyframes show {
+@keyframes showMain {
   from {
-    top: 5px;
+    /* top: 65px; */
+    margin-top: 70px;
+    padding-top:32px;
+    padding-bottom:32px;
     opacity: 0%;
   }
   to {
-    top: 0px;
+    /* top: 58px; */
+    margin-top: 58px;
+    padding-top:24px;
+    padding-bottom:24px;
     opacity: 100%;
   }
 }
-
-
 
 .popUpMenuContainer ul {
   display:block;
@@ -46,7 +55,7 @@ animation: show  0.5s;
 }
 
 .menuContent{
-  border:1px solid orange;
+  /* border:1px solid orange; */
   display:flex;
   justify-content: space-between;
   flex-direction:row;
@@ -70,7 +79,7 @@ animation: show  0.5s;
 }
 
 .itemBox{
-  border:1px solid red;
+  /* border:1px solid red; */
   display: flex;
   /* flex-direction:row; */
   align-items:center;
@@ -90,12 +99,13 @@ li{
   }
 
 .mobileMenu{
-  border:1px solid red;
+  /* border:1px solid red; */
   display: inline-block;
   float:right;
   width:23px;
   height:19px;
-  margin-left: 20px;
+  margin-left: 16px;
+  z-index:1;
 }
 
 .iconMenuOpen{
@@ -116,10 +126,19 @@ li{
   position: absolute;
   width:100vw;
   height:100vh;
+
+  background: rgba(196, 196, 196, 0.5);
+
+  backdrop-filter: blur(10px);
+  -moz-backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  -o-backdrop-filter: blur(10px);
+  -ms-backdrop-filter: blur(10px);
 }
 
-.DownMobileMenu{
+.downMobileMenu{
 position:fixed;
+z-index:1;
 width:50px;
 height:50px;
 border-radius: 100px;
@@ -127,4 +146,82 @@ right:16px;
 bottom:16px;
 background: #F5F3ED;
 box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+animation: showDownMobileMenu  0.7s;
+}
+
+
+@keyframes showDownMobileMenu {
+  from {
+    bottom:-16px;
+    opacity: 0%;
+  }
+  to {
+    bottom:16px;
+    opacity: 100%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+
+
+  .popUpMenuContainer{
+  /* margin-top: 100px; */
+  /* top:0; */
+  position: absolute;
+  /* margin:auto; */
+  text-align: right;
+  padding:24px;
+  border-radius: 10px;
+  right:16px;
+  left:16px;
+  bottom:85px;
+
+
+  background: #F5F3ED;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  animation: showMobileMenu  0.7s;
+  }
+
+  @keyframes showMobileMenu {
+    from {
+      bottom:65px;
+      padding-top:32px;
+      padding-bottom:32px;
+      opacity: 0%;
+    }
+    to {
+      bottom: 85px;
+      padding-top:24px;
+      padding-bottom:24px;
+      opacity: 100%;
+    }
+  }
+
+  .downBtnMenu{
+    position: absolute;
+    text-align:center;
+    padding-top:15px;
+    padding-bottom:15px;
+    bottom:16px;
+    right:82px;
+    left:16px;
+    background: #F5F3ED;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+    animation: showDownBtnMenu 0.7s;
+  }
+
+  @keyframes showDownBtnMenu {
+    from {
+      right:70px;
+      left:32px;
+      opacity: 0%;
+    }
+    to {
+      right:82px;
+      left:16px;
+      opacity: 100%;
+    }
+  }
+
 }

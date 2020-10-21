@@ -107,6 +107,8 @@ isOpen = () => {
 
 render(){
 
+  var scrollTop = window.pageYOffset || document.documentElement.scrollTop; //Узнаем величину прокрутки страницы
+
   var item = this.state.listItem.map(
     (item, i) =>{
       return  <a key={i} href={item.url} rel="noopener noreferrer"><li key={i} >{item.name}</li></a>
@@ -121,15 +123,24 @@ render(){
 
   );
 
+  var downBtnMenu = ( <div onClick={()=>{this.props.statusPopUp(true)}} className="downBtnMenu f-w-600">ЗАПИСАТЬСЯ</div> );
+
   var popUpMenuContainer = (
 
-    <div onClick={ ()=>{ this.setState({ isOpen:false, iconMenu:'iconMenuOpen' })} } className="bgMobileMenu">
+    <div onClick={ ()=>{ this.setState({ isOpen:false, iconMenu:'iconMenuOpen' })} } style={{top:scrollTop}} className="bgMobileMenu">
+    {this.state.sizeMin >= document.documentElement.clientWidth?downBtnMenu:''}
       <div className="popUpMenuContainer">
         <ul className="f-w-600 ul">
           {item}
         </ul>
       </div>
     </div>
+
+  );
+
+  var downMobileMenu = (
+
+    <div onClick={this.isOpen} className={this.state.iconMenu + " downMobileMenu "} ></div>
 
   );
 
@@ -159,7 +170,7 @@ render(){
 
         {this.state.isOpen?popUpMenuContainer:''}
 
-        <div onClick={this.isOpen} className={this.state.iconMenu + " DownMobileMenu "} ></div>
+        {this.state.sizeMin >= document.documentElement.clientWidth?downMobileMenu:''}
 
     </>
 
