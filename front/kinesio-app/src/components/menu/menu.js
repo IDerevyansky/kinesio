@@ -90,7 +90,7 @@ componentDidMount(){
   }
 
     resize()
-    window.addEventListener('resize', ()=>{resize()});
+    window.addEventListener('resize', ()=>{resize(); this.setState({ isOpen:false, iconMenu:'iconMenuOpen' })});
     window.addEventListener('scroll', ()=>{ this.setState({ isOpen:false, iconMenu:'iconMenuOpen' })} );
 
 
@@ -99,7 +99,7 @@ componentDidMount(){
 
 isOpen = () => {
 
-  this.setState( { isOpen:!this.state.isOpen,  iconMenu:this.state.iconMenu == 'iconMenuOpen'?'iconMenuClose':'iconMenuOpen'});
+  this.setState( { isOpen:!this.state.isOpen,  iconMenu:this.state.iconMenu === 'iconMenuOpen'?'iconMenuClose':'iconMenuOpen'});
 
 }
 
