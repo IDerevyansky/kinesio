@@ -13,7 +13,8 @@ constructor(props){
     visibleMobMenu:false,
     visibleItemMain:true,
     isOpen:false,
-    iconMenu:'iconMenuOpen'
+    iconMenu:'iconMenuOpen',
+    menuSticky:'absolute',
   }
 
 }
@@ -89,9 +90,38 @@ componentDidMount(){
 
   }
 
+
+
+  var memory=0;
+
+  var scrollPage = () => {
+
+  var scrollPageSum = window.pageYOffset || document.documentElement.scrollTop; //Узнаем величину прокрутки страницы
+
+
+  if(memory < scrollPageSum){
+
+    if(scrollPageSum >= 56){
+      this.setState({menuSticky:'fixed'});
+    }
+
+  }else{
+
+    this.setState({menuSticky:'absolute'});
+
+  }
+
+  memory = scrollPageSum;
+
+  }
+
+
+
+
+
     resize()
     window.addEventListener('resize', ()=>{resize(); this.setState({ isOpen:false, iconMenu:'iconMenuOpen' })});
-    window.addEventListener('scroll', ()=>{ this.setState({ isOpen:false, iconMenu:'iconMenuOpen' })} );
+    window.addEventListener('scroll', ()=>{scrollPage(); this.setState({ isOpen:false, iconMenu:'iconMenuOpen' })} );
 
 
 }
@@ -148,7 +178,7 @@ render(){
 
     <>
 
-      <div className="menuContainer">
+      <div className="menuContainer" style={{position:this.state.menuSticky}}>
         <div className="menuContent">
 
 
