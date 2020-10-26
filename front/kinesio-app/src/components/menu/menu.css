@@ -106,16 +106,18 @@ li{
   height:20px;
   margin-left: 16px;
   z-index:1;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
 }
 
 .iconMenuOpen{
   background-image:url(img/mobileMenu.svg) !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
 }
 
 .iconMenuClose{
   background-image:url(img/closeIcon.svg) !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
 }
 
 .bgMobileMenu{
