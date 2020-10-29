@@ -100,12 +100,13 @@ li{
 
 .mobileMenu{
   /* border:1px solid red; */
-  display: inline-block;
+  /* display: inline-block; */
+  position:relative;
   float:right;
   width:23px;
   height:20px;
   margin-left: 16px;
-  z-index:1;
+  z-index:999;
 }
 
 .iconMenuOpen{
@@ -222,4 +223,47 @@ animation: showDownMobileMenu  0.7s;
     }
   }
 
+}
+
+.stickyBox{
+  /* border:1px solid red; */
+  display:flex;
+}
+
+.btnSticky{
+  width: 144px;
+  height: 32px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: url(../popUpBlocks/img/btnSingUp.svg);
+}
+
+.stickyMessageBox{
+  display: flex;
+  flex-direction:row;
+  width:180px;
+}
+
+.stickyWhatsapp{
+  width:30px;
+  height:30px;
+  background-image:url(../popUpBlocks/img/whatsapp.svg);
+  background-size: 98%;
+  background-repeat: no-repeat;
+}
+
+.stickyTelegram{
+  width:30px;
+  height:30px;
+  background-image:url(../popUpBlocks/img/telegram.svg);
+  background-size: 98%;
+  background-repeat: no-repeat;
+}
+
+.stickyViber{
+  width:30px;
+  height:32px;
+  background-image:url(../popUpBlocks/img/viber.svg);
+  background-size: 96%;
+  background-repeat: no-repeat;
 }

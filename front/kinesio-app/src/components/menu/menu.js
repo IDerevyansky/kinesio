@@ -15,6 +15,7 @@ constructor(props){
     isOpen:false,
     iconMenu:'iconMenuOpen',
     menuSticky:'absolute',
+    visibleMenuSticky:false
   }
 
 }
@@ -53,6 +54,7 @@ componentDidMount(){
   }
 
 
+
   resize = () =>{
 
   var sizeWindow =  document.documentElement.clientWidth;
@@ -60,7 +62,6 @@ componentDidMount(){
 
   var after = sizeWindow > this.state.sizeMax;
   var befor = sizeWindow > this.state.sizeMin;
-
 
 
   if(after){
@@ -88,6 +89,7 @@ componentDidMount(){
 
     }
 
+
   }
 
 
@@ -98,23 +100,25 @@ componentDidMount(){
 
   var scrollPageSum = window.pageYOffset || document.documentElement.scrollTop; //Узнаем величину прокрутки страницы
 
+  if (document.documentElement.clientWidth > this.state.sizeMin) {
 
-  if(memory < scrollPageSum){
+      if(memory < scrollPageSum){
 
-    if(scrollPageSum >= 56){
-      this.setState({menuSticky:'fixed'});
-    }
+        if(scrollPageSum >= 56){
+          this.setState({menuSticky:'fixed'});
+        }
 
-  }else{
+      }else{
 
-    this.setState({menuSticky:'absolute'});
+        this.setState({menuSticky:'absolute'});
+
+      }
 
   }
 
   memory = scrollPageSum;
 
   }
-
 
 
 
@@ -174,16 +178,49 @@ render(){
 
   );
 
+
+
+  var stickyBox = (
+
+    <div className="menuContainer" style={{position:this.state.menuSticky}}>
+    <div className="menuContent">
+
+        <div className="logoBox"></div>
+
+        <div className="stickyBox">
+
+        <div className="stickyMessageBox">
+          <a href="https://wa.me/+79653121776?text=urlencodedtext" rel="noopener noreferrer" target="_blank"><div className="stickyWhatsapp"></div></a>
+          <a href="tg://resolve?domain=NataDerevyanskaya" rel="noopener noreferrer" target="_blank"><div className="stickyTelegram m24-l"></div></a>
+          <a href="viber://chat?number=79774147477" rel="noopener noreferrer" target="_blank"><div className="stickyViber m24-l"></div></a>
+        </div>
+
+
+          <div onClick={()=>{this.props.statusPopUp(true)}} className="btnSticky"></div>
+
+        </div>
+
+    </div>
+    </div>
+
+  );
+
+
+
   return(
 
     <>
 
-      <div className="menuContainer" style={{position:this.state.menuSticky}}>
+      {this.state.visibleMenuSticky?stickyBox:''}
+
+      <div className="menuContainer">
         <div className="menuContent">
 
 
 
               <div className="logoBox"></div>
+
+
 
               <div className="itemBox">
 
