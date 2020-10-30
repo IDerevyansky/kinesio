@@ -267,3 +267,18 @@ animation: showDownMobileMenu  0.7s;
   background-size: 96%;
   background-repeat: no-repeat;
 }
+
+.menuContainerAnimation{
+  animation: menuContainerAnimation 0.7s;
+}
+
+@keyframes menuContainerAnimation {
+  from {
+    top:-56px;
+    opacity: 0%;
+  }
+  to {
+    top:0px;
+    opacity: 100%;
+  }
+}

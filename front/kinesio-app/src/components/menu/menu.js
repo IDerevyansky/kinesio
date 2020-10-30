@@ -189,24 +189,39 @@ render(){
 
   );
 
+var socialIconAll = (
+<>
+  <div className="stickyMessageBox">
+    <a href="https://wa.me/+79653121776?text=urlencodedtext" rel="noopener noreferrer" target="_blank"><div className="stickyWhatsapp"></div></a>
+    <a href="tg://resolve?domain=NataDerevyanskaya" rel="noopener noreferrer" target="_blank"><div className="stickyTelegram m24-l"></div></a>
+    <a href="viber://chat?number=79774147477" rel="noopener noreferrer" target="_blank"><div className="stickyViber m24-l"></div></a>
+
+
+  </div>
+
+  <a href="mailto:iderevyansky@yandex.ru?subject=Мое письмо&body=Мой текст в этом письме" rel="noopener noreferrer" target="_blank"><div className="btnSticky"></div></a>
+</>
+);
+
+var btn = (
+
+  <div onClick={()=>{this.props.statusPopUp(true)}} className="btnSticky"></div>
+
+);
 
 
   var stickyBox = (
 
-    <div className="menuContainer" style={{position:this.state.menuSticky, zIndex:'1'}}>
+    <div className="menuContainer menuContainerAnimation" style={{position:this.state.menuSticky, zIndex:'1'}}>
     <div className="menuContent">
 
         <div className="logoBox"></div>
 
         <div className="stickyBox">
 
-        <div className="stickyMessageBox">
-          <a href="https://wa.me/+79653121776?text=urlencodedtext" rel="noopener noreferrer" target="_blank"><div className="stickyWhatsapp"></div></a>
-          <a href="tg://resolve?domain=NataDerevyanskaya" rel="noopener noreferrer" target="_blank"><div className="stickyTelegram m24-l"></div></a>
-          <a href="viber://chat?number=79774147477" rel="noopener noreferrer" target="_blank"><div className="stickyViber m24-l"></div></a>
-        </div>
+        {document.documentElement.clientWidth < this.state.sizeMax? socialIconAll : btn}
 
-          <a href="mailto:iderevyansky@yandex.ru?subject=Мое письмо&body=Мой текст в этом письме" rel="noopener noreferrer" target="_blank"><div className="btnSticky"></div></a>
+
 
         </div>
 
