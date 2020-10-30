@@ -53,12 +53,11 @@ componentDidMount(){
     this.setState({ visibleItemMain:w, visibleMobMenu:e, isOpen:false });
   }
 
-
+var logoBox = document.getElementsByClassName('logoBox');
 
   resize = () =>{
 
   var sizeWindow =  document.documentElement.clientWidth;
-  var logoBox = document.getElementsByClassName('logoBox');
 
   var after = sizeWindow > this.state.sizeMax;
   var befor = sizeWindow > this.state.sizeMin;
@@ -93,39 +92,51 @@ componentDidMount(){
   }
 
 
-
   var memory=0;
 
   var scrollPage = () => {
 
-  var scrollPageSum = window.pageYOffset || document.documentElement.scrollTop; //Узнаем величину прокрутки страницы
+      var scrollPageSum = window.pageYOffset || document.documentElement.scrollTop; //Узнаем величину прокрутки страницы
 
-  if (document.documentElement.clientWidth > this.state.sizeMin) {
+          if (document.documentElement.clientWidth > 630) {
 
-      if(memory < scrollPageSum){
+              if(memory < scrollPageSum){
 
-        if(scrollPageSum >= 56){
-          this.setState({menuSticky:'fixed'});
-        }
+                    if(scrollPageSum >= 56){
+                      this.setState({menuSticky:'fixed', visibleMenuSticky:true});
+                    }
 
-      }else{
+              }else{
 
-        this.setState({menuSticky:'absolute'});
+                    this.setState({menuSticky:'absolute', visibleMenuSticky:false});
 
-      }
+              }
+
+          }else{
+
+            this.setState({visibleMenuSticky:false});
+
+          }
+
+          memory = scrollPageSum;
 
   }
 
-  memory = scrollPageSum;
-
-  }
 
 
 
+    resize();
 
-    resize()
-    window.addEventListener('resize', ()=>{resize(); this.setState({ isOpen:false, iconMenu:'iconMenuOpen' })});
-    window.addEventListener('scroll', ()=>{scrollPage(); this.setState({ isOpen:false, iconMenu:'iconMenuOpen' })} );
+    window.addEventListener('resize', ()=>{
+      resize();
+      scrollPage();
+      this.setState({ isOpen:false, iconMenu:'iconMenuOpen' })
+    });
+
+    window.addEventListener('scroll', ()=>{
+      scrollPage();
+      this.setState({ isOpen:false, iconMenu:'iconMenuOpen' })
+    });
 
 
 }
@@ -182,7 +193,7 @@ render(){
 
   var stickyBox = (
 
-    <div className="menuContainer" style={{position:this.state.menuSticky}}>
+    <div className="menuContainer" style={{position:this.state.menuSticky, zIndex:'1'}}>
     <div className="menuContent">
 
         <div className="logoBox"></div>
@@ -195,8 +206,7 @@ render(){
           <a href="viber://chat?number=79774147477" rel="noopener noreferrer" target="_blank"><div className="stickyViber m24-l"></div></a>
         </div>
 
-
-          <div onClick={()=>{this.props.statusPopUp(true)}} className="btnSticky"></div>
+          <a href="mailto:iderevyansky@yandex.ru?subject=Мое письмо&body=Мой текст в этом письме" rel="noopener noreferrer" target="_blank"><div className="btnSticky"></div></a>
 
         </div>
 

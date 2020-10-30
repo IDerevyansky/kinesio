@@ -69,12 +69,12 @@ animation: showMain  0.7s;
 
 .logoBox{
   /* border:1px solid green; */
-  background-image:url(img/DEREVYANSKAYA.svg);
+  background-image:url(../img/DEREVYANSKAYA.svg);
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
-  width:238px;
-  min-width:130px;
+  width:216px;
+  /* min-width:130px; */
   height:40px;
 }
 
@@ -110,13 +110,13 @@ li{
 }
 
 .iconMenuOpen{
-  background-image:url(img/mobileMenu.svg) !important;
+  background-image:url(../img/mobileMenu.svg) !important;
   background-repeat: no-repeat !important;
   background-position: center !important;
 }
 
 .iconMenuClose{
-  background-image:url(img/closeIcon.svg) !important;
+  background-image:url(../img/closeIcon.svg) !important;
   background-repeat: no-repeat !important;
   background-position: center !important;
 }
@@ -235,7 +235,7 @@ animation: showDownMobileMenu  0.7s;
   height: 32px;
   background-size: 100%;
   background-repeat: no-repeat;
-  background-image: url(../popUpBlocks/img/btnSingUp.svg);
+  background-image: url(../img/btnSingUp.svg);
 }
 
 .stickyMessageBox{
@@ -247,7 +247,7 @@ animation: showDownMobileMenu  0.7s;
 .stickyWhatsapp{
   width:30px;
   height:30px;
-  background-image:url(../popUpBlocks/img/whatsapp.svg);
+  background-image:url(../img/whatsapp.svg);
   background-size: 98%;
   background-repeat: no-repeat;
 }
@@ -255,7 +255,7 @@ animation: showDownMobileMenu  0.7s;
 .stickyTelegram{
   width:30px;
   height:30px;
-  background-image:url(../popUpBlocks/img/telegram.svg);
+  background-image:url(../img/telegram.svg);
   background-size: 98%;
   background-repeat: no-repeat;
 }
@@ -263,7 +263,7 @@ animation: showDownMobileMenu  0.7s;
 .stickyViber{
   width:30px;
   height:32px;
-  background-image:url(../popUpBlocks/img/viber.svg);
+  background-image:url(../img/viber.svg);
   background-size: 96%;
   background-repeat: no-repeat;
 }

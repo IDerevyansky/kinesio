@@ -105,7 +105,7 @@
   height:13px;
   left: 95%;
   top: 5%;
-  background-image:url(img/crossClosed.svg);
+  background-image:url(../img/crossClosed.svg);
   background-size: 100%;
 }
 
@@ -146,7 +146,7 @@
   width:180px;
   height:40px;
   margin-top:13px;
-  background-image:url(img/btnSingUp.svg);
+  background-image:url(../img/btnSingUp.svg);
 }
 
 .messageBox{
@@ -159,7 +159,7 @@
   width:40px;
   height:40px;
   margin-top:13px;
-  background-image:url(img/whatsapp.svg);
+  background-image:url(../img/whatsapp.svg);
   background-size: 98%;
   background-repeat: no-repeat;
 }
@@ -168,7 +168,7 @@
   width:40px;
   height:40px;
   margin-top:13px;
-  background-image:url(img/telegram.svg);
+  background-image:url(../img/telegram.svg);
   background-size: 98%;
   background-repeat: no-repeat;
 }
@@ -177,7 +177,7 @@
   width:40px;
   height:40px;
   margin-top:13px;
-  background-image:url(img/viber.svg);
+  background-image:url(../img/viber.svg);
   background-size: 96%;
   background-repeat: no-repeat;
 }
