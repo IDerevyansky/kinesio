@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './menu.css';
-
+import { data } from '../storage';
 
 class Menu extends Component {
 constructor(props){
@@ -22,39 +22,23 @@ constructor(props){
 
 componentDidMount(){
 
-  var listItem, resize, visible;
+  // var storeg = dataMenuComponent;
 
+  var resize, visible;
 
-  listItem = [
-    {
-      name:'Item1',
-      url:'#1'
-    },
-    {
-      name:'Item2',
-      url:'#2'
-    },
-    {
-      name:'Item3',
-      url:'#3'
-    },
-    {
-      name:'Item4',
-      url:'#4'
-    },
-    {
-      name:'Item5',
-      url:'#5'
-    }
-  ];
-  this.setState({listItem:listItem});
+  //Назначаем список пунктов меню в состояние
 
+  this.setState({listItem:data.listItem});
+
+  //Контролируем сварачивание основного меню и включение "гамбургера" или включение меню внизу под палец.
   visible = (e, w) => {
     this.setState({ visibleItemMain:w, visibleMobMenu:e, isOpen:false });
   }
 
 var logoBox = document.getElementsByClassName('logoBox');
 
+  //Работа с шириной экрана для 3 устройств.
+  //Сейчас это просто смена размеров и позиционирования логотипа
   resize = () =>{
 
   var sizeWindow =  document.documentElement.clientWidth;
@@ -91,15 +75,15 @@ var logoBox = document.getElementsByClassName('logoBox');
 
   }
 
-
+  //Прилипающие меню с лого и кнопкой
   var memory=0;
 
   var scrollPage = () => {
 
       var scrollPageSum = window.pageYOffset || document.documentElement.scrollTop; //Узнаем величину прокрутки страницы
-
+          //контроль по ширине
           if (document.documentElement.clientWidth > 630) {
-
+              //контроль по высоте
               if(memory < scrollPageSum){
 
                     if(scrollPageSum >= 56){
@@ -141,7 +125,7 @@ var logoBox = document.getElementsByClassName('logoBox');
 
 }
 
-
+//открыти мобильного меню и смена иконок "гамбургер" на "крест"
 isOpen = () => {
 
   this.setState( { isOpen:!this.state.isOpen,  iconMenu:this.state.iconMenu === 'iconMenuOpen'?'iconMenuClose':'iconMenuOpen'});
@@ -160,8 +144,8 @@ render(){
     }
   );
 
+  //подставляем класс с нужной иконкой
   var cssMobileMenu = 'mobileMenu ' + this.state.iconMenu;
-
   var mobileMenu = (
 
     <div onClick={this.isOpen} className={cssMobileMenu}></div>
@@ -169,7 +153,6 @@ render(){
   );
 
   var downBtnMenu = ( <div onClick={()=>{this.props.statusPopUp(true)}} className="downBtnMenu f-w-600">ЗАПИСАТЬСЯ</div> );
-
   var popUpMenuContainer = (
 
     <div onClick={ ()=>{ this.setState({ isOpen:false, iconMenu:'iconMenuOpen' })} } style={{top:scrollTop}} className="bgMobileMenu">
@@ -192,14 +175,12 @@ render(){
 var socialIconAll = (
 <>
   <div className="stickyMessageBox">
-    <a href="https://wa.me/+79653121776?text=urlencodedtext" rel="noopener noreferrer" target="_blank"><div className="stickyWhatsapp"></div></a>
-    <a href="tg://resolve?domain=NataDerevyanskaya" rel="noopener noreferrer" target="_blank"><div className="stickyTelegram m24-l"></div></a>
-    <a href="viber://chat?number=79774147477" rel="noopener noreferrer" target="_blank"><div className="stickyViber m24-l"></div></a>
-
-
+    <a href={"https://wa.me/"+data.massagerContent.whatsApp.id+"?text="+data.massagerContent.whatsApp.text} rel="noopener noreferrer" target="_blank"><div className="stickyWhatsapp"></div></a>
+    <a href={"tg://resolve?domain="+data.massagerContent.telegram.id} rel="noopener noreferrer" target="_blank"><div className="stickyTelegram m24-l"></div></a>
+    <a href={"viber://chat?number="+data.massagerContent.viber.id} rel="noopener noreferrer" target="_blank"><div className="stickyViber m24-l"></div></a>
   </div>
 
-  <a href="mailto:iderevyansky@yandex.ru?subject=Мое письмо&body=Мой текст в этом письме" rel="noopener noreferrer" target="_blank"><div className="btnSticky"></div></a>
+  <a href={"mailto:"+data.massagerContent.email.id+"?subject="+data.massagerContent.email.title+"&body="+data.massagerContent.email.text} rel="noopener noreferrer" target="_blank"><div className="btnSticky"></div></a>
 </>
 );
 

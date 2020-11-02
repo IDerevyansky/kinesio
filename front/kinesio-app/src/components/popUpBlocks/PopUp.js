@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import './PopUp.css';
+import { data } from '../storage';
+
 
 
 class PopUp extends Component {
@@ -35,9 +37,9 @@ class PopUp extends Component {
 
                                 <p className="textCenter">Записаться в один клик</p>
                                   <div className="messageBox">
-                                    <a href="https://wa.me/+79653121776?text=urlencodedtext" rel="noopener noreferrer" target="_blank"><div className="whatsapp"></div></a>
-                                    <a href="tg://resolve?domain=NataDerevyanskaya" rel="noopener noreferrer" target="_blank"><div className="telegram m24-l"></div></a>
-                                    <a href="viber://chat?number=79774147477" rel="noopener noreferrer" target="_blank"><div className="viber m24-l"></div></a>
+                                    <a href={"https://wa.me/"+data.massagerContent.whatsApp.id+"?text="+data.massagerContent.whatsApp.text} rel="noopener noreferrer" target="_blank"><div className="whatsapp"></div></a>
+                                    <a href={"tg://resolve?domain="+data.massagerContent.telegram.id} rel="noopener noreferrer" target="_blank"><div className="telegram m24-l"></div></a>
+                                    <a href={"viber://chat?number="+data.massagerContent.viber.id} rel="noopener noreferrer" target="_blank"><div className="viber m24-l"></div></a>
                                   </div>
 
 
@@ -47,7 +49,7 @@ class PopUp extends Component {
 
                               <div className="margin">
                                 <p className="textCenter">Запись через Email</p>
-                                <a href="mailto:iderevyansky@yandex.ru?subject=Мое письмо&body=Мой текст в этом письме" rel="noopener noreferrer" target="_blank"><div className="singUp"></div></a>
+                                <a href={"mailto:"+data.massagerContent.email.id+"?subject="+data.massagerContent.email.title+"&body="+data.massagerContent.email.text} rel="noopener noreferrer" target="_blank"><div className="singUp"></div></a>
                               </div>
 
                             </div>
@@ -56,7 +58,7 @@ class PopUp extends Component {
                         </div>
                         <div>
                         <p className="textCenter m24-t f-16">или</p>
-                        <a  href="tel:8-977-414-74-77" rel="noopener noreferrer" target="_blank" ><p className="textCenter m24-t f-22 f-w-600">8 977 414 74 77</p></a>
+                        <a  href={"tel:"+data.massagerContent.phone} rel="noopener noreferrer" target="_blank" ><p className="textCenter m24-t f-22 f-w-600">{data.massagerContent.phone}</p></a>
                         </div>
                       </div>
                   </div>
