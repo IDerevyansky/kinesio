@@ -1,21 +1,33 @@
 
 
 .footerContainer{
-  background-color: grey ;
+  background-color: #525862;
+}
+
+.contentBox{
+  border:1px solid red;
+  max-width:1330px;
+  margin:auto;
 }
 
 @media (max-width: 768px) {
 
-    .footerContainer{
-    background-color: orange !important;
-    }
+  .contentBox{
+    border:1px solid green;
+    max-width:768px !important;
+    margin:auto;
+    padding:16px;
+  }
 
 }
 
 @media (max-width: 450px) {
 
-    .footerContainer{
-      background-color: red !important;
-    }
+  .contentBox{
+    border:1px solid orange;
+    max-width:450px !important;
+    margin:auto;
+    padding:16px;
+  }
 
 }

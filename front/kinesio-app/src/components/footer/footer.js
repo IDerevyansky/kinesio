@@ -10,7 +10,9 @@ render(){
 
   return(
 <div className="footerContainer">
-123
+  <div className="contentBox">
+123 123 123
+  </div>
 </div>
   )
 }
