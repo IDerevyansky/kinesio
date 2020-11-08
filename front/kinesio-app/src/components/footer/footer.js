@@ -61,7 +61,7 @@ render(){
 
                   <div className="right" >
 
-                    <div className="margin">
+                    <div className="margin footer">
                       <p className="textLeft">Запись через Email</p>
                       <a href={"mailto:"+data.massagerContent.email.id+"?subject="+data.massagerContent.email.title+"&body="+data.massagerContent.email.text} rel="noopener noreferrer" target="_blank"><div className="singUp"></div></a>
                     </div>

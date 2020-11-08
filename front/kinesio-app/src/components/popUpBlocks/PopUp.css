@@ -6,7 +6,7 @@
   right: 0%;
   top: 0%;
   bottom: 0%; */
-  z-index: 1;
+  z-index: 998;
 
   background: rgba(196, 196, 196, 0.5);
 
@@ -17,9 +17,6 @@
   -ms-backdrop-filter: blur(10px);
 
 }
-
-
-
 
 
 @media screen and (max-width: 540px) {
@@ -85,6 +82,7 @@
   width: 540px;
   margin-left:-270px;
   left:50%;
+  z-index: 999;
 }
 
 .popUpBlock{
