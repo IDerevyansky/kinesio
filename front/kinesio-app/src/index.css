@@ -15,7 +15,6 @@ body {
   color: #525862;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
 }
 
 p{
@@ -28,10 +27,30 @@ a{
   text-decoration: none;
 }
 
+.itemBoxFooter a {
+  color: #707885;
+  text-decoration: none;
+}
+
+.footerContainer p {
+  color: #89919F !important;
+}
+
 .textCenter{
   text-align:center;
 }
 
+.textRight{
+  text-align:right;
+}
+
+.f-12{
+  font-size: 12px;
+}
+
+.f-14{
+  font-size: 14px;
+}
 
 .f-16{
   font-size: 16px;

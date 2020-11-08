@@ -68,6 +68,10 @@
     margin-left:0px !important;
   }
 
+  .popUpText{
+    text-align: center;
+  }
+
 }
 
 
@@ -114,7 +118,7 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 22px;
-  text-align: left;
+  /* text-align: left; */
   color: #525862;
 }
 
@@ -182,7 +186,9 @@
   background-repeat: no-repeat;
 }
 
-
+.popUpText{
+  text-align: left;
+}
 
 
 

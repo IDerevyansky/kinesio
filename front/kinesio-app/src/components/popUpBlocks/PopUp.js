@@ -35,7 +35,7 @@ class PopUp extends Component {
 
                             <div className="left">
 
-                                <p className="textCenter">Записаться в один клик</p>
+                                <p className="popUpText">Записаться в один клик</p>
                                   <div className="messageBox">
                                     <a href={"https://wa.me/"+data.massagerContent.whatsApp.id+"?text="+data.massagerContent.whatsApp.text} rel="noopener noreferrer" target="_blank"><div className="whatsapp"></div></a>
                                     <a href={"tg://resolve?domain="+data.massagerContent.telegram.id} rel="noopener noreferrer" target="_blank"><div className="telegram m24-l"></div></a>
@@ -48,7 +48,7 @@ class PopUp extends Component {
                             <div className="right" >
 
                               <div className="margin">
-                                <p className="textCenter">Запись через Email</p>
+                                <p className="popUpText">Запись через Email</p>
                                 <a href={"mailto:"+data.massagerContent.email.id+"?subject="+data.massagerContent.email.title+"&body="+data.massagerContent.email.text} rel="noopener noreferrer" target="_blank"><div className="singUp"></div></a>
                               </div>
 

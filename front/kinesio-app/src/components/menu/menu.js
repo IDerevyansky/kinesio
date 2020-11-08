@@ -230,7 +230,7 @@ var btn = (
 
               <div className="itemBox">
 
-                  <ul className="f-w-600 ul">
+                  <ul className="f-w-600 ul f-16">
                     {this.state.visibleItemMain?item:''}
                   </ul>
                     {this.state.visibleMobMenu?mobileMenu:''}

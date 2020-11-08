@@ -8,7 +8,115 @@
   border:1px solid red;
   max-width:1330px;
   margin:auto;
+  padding:16px;
+
 }
+
+.flex{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+
+
+
+.LogoFooterBox{
+
+  background-image:url(../img/DEREVYANSKAYA-gray.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  width:216px;
+  /* min-width:130px; */
+  height:40px;
+
+}
+
+.itemBoxFooter{
+
+  display: flex;
+  align-items: center;
+  height: 40px;
+
+}
+
+
+.containerButtonFooter{
+padding-top:24px;
+}
+
+.socialContainer{
+padding-top:24px;
+}
+
+.socialContainerText{
+  text-align: right !important;
+}
+
+.footerContainer .messageBox{
+  border-right: 1px solid #626974;
+  display: flex;
+  flex-direction:row;
+}
+
+.footerContainer .singUp{
+  background-image:url(../img/btnSingUp-grey.svg);
+}
+
+.footerContainer .whatsapp{
+  background-image:url(../img/whatsapp-gray.svg);
+}
+
+.footerContainer .telegram{
+  background-image:url(../img/telegram-gray.svg);
+}
+
+.footerContainer .viber{
+  background-image:url(../img/viber-gray.svg);
+}
+
+.socialIcon{
+
+  display: flex;
+  flex-direction:row;
+
+}
+
+.faceBookIcon{
+  width:36px;
+  height:36px;
+  margin-top:13px;
+  background-image:url(../img/FB.svg);
+  background-size: 98%;
+  background-repeat: no-repeat;
+}
+
+.instagramIcon{
+  width:36px;
+  height:36px;
+  margin-top:13px;
+  background-image:url(../img/inst.svg);
+  background-size: 98%;
+  background-repeat: no-repeat;
+}
+
+.vkontacteIcon{
+  width:36px;
+  height:36px;
+  margin-top:13px;
+  background-image:url(../img/vk.svg);
+  background-size: 98%;
+  background-repeat: no-repeat;
+}
+
+.disclamer{
+  border-top:1px solid #626974;
+  margin-top: 70px;
+  padding-top:16px;
+}
+
+
 
 @media (max-width: 768px) {
 
@@ -18,6 +126,35 @@
     margin:auto;
     padding:16px;
   }
+
+
+  .flex{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .itemBoxFooter{
+
+    display: flex;
+    align-items: center;
+    height: 40px;
+    margin-top: 24px;
+
+  }
+
+  .disclamer{
+    border-top:1px solid #626974;
+    margin-top: 70px;
+    padding-top:16px;
+    text-align: center;
+  }
+
+  .socialContainerText{
+    text-align: center !important;
+  }
+
 
 }
 
