@@ -22,7 +22,7 @@ class App extends Component {
     q?document.body.style.overflowY="hidden":document.body.style.overflowY="auto"; //Добовляем или убираем скрол
   };
 
-
+// <div onClick={()=>{this.statusPopUp(true)}} className="BGtest"></div> Фон
   render(){
 
     return (
@@ -31,7 +31,7 @@ class App extends Component {
       <>
             <Menu statusPopUp={this.statusPopUp}/>
             {this.state.statusPopUp?<PopUp statusPopUp={this.statusPopUp}  />:''}
-            <div onClick={()=>{this.statusPopUp(true)}} className="BGtest"></div>
+
             <Footer />
       </>
 
