@@ -5,7 +5,7 @@
 }
 
 .contentBox{
-  border:1px solid red;
+  /* border:1px solid red; */
   max-width:1330px;
   margin:auto;
   padding:16px;
@@ -122,7 +122,7 @@ padding-top:24px;
 @media (max-width: 768px) {
 
   .contentBox{
-    border:1px solid green;
+    /* border:1px solid green; */
     max-width:768px !important;
     margin:auto;
     padding:16px;
@@ -162,7 +162,7 @@ padding-top:24px;
 @media (max-width: 540px) {
 
   .contentBox{
-    border:1px solid orange;
+    /* border:1px solid orange; */
     max-width:450px !important;
     margin:auto;
     padding:16px;
