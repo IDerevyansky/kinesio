@@ -41,7 +41,7 @@ render(){
     <div className="flex">
       <div className="containerButtonFooter">
 
-            //Верстка из PopUp контейнера начало
+
             <div className="popUpContent">
 
               <div className="containerButton">
@@ -61,9 +61,9 @@ render(){
 
                   <div className="right" >
 
-                    <div className="margin footer">
+                    <div className="margin">
                       <p className="textLeft">Запись через Email</p>
-                      <a href={"mailto:"+data.massagerContent.email.id+"?subject="+data.massagerContent.email.title+"&body="+data.massagerContent.email.text} rel="noopener noreferrer" target="_blank"><div className="singUp"></div></a>
+                          <a href={"mailto:"+data.massagerContent.email.id+"?subject="+data.massagerContent.email.title+"&body="+data.massagerContent.email.text} rel="noopener noreferrer" target="_blank"><div className="singUp"></div></a>
                     </div>
 
                   </div>
@@ -72,16 +72,16 @@ render(){
               </div>
 
             </div>
-            //Верстка из PopUp контейнера конец
+
 
       </div>
       <div className="socialContainer">
 
         <p className="socialContainerText f-16">Я в соцсетях</p>
         <div className="socialIcon">
-          <a href="" rel="noopener noreferrer" target="_blank"><div className="faceBookIcon"></div></a>
-          <a href="" rel="noopener noreferrer" target="_blank"><div className="instagramIcon m24-l"></div></a>
-          <a href="" rel="noopener noreferrer" target="_blank"><div className="vkontacteIcon m24-l"></div></a>
+          <a href={data.socialAccount.facebook.linkAccount} rel="noopener noreferrer" target="_blank"><div className="faceBookIcon"></div></a>
+          <a href={data.socialAccount.instagram.linkAccount} rel="noopener noreferrer" target="_blank"><div className="instagramIcon m24-l"></div></a>
+          <a href={data.socialAccount.vk.linkAccount} rel="noopener noreferrer" target="_blank"><div className="vkontacteIcon m24-l"></div></a>
         </div>
 
       </div>

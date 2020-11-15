@@ -41,6 +41,17 @@ export var data = {
        text:'Мой тексте письма'
      },
      phone:'+7 977 414 74 77'
+   },
+   socialAccount:{
+     facebook:{
+       linkAccount:'https://www.facebook.com/natali.ruznikova'
+     },
+     instagram:{
+       linkAccount:'https://www.instagram.com/natalia.kinesio/'
+     },
+     vk:{
+       linkAccount:'https://vk.com/id167051990'
+     }
    }
 
 };

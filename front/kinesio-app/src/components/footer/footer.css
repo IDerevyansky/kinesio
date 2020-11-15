@@ -118,6 +118,7 @@ padding-top:24px;
 
 
 
+
 @media (max-width: 768px) {
 
   .contentBox{
@@ -155,12 +156,10 @@ padding-top:24px;
     text-align: center !important;
   }
 
-
-
-
 }
 
-@media (max-width: 450px) {
+
+@media (max-width: 540px) {
 
   .contentBox{
     border:1px solid orange;
@@ -168,5 +167,18 @@ padding-top:24px;
     margin:auto;
     padding:16px;
   }
+
+  .itemBoxFooter{
+    display: block;
+    align-items: center;
+    height: auto;
+  }
+
+  .footerContainer li {
+    list-style-type: none;
+    margin-left: 0px;
+    margin-top: 10px;
+  }
+
 
 }
