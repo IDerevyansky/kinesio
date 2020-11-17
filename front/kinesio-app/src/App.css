@@ -24,6 +24,12 @@
   color: white;
 }
 
+.App-body{
+  min-height: calc(100vh - 320px);
+  margin:auto;
+  padding:16px;
+}
+
 .App-link {
   color: #61dafb;
 }

@@ -33,7 +33,7 @@ class App extends Component {
             <Menu statusPopUp={this.statusPopUp}/>
             {this.state.statusPopUp?<PopUp statusPopUp={this.statusPopUp}  />:''}
 
-<div id="contant" style={{ height:'3000px', margin:'auto', border:'5px solid red', position:'relative'}}></div>
+<div  className='App-body'></div>
 
             <Footer />
       </>

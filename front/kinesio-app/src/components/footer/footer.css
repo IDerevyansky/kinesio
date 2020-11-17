@@ -161,6 +161,30 @@ padding-top:24px;
 
 @media (max-width: 540px) {
 
+  .flex{
+    display:block;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .containerButton p {
+      text-align: left !important;
+  }
+
+  .socialContainerText {
+      text-align: left !important;
+  }
+
+  .messageBox {
+    border-bottom: 1px solid rgba(82, 88, 98, 0.1);
+    border-right: 0px solid rgba(82, 88, 98, 0.1) !important;
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    display: flex;
+    justify-content: left;
+}
+
   .contentBox{
     /* border:1px solid orange; */
     max-width:450px !important;
@@ -178,6 +202,13 @@ padding-top:24px;
     list-style-type: none;
     margin-left: 0px;
     margin-top: 10px;
+  }
+
+  .disclamer {
+      border-top: 1px solid #626974;
+      margin-top: 70px;
+      padding-top: 16px;
+      text-align: left;
   }
 
 
