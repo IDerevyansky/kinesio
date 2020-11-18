@@ -25,9 +25,12 @@
 }
 
 .App-body{
-  min-height: calc(100vh - 320px);
+  min-height: calc(100vh - 304px);
   margin:auto;
-  padding:16px;
+  padding-top:0px;
+  padding-left:16px;
+  padding-right:16px;
+  padding-bottom:16px;
 }
 
 .App-link {
