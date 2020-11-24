@@ -4,7 +4,7 @@ import PopUp from './components/popUpBlocks/PopUp';
 import Menu from './components/menu/menu';
 import Footer from './components/footer/footer';
 
-
+import Provider from './components/provider';
 
 class App extends Component {
   constructor(props){
@@ -33,7 +33,9 @@ class App extends Component {
             <Menu statusPopUp={this.statusPopUp}/>
             {this.state.statusPopUp?<PopUp statusPopUp={this.statusPopUp}  />:''}
 
-<div  className='App-body'></div>
+            <div  className='App-body'>
+              <Provider />
+            </div>
 
             <Footer />
       </>
