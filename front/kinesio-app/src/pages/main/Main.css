@@ -1,0 +1,40 @@
+
+.test1{
+
+}
+
+.test2{
+  max-width: 1330px;
+  height:1000px;
+  background:green;
+  margin:auto;
+  padding-left:0px;
+  padding-right:0px;
+  padding-bottom:16px;
+  padding-top:16px;
+}
+
+@media (max-width: 1330px) {
+
+  .test2{
+    padding:16px;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .test2{
+    padding:16px;
+  }
+
+}
+
+
+@media (max-width: 540px) {
+
+  .test2{
+
+  }
+
+}
