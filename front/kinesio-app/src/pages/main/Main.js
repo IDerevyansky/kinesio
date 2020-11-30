@@ -4,10 +4,12 @@ import './Main.css'
 class Main extends Component {
   render(){
     return(
-      <>
-        <div className="test1" style={{width:'auto', minHeight:'100vh', background:'red'}}></div>
-        <div className="test2" >qwewqeqweqwewqwq</div>
-      </>
+    <>
+        <div className="bannerMainBox">
+          <div className="imgBanner"></div>
+        </div>
+        <div className="bodyMainContent" >qwewqeqweqwewqwq</div>
+    </>
     )
   }
 }

@@ -1,9 +1,21 @@
 
-.test1{
-
+.bannerMainBox{
+  width:auto;
+  height:1000px;
+  /* min-height:100vh; */
+  background:#F5F3ED;
+  border:1px solid red;
 }
 
-.test2{
+.imgBanner{
+  width:500px;
+  height:500px;
+  border:1px solid green;
+  background-image: url('/img/face_main_banner.png');
+  background-size: 50%;
+}
+
+.bodyMainContent{
   max-width: 1330px;
   height:1000px;
   background:green;
@@ -16,7 +28,7 @@
 
 @media (max-width: 1330px) {
 
-  .test2{
+  .bodyMainContent{
     padding:16px;
   }
 
@@ -24,7 +36,7 @@
 
 @media (max-width: 768px) {
 
-  .test2{
+  .bodyMainContent{
     padding:16px;
   }
 
@@ -33,7 +45,7 @@
 
 @media (max-width: 540px) {
 
-  .test2{
+  .bodyMainContent{
 
   }
 
