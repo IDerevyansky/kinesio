@@ -1,18 +1,28 @@
 
 .bannerMainBox{
   width:auto;
-  height:1000px;
-  /* min-height:100vh; */
+  min-height:100vh;
   background:#F5F3ED;
   border:1px solid red;
+  display: flex;
+  flex-direction: row;
 }
 
 .imgBanner{
-  width:500px;
-  height:500px;
+  width:1250px;
+  height:100vh;
   border:1px solid green;
-  background-image: url('/img/face_main_banner.png');
-  background-size: 50%;
+  background-image: url('./img/face_main_banner.png');
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: -150px 0px
+}
+
+.textBannerContainer{
+  border:1px solid orange;
+  width:200px;
+  height:200px;
+  align-self: center;
 }
 
 .bodyMainContent{
@@ -25,6 +35,7 @@
   padding-bottom:16px;
   padding-top:16px;
 }
+
 
 @media (max-width: 1330px) {
 
