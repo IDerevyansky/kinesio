@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import Main from '../pages/main/Main';
-import CallBack from './callBack/callBack';
+// import CallBack from './callBack/callBack';
 
 
 class Provider extends Component {
@@ -9,9 +9,9 @@ class Provider extends Component {
 
   render(){
 
-// <Main />
+    // <CallBack view="dark" />
     return(
-        <CallBack/>
+        <Main />
     )
 
 

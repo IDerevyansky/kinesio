@@ -1,0 +1,172 @@
+.callBackConteiner{
+  display:flex;
+  flex-direction: row;
+  justify-content:center;
+  align-items:flex-end;
+  /* width:450px; */
+}
+
+
+.callBackConteiner p {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.leftSide{
+
+}
+
+.massagerIcon{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+}
+
+.rightSide{
+
+}
+
+.styleText-dark{
+color: #525862;
+}
+
+.styleText-gray{
+color: #89919F;
+}
+
+.btnSingUp-dark{
+  width:180px;
+  height:40px;
+  margin-top:13px;
+  background-image:url(../img/btnSingUp.svg);
+}
+
+.btnSingUp-gray{
+  width:180px;
+  height:40px;
+  margin-top:13px;
+  background-image:url(../img/btnSingUp-gray.svg);
+}
+
+.seporator-dark{
+  width:1px;
+  height:40px;
+  margin-left:24px;
+  margin-right:24px;
+  background-color: #E5E3DF;
+}
+
+.seporator-gray{
+  width:1px;
+  height:40px;
+  margin-left:24px;
+  margin-right:24px;
+  background-color: #89919F;
+}
+
+.whatsapp-dark{
+  width:40px;
+  height:40px;
+  margin-top:13px;
+  background-image:url(../img/whatsapp.svg);
+  background-size: 98%;
+  background-repeat: no-repeat;
+}
+
+.whatsapp-gray{
+  width:40px;
+  height:40px;
+  margin-top:13px;
+  background-image:url(../img/whatsapp-gray.svg);
+  background-size: 98%;
+  background-repeat: no-repeat;
+}
+
+.telegram-dark{
+  width:40px;
+  height:40px;
+  margin-top:13px;
+  background-image:url(../img/telegram.svg);
+  background-size: 98%;
+  background-repeat: no-repeat;
+}
+
+.telegram-gray{
+  width:40px;
+  height:40px;
+  margin-top:13px;
+  background-image:url(../img/telegram-gray.svg);
+  background-size: 98%;
+  background-repeat: no-repeat;
+}
+
+.viber-dark{
+  width:40px;
+  height:40px;
+  margin-top:13px;
+  background-image:url(../img/viber.svg);
+  background-size: 96%;
+  background-repeat: no-repeat;
+}
+
+.viber-gray{
+  width:40px;
+  height:40px;
+  margin-top:13px;
+  background-image:url(../img/viber-gray.svg);
+  background-size: 96%;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 540px) {
+
+  .callBackConteiner{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    /* width:450px; */
+  }
+
+
+
+  .seporator-dark{
+    width:160px;
+    height:1px;
+    margin-top:24px;
+    margin-bottom:24px;
+    margin-left:0px;
+    margin-right:0px;
+    background-color: #E5E3DF;
+  }
+
+  .seporator-gray{
+    width:160px;
+    height:1px;
+    margin-top:24px;
+    margin-bottom:24px;
+    margin-left:0px;
+    margin-right:0px;
+    background-color: #89919F;
+  }
+
+  .leftSide-center{
+    display: flex;
+    flex-direction:column;
+    text-align: center;
+  }
+
+  .rightSide{
+    display: flex;
+    flex-direction:column;
+    text-align: center;
+  }
+
+  .massagerIcon{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+  }
+
+
+}

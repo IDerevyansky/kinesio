@@ -1,17 +1,18 @@
 
 .bannerMainBox{
+  /* border:1px solid red; */
+
   width:auto;
   min-height:100vh;
   background:#F5F3ED;
-  border:1px solid red;
   display: flex;
   flex-direction: row;
 }
 
 .imgBanner{
-  width:1100px;
+  /* border:1px solid green; */
+  width:1300px;
   height:100vh;
-  border:1px solid green;
   background-image: url('./img/face_main_banner.png');
   background-size: auto 100%;
   background-repeat: no-repeat;
@@ -19,15 +20,19 @@
 }
 
 .textBannerContainer{
-  border:1px solid orange;
+  /* border:1px solid orange; */
   width:517px;
   /* height:200px; */
   align-self: center;
 }
 
-.textBannerContainer p{
+.textMainBanner p{
   margin-top:16px;
   margin-bottom:16px;
+}
+
+.textMainBanner{
+  margin-bottom:40px;
 }
 
 .bodyMainContent{
@@ -42,7 +47,8 @@
 }
 
 .callBackBanner{
-  border:1px solid red;
+  /* border:1px solid red; */
+  float:left;
 }
 
 @media (max-width: 1330px) {

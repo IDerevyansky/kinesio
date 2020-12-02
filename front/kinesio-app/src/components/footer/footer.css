@@ -60,21 +60,6 @@ padding-top:24px;
   flex-direction:row;
 }
 
-.footerContainer .singUp{
-  background-image:url(../img/btnSingUp-grey.svg);
-}
-
-.footerContainer .whatsapp{
-  background-image:url(../img/whatsapp-gray.svg);
-}
-
-.footerContainer .telegram{
-  background-image:url(../img/telegram-gray.svg);
-}
-
-.footerContainer .viber{
-  background-image:url(../img/viber-gray.svg);
-}
 
 .socialIcon{
 
@@ -162,10 +147,8 @@ padding-top:24px;
 @media (max-width: 540px) {
 
   .flex{
-    display:block;
-    justify-content: space-between;
-    flex-direction: row;
-    align-items: center;
+    flex-direction:;
+    align-items:flex-start;
   }
 
   .containerButtonFooter p {
