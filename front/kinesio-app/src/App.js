@@ -24,14 +24,20 @@ class App extends Component {
 
 // <div onClick={()=>{this.statusPopUp(true)}} className="BGtest"></div> Фон
 
+// Меню вернуть при доработле callBack блока
+// <Menu statusPopUp={this.statusPopUp}/>
+// {this.state.statusPopUp?<PopUp statusPopUp={this.statusPopUp}  />:''}
+
+
+
   render(){
 
     return (
 
 
       <>
-            <Menu statusPopUp={this.statusPopUp}/>
-            {this.state.statusPopUp?<PopUp statusPopUp={this.statusPopUp}  />:''}
+
+
 
             <div  className='App-body'>
               <Provider />

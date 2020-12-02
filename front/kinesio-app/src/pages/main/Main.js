@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import './Main.css'
 
-import { dataPages } from '../pageStorage'
+import { dataPages } from '../pageStorage';
 
 class Main extends Component {
 
   render(){
 
     const dataMain = dataPages.pages.main;
-    console.log(dataMain);
+
 
     return(
     <>
@@ -18,6 +18,17 @@ class Main extends Component {
             <div className="textMainBanner">
               <h1>{dataMain.section.MainBanner.h1}</h1>
               <p>{dataMain.section.MainBanner.p}</p>
+
+
+
+                <div className="callBackBanner">
+
+
+
+                </div>
+
+
+
             </div>
             <div className="callBackBtnMainBanner"></div>
           </div>
