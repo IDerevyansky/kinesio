@@ -40,6 +40,5 @@ class Main extends Component {
   }
 }
 
-//exe
 
 export default Main;

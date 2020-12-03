@@ -68,6 +68,25 @@
     padding:16px;
   }
 
+  .textMainBanner p{
+    font-size:14px;
+  }
+
+  .textMainBanner h1{
+    font-size:24px;
+  }
+
+  .textBannerContainer{
+    /* border:1px solid orange; */
+    width:400px;
+    /* height:200px; */
+    align-self: center;
+    position: absolute;
+    top:calc(100vh / 3);
+    left:50%;
+  }
+
+
 }
 
 @media (max-width: 768px) {
