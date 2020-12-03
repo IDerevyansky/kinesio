@@ -41,7 +41,7 @@ class App extends Component {
             {this.state.statusPopUp?<PopUp statusPopUp={this.statusPopUp}  />:''}
 
             <div  className='App-body'>
-              <Provider />
+              <Provider statusPopUp={this.statusPopUp} />
             </div>
 
             <Footer />

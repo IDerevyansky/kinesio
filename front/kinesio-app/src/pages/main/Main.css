@@ -1,22 +1,21 @@
+.colorSeporatorBlock{
+  background-color:#F5F3ED;
+}
 
 .bannerMainBox{
   /* border:1px solid red; */
 
   width:auto;
-  min-height:100vh;
-  background:#F5F3ED;
-  display: flex;
-  flex-direction: row;
-}
-
-.imgBanner{
-  /* border:1px solid green; */
-  width:1300px;
   height:100vh;
+  /* min-height:100vh; */
   background-image: url('./img/face_main_banner.png');
   background-size: auto 100%;
   background-repeat: no-repeat;
-  background-position: -150px 0px
+  /* background-attachment: fixed; */
+  background-position: center center;
+  /* background:#F5F3ED; */
+  /* display: flex; */
+  /* flex-direction: row; */
 }
 
 .textBannerContainer{
@@ -24,6 +23,9 @@
   width:517px;
   /* height:200px; */
   align-self: center;
+  position: absolute;
+  top:calc(100vh / 3);
+  left:50%;
 }
 
 .textMainBanner p{
@@ -32,7 +34,7 @@
 }
 
 .textMainBanner{
-  margin-bottom:40px;
+  margin-bottom:16px;
 }
 
 .bodyMainContent{
@@ -50,6 +52,15 @@
   /* border:1px solid red; */
   float:left;
 }
+
+.btnSingUpMainBanner{
+  width:180px;
+  height:40px;
+  margin-top:13px;
+  background-image:url(../../components/img/btnSingUp.svg);
+  cursor:pointer;
+}
+
 
 @media (max-width: 1330px) {
 

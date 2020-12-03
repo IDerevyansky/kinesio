@@ -38,7 +38,7 @@ class PopUp extends Component {
 
                         <div>
                         <p className="textCenter m24-t f-16">или</p>
-                        <a  href={"tel:"+data.massagerContent.phone} rel="noopener noreferrer" target="_blank" ><p className="textCenter m24-t f-22 f-w-600">{data.massagerContent.phone}</p></a>
+                        <a href={"tel:"+data.massagerContent.phone} rel="noopener noreferrer" target="_blank" ><p className="textCenter m24-t f-22 f-w-600">{data.massagerContent.phone}</p></a>
                         </div>
                       </div>
                   </div>

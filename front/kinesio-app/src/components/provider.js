@@ -11,7 +11,7 @@ class Provider extends Component {
 
     // <CallBack view="dark" />
     return(
-        <Main />
+        <Main statusPopUp={this.props.statusPopUp}/>
     )
 
 
