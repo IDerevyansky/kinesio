@@ -1,4 +1,4 @@
-.colorSeporatorBlock{
+.contentBanner{
   background-color:#F5F3ED;
 }
 
@@ -6,7 +6,7 @@
   /* border:1px solid red; */
 
   width:auto;
-  height:100vh;
+  height:100vh ;
   /* min-height:100vh; */
   background-image: url('./img/face_main_banner.png');
   background-size: auto 100%;
@@ -83,17 +83,47 @@
     align-self: center;
     position: absolute;
     top:calc(100vh / 3);
-    left:50%;
+    left:45%;
   }
 
 
 }
 
+
 @media (max-width: 768px) {
 
-  .bodyMainContent{
-    padding:16px;
+  .bannerMainBox{
+    /* border:1px solid red; */
+
+    width:auto;
+    height:50vh;
+    /* min-height:100vh; */
+    background-image: url('./img/face_main_banner.png');
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    background-position: 10px center;
+    /* background:#F5F3ED; */
+    /* display: flex; */
+    /* flex-direction: row; */
   }
+
+  .contentBanner{
+    border:1px solid red;
+    height:100vh;
+    background-color:#F5F3ED;
+
+  }
+
+  .textBannerContainer{
+      /* border:1px solid orange; */
+      width:400px;
+      /* height:200px; */
+      align-self: center;
+      position: absolute;
+      top:calc(53vh );
+      left:32px;
+    }
 
 }
 

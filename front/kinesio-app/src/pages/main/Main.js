@@ -13,7 +13,7 @@ class Main extends Component {
 
     return(
     <>
-      <div className="colorSeporatorBlock">
+      <div className="contentBanner">
             <div className="bannerMainBox">
               <div className="textBannerContainer">
 
