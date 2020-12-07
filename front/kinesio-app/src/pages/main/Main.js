@@ -4,26 +4,29 @@ import './Main.css'
 import { dataPages } from '../pageStorage';
 // import CallBack from '../../components/callBack/callBack';
 
-const dataMain = dataPages.pages.main.section;
+// const dataMain = dataPages.pages.main.section;
+const url = "https://iderevyansky.github.io/kinesio/back/pageStorage.json";
 
 class Main extends Component {
   constructor(props){
     super(props);
     this.state = {
-      data:{}
+      dataMainBanner:''
     }
   }
 
-  componentDidMount(){
+  componentDidMount = async () => {
 
-
-
+    // const respons = fetch(url, {method:"GET"}).then(res => res.json()).then(data => data.pages);
+    const respons = await fetch(url).then(pages => pages.json());
+    this.setState({dataMainBanner:respons.pages.main.section.MainBanner});
+    console.log(respons.pages.main.section.MainBanner);
   }
 
 
   render(){
 
-    console.log();
+
 
     return(
     <>
@@ -33,8 +36,8 @@ class Main extends Component {
 
                 <div className="textMainBanner">
 
-                  <h1>{dataMain.MainBanner.h1}</h1>
-                  <p>{dataMain.MainBanner.p}</p>
+                  <h1>{this.state.dataMainBanner.h1}</h1>
+                  <p>{this.state.dataMainBanner.p}</p>
 
                 </div>
 
