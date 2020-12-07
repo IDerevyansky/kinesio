@@ -4,12 +4,26 @@ import './Main.css'
 import { dataPages } from '../pageStorage';
 // import CallBack from '../../components/callBack/callBack';
 
+const dataMain = dataPages.pages.main.section;
+
 class Main extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      data:{}
+    }
+  }
+
+  componentDidMount(){
+
+
+
+  }
+
 
   render(){
 
-    const dataMain = dataPages.pages.main;
-
+    console.log();
 
     return(
     <>
@@ -19,8 +33,8 @@ class Main extends Component {
 
                 <div className="textMainBanner">
 
-                  <h1>{dataMain.section.MainBanner.h1}</h1>
-                  <p>{dataMain.section.MainBanner.p}</p>
+                  <h1>{dataMain.MainBanner.h1}</h1>
+                  <p>{dataMain.MainBanner.p}</p>
 
                 </div>
 
