@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './Main.css'
 
-import { dataPages } from '../pageStorage';
 // import CallBack from '../../components/callBack/callBack';
 
 // const dataMain = dataPages.pages.main.section;
@@ -20,7 +19,7 @@ class Main extends Component {
     // const respons = fetch(url, {method:"GET"}).then(res => res.json()).then(data => data.pages);
     const respons = await fetch(url).then(pages => pages.json());
     this.setState({dataMainBanner:respons.pages.main.section.MainBanner});
-    console.log(respons.pages.main.section.MainBanner);
+    // console.log(respons.pages.main.section.MainBanner);
   }
 
 
