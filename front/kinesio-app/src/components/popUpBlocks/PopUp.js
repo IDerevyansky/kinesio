@@ -4,7 +4,7 @@ import CallBack from '../callBack/callBack';
 
 import { data } from '../storage';
 
-
+const url = "https://iderevyansky.github.io/kinesio/back/storage.json";
 
 class PopUp extends Component {
   constructor(props){
@@ -14,9 +14,12 @@ class PopUp extends Component {
     }
   }
 
+  componentDidMount = async () => {
+    const response = await fetch();
+  }
+
 
   render(){
-
 
     var scrollTop = window.pageYOffset || document.documentElement.scrollTop; //Узнаем величину прокрутки страницы
     var heightWindow = window.innerHeight / 100 * 20; //Получаем 20% от высоты видемой области страницы
@@ -34,7 +37,7 @@ class PopUp extends Component {
                       <div className="popUpContent">
                         <p className="textCenter m24-b f-22 f-w-600">Записаться</p>
 
-                          <CallBack view="dark"/>
+                          <CallBack data={this.state.data} view="dark"/>
 
                         <div>
                         <p className="textCenter m24-t f-16">или</p>
