@@ -1,34 +1,45 @@
 import React, {Component} from 'react';
 import './menu.css';
-import { data } from '../storage';
+
+const url = "https://iderevyansky.github.io/kinesio/back/storage.json";
 
 class Menu extends Component {
-constructor(props){
-  super(props);
-  this.isOpen = this.isOpen.bind(this);
-  this.state = {
-    listItem:[],
-    sizeMax:768,
-    sizeMin:450,
-    visibleMobMenu:false,
-    visibleItemMain:true,
-    isOpen:false,
-    iconMenu:'iconMenuOpen',
-    menuSticky:'absolute',
-    visibleMenuSticky:false
+  constructor(props){
+    super(props);
+    this.isOpen = this.isOpen.bind(this);
+    this.state = {
+      listItem:[],
+      email:"",
+      telegram:"",
+      viber:"",
+      whatsApp:"",
+      sizeMax:768,
+      sizeMin:450,
+      visibleMobMenu:false,
+      visibleItemMain:true,
+      isOpen:false,
+      iconMenu:'iconMenuOpen',
+      menuSticky:'absolute',
+      visibleMenuSticky:false
+    }
+
   }
 
-}
-
-componentDidMount(){
+componentDidMount = async () => {
 
   // var storeg = dataMenuComponent;
 
   var resize, visible;
 
   //Назначаем список пунктов меню в состояние
-
-  this.setState({listItem:data.listItem});
+  const respons = await fetch(url).then(data => data.json());
+  this.setState({
+    listItem:respons.listItem,
+    email:respons.massagerContent.email,
+    telegram:respons.massagerContent.telegram,
+    viber:respons.massagerContent.viber,
+    whatsApp:respons.massagerContent.whatsApp
+  });
 
   //Контролируем сварачивание основного меню и включение "гамбургера" или включение меню внизу под палец.
   visible = (e, w) => {
@@ -175,12 +186,12 @@ render(){
 var socialIconAll = (
 <>
   <div className="stickyMessageBox">
-    <a href={"https://wa.me/"+data.massagerContent.whatsApp.id+"?text="+data.massagerContent.whatsApp.text} rel="noopener noreferrer" target="_blank"><div className="stickyWhatsapp"></div></a>
-    <a href={"tg://resolve?domain="+data.massagerContent.telegram.id} rel="noopener noreferrer" target="_blank"><div className="stickyTelegram m24-l"></div></a>
-    <a href={"viber://chat?number="+data.massagerContent.viber.id} rel="noopener noreferrer" target="_blank"><div className="stickyViber m24-l"></div></a>
+    <a href={"https://wa.me/"+this.state.whatsApp.id+"?text="+this.state.whatsApp.text} rel="noopener noreferrer" target="_blank"><div className="stickyWhatsapp"></div></a>
+    <a href={"tg://resolve?domain="+this.state.telegram.id} rel="noopener noreferrer" target="_blank"><div className="stickyTelegram m24-l"></div></a>
+    <a href={"viber://chat?number="+this.state.viber.id} rel="noopener noreferrer" target="_blank"><div className="stickyViber m24-l"></div></a>
   </div>
 
-  <a href={"mailto:"+data.massagerContent.email.id+"?subject="+data.massagerContent.email.title+"&body="+data.massagerContent.email.text} rel="noopener noreferrer" target="_blank"><div className="btnSticky"></div></a>
+  <a href={"mailto:"+this.state.email.id+"?subject="+this.state.email.title+"&body="+this.state.email.text} rel="noopener noreferrer" target="_blank"><div className="btnSticky"></div></a>
 </>
 );
 

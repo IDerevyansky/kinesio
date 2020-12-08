@@ -1,14 +1,39 @@
 import React, { Component } from 'react';
 import './callBack.css';
 
-import { data } from '../storage';
-
+const url = "https://iderevyansky.github.io/kinesio/back/storage.json";
 
 class CallBack extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      email:"",
+      telegram:"",
+      viber:"",
+      whatsApp:""
+    }
 
+  }
+
+
+componentDidMount = async () => {
+
+    const respons = await fetch(url).then(data => data.json());
+    this.setState({
+      email:respons.massagerContent.email,
+      telegram:respons.massagerContent.telegram,
+      viber:respons.massagerContent.viber,
+      whatsApp:respons.massagerContent.whatsApp
+    });
+    // console.log(this.state);
+  
+}
+
+  
   render(){
-    var view = this.props.view;
 
+    var view = this.props.view;
+    
     return(
       <div className="callBackConteiner">
 
@@ -16,9 +41,9 @@ class CallBack extends Component {
         <p className={"styleText-"+view}>Записаться в один клик</p>
 
           <div className="massagerIcon">
-            <a href={"https://wa.me/"+data.massagerContent.whatsApp.id+"?text="+data.massagerContent.whatsApp.text} rel="noopener noreferrer" target="_blank"><div className={"whatsapp-"+view}></div></a>
-            <a href={"tg://resolve?domain="+data.massagerContent.telegram.id} rel="noopener noreferrer" target="_blank"><div className={"telegram-"+view+" m24-l"}></div></a>
-            <a href={"viber://chat?number="+data.massagerContent.viber.id} rel="noopener noreferrer" target="_blank"><div className={"viber-"+view+" m24-l"}></div></a>
+            <a href={"https://wa.me/"+this.state.whatsApp.id+"?text="+this.state.whatsApp.text} rel="noopener noreferrer" target="_blank"><div className={"whatsapp-"+view}></div></a>
+            <a href={"tg://resolve?domain="+this.state.telegram.id} rel="noopener noreferrer" target="_blank"><div className={"telegram-"+view+" m24-l"}></div></a>
+            <a href={"viber://chat?number="+this.state.viber.id} rel="noopener noreferrer" target="_blank"><div className={"viber-"+view+" m24-l"}></div></a>
           </div>
 
         </div>
@@ -28,7 +53,7 @@ class CallBack extends Component {
         <div className="rightSide">
         <p className={"styleText-"+view}>Запись через Email</p>
           <div className="">
-            <a href={"mailto:"+data.massagerContent.email.id+"?subject="+data.massagerContent.email.title+"&body="+data.massagerContent.email.text} rel="noopener noreferrer" target="_blank"><div className={"btnSingUp-"+view}></div></a>
+            <a href={"mailto:"+this.state.email.id+"?subject="+this.state.email.title+"&body="+this.state.email.text} rel="noopener noreferrer" target="_blank"><div className={"btnSingUp-"+view}></div></a>
           </div>
         </div>
 
