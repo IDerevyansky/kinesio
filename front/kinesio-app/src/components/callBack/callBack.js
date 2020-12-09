@@ -25,7 +25,7 @@ componentDidMount = async () => {
       viber:respons.massagerContent.viber,
       whatsApp:respons.massagerContent.whatsApp
     });
-    // console.log(this.state);
+   
   
 }
 
