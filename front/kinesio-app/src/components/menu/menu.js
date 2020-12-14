@@ -1,18 +1,12 @@
 import React, {Component} from 'react';
 import './menu.css';
 
-const url = "https://iderevyansky.github.io/kinesio/back/storage.json";
 
 class Menu extends Component {
   constructor(props){
     super(props);
     this.isOpen = this.isOpen.bind(this);
     this.state = {
-      listItem:[],
-      email:"",
-      telegram:"",
-      viber:"",
-      whatsApp:"",
       sizeMax:768,
       sizeMin:450,
       visibleMobMenu:false,
@@ -30,16 +24,6 @@ componentDidMount = async () => {
   // var storeg = dataMenuComponent;
 
   var resize, visible;
-
-  //Назначаем список пунктов меню в состояние
-  const respons = await fetch(url).then(data => data.json());
-  this.setState({
-    listItem:respons.listItem,
-    email:respons.massagerContent.email,
-    telegram:respons.massagerContent.telegram,
-    viber:respons.massagerContent.viber,
-    whatsApp:respons.massagerContent.whatsApp
-  });
 
   //Контролируем сварачивание основного меню и включение "гамбургера" или включение меню внизу под палец.
   visible = (e, w) => {
@@ -149,7 +133,7 @@ render(){
 
   var scrollTop = window.pageYOffset || document.documentElement.scrollTop; //Узнаем величину прокрутки страницы
 
-  var item = this.state.listItem.map(
+  var item = this.props.listItem.map(
     (item, i) =>{
       return  <a key={i} href={item.url} rel="noopener noreferrer"><li key={i} >{item.name}</li></a>
     }
@@ -186,12 +170,12 @@ render(){
 var socialIconAll = (
 <>
   <div className="stickyMessageBox">
-    <a href={"https://wa.me/"+this.state.whatsApp.id+"?text="+this.state.whatsApp.text} rel="noopener noreferrer" target="_blank"><div className="stickyWhatsapp"></div></a>
-    <a href={"tg://resolve?domain="+this.state.telegram.id} rel="noopener noreferrer" target="_blank"><div className="stickyTelegram m24-l"></div></a>
-    <a href={"viber://chat?number="+this.state.viber.id} rel="noopener noreferrer" target="_blank"><div className="stickyViber m24-l"></div></a>
+    <a href={"https://wa.me/"+this.props.whatsApp.id+"?text="+this.props.whatsApp.text} rel="noopener noreferrer" target="_blank"><div className="stickyWhatsapp"></div></a>
+    <a href={"tg://resolve?domain="+this.props.telegram.id} rel="noopener noreferrer" target="_blank"><div className="stickyTelegram m24-l"></div></a>
+    <a href={"viber://chat?number="+this.props.viber.id} rel="noopener noreferrer" target="_blank"><div className="stickyViber m24-l"></div></a>
   </div>
 
-  <a href={"mailto:"+this.state.email.id+"?subject="+this.state.email.title+"&body="+this.state.email.text} rel="noopener noreferrer" target="_blank"><div className="btnSticky"></div></a>
+  <a href={"mailto:"+this.props.email.id+"?subject="+this.props.email.title+"&body="+this.props.email.text} rel="noopener noreferrer" target="_blank"><div className="btnSticky"></div></a>
 </>
 );
 

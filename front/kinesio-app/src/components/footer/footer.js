@@ -2,38 +2,12 @@ import React, {Component} from 'react';
 import './footer.css';
 import CallBack from '../callBack/callBack';
 
-
-const url = "https://iderevyansky.github.io/kinesio/back/storage.json";
-
 class Footer extends Component {
-  constructor(props){
-    super(props);
-    this.state = {
-      listItem:[],
-      facebook:"",
-      instagram:"",
-      vk:""
-    }
-  }
-
-componentDidMount = async () => {
-  const respons = await fetch(url).then(data => data.json());
-  
-  this.setState({
-    listItem:respons.listItem,
-    facebook:respons.socialAccount.facebook.linkAccount,
-    instagram:respons.socialAccount.instagram.linkAccount,
-    vk:respons.socialAccount.vk.linkAccount
-  });
-
-}
-
-
-
+ 
 
 render(){
 
-  var item = this.state.listItem.map(
+  var item = this.props.listItem.map(
     (item, i) =>{
       return  <a key={i} href={item.url} rel="noopener noreferrer"><li key={i} >{item.name}</li></a>
     }
@@ -62,9 +36,9 @@ render(){
 
         <p className="socialContainerText f-16">Я в соцсетях</p>
         <div className="socialIcon">
-          <a href={this.state.facebook} rel="noopener noreferrer" target="_blank"><div className="faceBookIcon"></div></a>
-          <a href={this.state.instagram} rel="noopener noreferrer" target="_blank"><div className="instagramIcon m24-l"></div></a>
-          <a href={this.state.vk} rel="noopener noreferrer" target="_blank"><div className="vkontacteIcon m24-l"></div></a>
+          <a href={this.props.facebook} rel="noopener noreferrer" target="_blank"><div className="faceBookIcon"></div></a>
+          <a href={this.props.instagram} rel="noopener noreferrer" target="_blank"><div className="instagramIcon m24-l"></div></a>
+          <a href={this.props.vk} rel="noopener noreferrer" target="_blank"><div className="vkontacteIcon m24-l"></div></a>
         </div>
 
       </div>
