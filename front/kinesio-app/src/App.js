@@ -30,6 +30,7 @@ class App extends Component {
     const respons = await fetch(url).then(data => data.json());
     this.setState({
       listItem:respons.listItem,
+      phone:respons.massagerContent.phone,
       email:respons.massagerContent.email,   
       telegram:respons.massagerContent.telegram,
       viber:respons.massagerContent.viber,
@@ -41,17 +42,16 @@ class App extends Component {
     // console.log(respons);
   }
 
+
+
+
+
   //Функция управления статусом всплывающего окна
   statusPopUp = (q) => {
     this.setState({statusPopUp:q});
     q?document.body.style.overflowY="hidden":document.body.style.overflowY="auto"; //Добовляем или убираем скрол
   };
 
-// <div onClick={()=>{this.statusPopUp(true)}} className="BGtest"></div> Фон
-
-// Меню вернуть при доработле callBack блока
-// <Menu statusPopUp={this.statusPopUp}/>
-// {this.state.statusPopUp?<PopUp statusPopUp={this.statusPopUp}  />:''}
 
 
 
@@ -71,13 +71,21 @@ class App extends Component {
               whatsApp = {this.state.whatsApp}
             />
 
-            {this.state.statusPopUp?<PopUp statusPopUp={this.statusPopUp}  />:''}
+            {this.state.statusPopUp?
+            <PopUp 
+            {...this.state}
+            statusPopUp={this.statusPopUp} />
+            :''}
 
             <div  className='App-body'>
               <Provider statusPopUp={this.statusPopUp} />
             </div>
 
             <Footer 
+            email = {this.state.email}
+            telegram = {this.state.telegram}
+            viber = {this.state.viber}
+            whatsApp = {this.state.whatsApp}
             listItem = {this.state.listItem}
             facebook = {this.state.facebook}
             instagram = {this.state.instagram}

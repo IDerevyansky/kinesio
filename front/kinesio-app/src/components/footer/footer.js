@@ -28,7 +28,9 @@ render(){
 
       <div className="containerButtonFooter">
 
-      <CallBack view="gray"/>
+      <CallBack 
+      {...this.props}
+      view="gray"/>
 
       </div>
 
