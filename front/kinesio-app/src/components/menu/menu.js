@@ -211,6 +211,7 @@ var btn = (
   return(
 
     <>
+   
 
       {this.state.visibleMenuSticky?stickyBox:''}
 
@@ -218,8 +219,8 @@ var btn = (
         <div className="menuContent">
 
 
-
-              <div className="logoBox"></div>
+            <div className="logoBox"></div>
+              
 
 
 
@@ -240,6 +241,7 @@ var btn = (
 
         {this.state.sizeMin >= document.documentElement.clientWidth?downMobileMenu:''}
 
+   
     </>
 
   )
