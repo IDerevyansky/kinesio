@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+
 import './App.css';
 import PopUp from './components/popUpBlocks/PopUp';
 import Menu from './components/menu/menu';
@@ -61,6 +63,7 @@ class App extends Component {
 
 
       <>
+      <Router>
 
             <Menu 
               statusPopUp = {this.statusPopUp}
@@ -92,6 +95,7 @@ class App extends Component {
             vk = {this.state.vk}
             />
 
+      </Router>
       </>
 
 

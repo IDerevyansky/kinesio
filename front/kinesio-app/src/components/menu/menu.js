@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { Link } from 'react-router-dom';
 import './menu.css';
 
 
@@ -135,7 +136,7 @@ render(){
 
   var item = this.props.listItem.map(
     (item, i) =>{
-      return  <a key={i} href={item.url} rel="noopener noreferrer"><li key={i} >{item.name}</li></a>
+      return  <Link key={i} to={item.url} rel="noopener noreferrer"><li key={i} >{item.name}</li></Link>
     }
   );
 
@@ -191,7 +192,7 @@ var btn = (
     <div className="menuContainer menuContainerAnimation" style={{position:this.state.menuSticky, zIndex:'1'}}>
     <div className="menuContent">
 
-        <div className="logoBox"></div>
+    <Link to="/"> <div className="logoBox"></div></Link>
 
         <div className="stickyBox">
 
@@ -211,7 +212,7 @@ var btn = (
   return(
 
     <>
-   
+      
 
       {this.state.visibleMenuSticky?stickyBox:''}
 
@@ -219,7 +220,7 @@ var btn = (
         <div className="menuContent">
 
 
-            <div className="logoBox"></div>
+        <Link className="logoBox" to="/"></Link>
               
 
 
@@ -241,7 +242,7 @@ var btn = (
 
         {this.state.sizeMin >= document.documentElement.clientWidth?downMobileMenu:''}
 
-   
+      
     </>
 
   )

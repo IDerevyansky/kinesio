@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import { Switch, Route} from 'react-router-dom';
 
 import Main from '../pages/main/Main';
 import WhatIs from '../pages/whatIsKineziology/WhatIs';
@@ -27,8 +27,7 @@ class Provider extends Component {
     // <NewsView text='NewsView'/>
 
     return(
-       <Router>
-          <div>
+       
             <Switch>
                 <Route exact path='/'>
                     <Main statusPopUp={this.props.statusPopUp}/>
@@ -52,8 +51,6 @@ class Provider extends Component {
                   <Page404/>
                 </Route>
             </Switch>
-          </div>
-       </Router>
     )
 
 

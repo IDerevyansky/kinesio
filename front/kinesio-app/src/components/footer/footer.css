@@ -124,11 +124,17 @@ padding-top:24px;
   .itemBoxFooter{
 
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     height: 40px;
     margin-top: 24px;
 
   }
+
+
+ .itemBoxFooter li{
+   margin: 10px;
+  }
+
 
   .disclamer{
     border-top:1px solid #626974;

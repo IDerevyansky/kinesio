@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './footer.css';
 import CallBack from '../callBack/callBack';
+import { Link } from 'react-router-dom';
 
 class Footer extends Component {
  
@@ -9,7 +10,7 @@ render(){
 
   var item = this.props.listItem.map(
     (item, i) =>{
-      return  <a key={i} href={item.url} rel="noopener noreferrer"><li key={i} >{item.name}</li></a>
+      return  <li key={i}> <Link key={i} to={item.url} rel="noopener noreferrer">{item.name}</Link> </li>
     }
   );
 
@@ -20,7 +21,7 @@ render(){
   <div className="contentBox">
 
     <div className="flex">
-      <div className="LogoFooterBox"></div>
+      <Link to='/'><div className="LogoFooterBox"></div></Link>
       <div className="itemBoxFooter f-w-600 f-16">{item}</div>
     </div>
 
