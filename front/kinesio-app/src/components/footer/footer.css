@@ -150,7 +150,24 @@ padding-top:24px;
 }
 
 
-@media (max-width: 540px) {
+
+
+
+
+@media (max-width: 1440px) {
+
+}
+
+@media (max-width: 1024px) {
+
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 425px) {
+
 
   .flex{
     flex-direction:;
@@ -176,7 +193,7 @@ padding-top:24px;
 
   .contentBox{
     /* border:1px solid orange; */
-    max-width:450px !important;
+    max-width:425px !important;
     margin:auto;
     padding:16px;
   }
@@ -200,5 +217,13 @@ padding-top:24px;
       text-align: left;
   }
 
+
+}
+
+@media (max-width: 375px) {
+
+}
+
+@media (max-width: 320px) {
 
 }

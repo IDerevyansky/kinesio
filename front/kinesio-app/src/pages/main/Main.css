@@ -62,33 +62,22 @@
 }
 
 
-@media (max-width: 1330px) {
 
-  .bodyMainContent{
-    padding:16px;
-  }
 
-  .textMainBanner p{
-    font-size:14px;
-  }
 
-  .textMainBanner h1{
-    font-size:24px;
-  }
 
-  .textBannerContainer{
-    /* border:1px solid orange; */
-    width:400px;
-    /* height:200px; */
-    align-self: center;
-    position: absolute;
-    top:calc(100vh / 3);
-    left:45%;
-  }
+
+
+
+
+@media (max-width: 1440px) {
 
 
 }
 
+@media (max-width: 1024px) {
+
+}
 
 @media (max-width: 768px) {
 
@@ -116,22 +105,65 @@
   }
 
   .textBannerContainer{
-      /* border:1px solid orange; */
-      width:400px;
-      /* height:200px; */
-      align-self: center;
-      position: absolute;
-      top:calc(53vh );
-      left:32px;
-    }
+    /* border:1px solid orange; */
+    width:auto;
+    /* height:200px; */
+    align-self: center;
+    position: absolute;
+    right: 24px;
+    top:calc(53vh );
+    left:24px;
+  }
 
 }
 
+@media (max-width: 425px) {
 
-@media (max-width: 540px) {
+  .bannerMainBox{
+    /* border:1px solid red; */
+
+    width:auto;
+    height:50vh;
+    /* min-height:100vh; */
+    background-image: url('./img/face_main_banner.png');
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    background-position: 20% center;
+    /* background:#F5F3ED; */
+    /* display: flex; */
+    /* flex-direction: row; */
+  }
+
+  .contentBanner{
+    border:1px solid red;
+    height:100%;
+    background-color:#F5F3ED;
+
+  }
 
   .bodyMainContent{
 
   }
+
+  .textBannerContainer{
+    /* border:1px solid orange; */
+    width:auto;
+    /* height:200px; */
+    align-self: center;
+    position: absolute;
+    right: 24px;
+    top:calc(53vh );
+    left:24px;
+  }
+
+
+}
+
+@media (max-width: 375px) {
+
+}
+
+@media (max-width: 320px) {
 
 }

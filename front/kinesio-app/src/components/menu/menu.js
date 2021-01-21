@@ -9,7 +9,7 @@ class Menu extends Component {
     this.isOpen = this.isOpen.bind(this);
     this.state = {
       sizeMax:768,
-      sizeMin:450,
+      sizeMin:425,
       visibleMobMenu:false,
       visibleItemMain:true,
       isOpen:false,

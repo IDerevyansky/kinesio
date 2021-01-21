@@ -31,6 +31,7 @@ class Main extends Component {
     <>
       <div className="contentBanner">
             <div className="bannerMainBox">
+
               <div className="textBannerContainer">
 
                 <div className="textMainBanner">
@@ -48,6 +49,7 @@ class Main extends Component {
 
               </div>
               </div>
+
         </div>
 
         <div className="bodyMainContent" >qwewqeqweqwewqwq</div>
