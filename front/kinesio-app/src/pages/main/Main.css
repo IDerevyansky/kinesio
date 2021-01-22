@@ -1,31 +1,37 @@
 .contentBanner{
+  display: flex;
+  flex-direction: row;
   background-color:#F5F3ED;
+  min-height:100vh ;
+  width:100vw;
 }
 
 .bannerMainBox{
-  /* border:1px solid red; */
-
-  width:auto;
-  height:100vh ;
+  border:1px solid red;
+  width:50vw;
+  height:100vh;
   /* min-height:100vh; */
+ 
+  /* background:#F5F3ED; */
+  /* display: flex; */
+  /* flex-direction: row; */
+
   background-image: url('./img/face_main_banner.png');
   background-size: auto 100%;
   background-repeat: no-repeat;
   /* background-attachment: fixed; */
-  background-position: center center;
-  /* background:#F5F3ED; */
-  /* display: flex; */
-  /* flex-direction: row; */
+  background-position: 25% center;
+
 }
 
 .textBannerContainer{
-  /* border:1px solid orange; */
-  width:517px;
+  border:1px solid orange;
+  width:450px;
   /* height:200px; */
   align-self: center;
-  position: absolute;
-  top:calc(100vh / 3);
-  left:50%;
+  /* position: absolute; */
+  /* top:calc(100vh / 3); */
+  /* left:50%; */
 }
 
 .textMainBanner p{
@@ -50,7 +56,7 @@
 
 .callBackBanner{
   /* border:1px solid red; */
-  float:left;
+  /* float:left; */
 }
 
 .btnSingUpMainBanner{
@@ -72,98 +78,102 @@
 
 @media (max-width: 1440px) {
 
+  .bannerMainBox{
+    background-image: url('./img/face_main_banner.png');
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: 30% center;
+  
+  }
 
 }
 
 @media (max-width: 1024px) {
 
+  .contentBanner{
+    flex-direction: column;
+  }
+
+  .textBannerContainer{
+    align-self: flex-start;
+    width:auto;
+    margin:16px;
+  }
+
+  .bannerMainBox{
+    width:100vw;
+  }
+
 }
 
 @media (max-width: 768px) {
 
-  .bannerMainBox{
-    /* border:1px solid red; */
-
-    width:auto;
-    height:50vh;
-    /* min-height:100vh; */
-    background-image: url('./img/face_main_banner.png');
-    background-size: auto 100%;
-    background-repeat: no-repeat;
-    /* background-attachment: fixed; */
-    background-position: 10px center;
-    /* background:#F5F3ED; */
-    /* display: flex; */
-    /* flex-direction: row; */
-  }
-
   .contentBanner{
-    border:1px solid red;
-    height:100vh;
-    background-color:#F5F3ED;
-
+    flex-direction: column;
   }
 
   .textBannerContainer{
-    /* border:1px solid orange; */
+    align-self: flex-start;
     width:auto;
-    /* height:200px; */
-    align-self: center;
-    position: absolute;
-    right: 24px;
-    top:calc(53vh );
-    left:24px;
+    margin:16px;
+  }
+
+  .bannerMainBox{
+    width:100vw;
   }
 
 }
 
 @media (max-width: 425px) {
 
-  .bannerMainBox{
-    /* border:1px solid red; */
-
-    width:auto;
-    height:50vh;
-    /* min-height:100vh; */
-    background-image: url('./img/face_main_banner.png');
-    background-size: auto 100%;
-    background-repeat: no-repeat;
-    /* background-attachment: fixed; */
-    background-position: 20% center;
-    /* background:#F5F3ED; */
-    /* display: flex; */
-    /* flex-direction: row; */
-  }
-
   .contentBanner{
-    border:1px solid red;
-    height:100%;
-    background-color:#F5F3ED;
-
-  }
-
-  .bodyMainContent{
-
+    flex-direction: column;
   }
 
   .textBannerContainer{
-    /* border:1px solid orange; */
+    align-self: flex-start;
     width:auto;
-    /* height:200px; */
-    align-self: center;
-    position: absolute;
-    right: 24px;
-    top:calc(53vh );
-    left:24px;
+    margin:16px;
   }
 
+  .bannerMainBox{
+    width:100vw;
+  }
 
 }
 
 @media (max-width: 375px) {
 
+  .contentBanner{
+    flex-direction: column;
+  }
+
+  .textBannerContainer{
+    align-self: flex-start;
+    width:auto;
+    margin:16px;
+  }
+
+  .bannerMainBox{
+    width:100vw;
+  }
+
 }
 
 @media (max-width: 320px) {
+
+  .contentBanner{
+    flex-direction: column;
+  }
+
+  .textBannerContainer{
+    align-self: flex-start;
+    width:auto;
+    margin:16px;
+  }
+
+  .bannerMainBox{
+    width:100vw;
+  }
 
 }

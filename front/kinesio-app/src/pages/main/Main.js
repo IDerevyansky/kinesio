@@ -29,31 +29,29 @@ class Main extends Component {
 
     return(
     <>
-      <div className="contentBanner">
-            <div className="bannerMainBox">
+          <div className="contentBanner">
 
-              <div className="textBannerContainer">
+                <div className="bannerMainBox"></div>
 
-                <div className="textMainBanner">
+                    <div className="textBannerContainer">
 
-                  <h1>{this.state.dataMainBanner.h1}</h1>
-                  <p>{this.state.dataMainBanner.p}</p>
+                            <div className="textMainBanner">
 
-                </div>
+                              <h1>{this.state.dataMainBanner.h1}</h1>
+                              <p>{this.state.dataMainBanner.p}</p>
 
-                    <div className="callBackBanner">
+                            </div>
 
-                      <div onClick={()=>{this.props.statusPopUp(true)}} className="btnSingUpMainBanner"></div>
+                            <div onClick={()=>{this.props.statusPopUp(true)}} className="btnSingUpMainBanner"></div>
 
                     </div>
 
-              </div>
-              </div>
+                
 
-        </div>
+          </div>
 
         <div className="bodyMainContent" >qwewqeqweqwewqwq</div>
-    </>
+  </>
     )
   }
 }
