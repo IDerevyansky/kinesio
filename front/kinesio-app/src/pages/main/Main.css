@@ -7,7 +7,7 @@
 }
 
 .bannerMainBox{
-  border:1px solid red;
+  /* border:1px solid red; */
   width:50vw;
   height:100vh;
   /* min-height:100vh; */
@@ -25,7 +25,7 @@
 }
 
 .textBannerContainer{
-  border:1px solid orange;
+  /* border:1px solid orange; */
   width:450px;
   /* height:200px; */
   align-self: center;
@@ -44,9 +44,14 @@
 }
 
 .bodyMainContent{
+  /* border:1px solid black; */
+  display:flex;
+  /* justify-content: center; */
+  /* align-items: center; */
+
   max-width: 1330px;
-  height:1000px;
-  background:green;
+  /* height:1000px; */
+  background:#F7F5EF;
   margin:auto;
   padding-left:0px;
   padding-right:0px;
@@ -67,11 +72,39 @@
   cursor:pointer;
 }
 
+.section-one{
+  /* border:1px solid red; */
 
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width:auto;
+  min-height:100vh;
+  background-color: #F7F5EF;
+}
 
+.section-one__content{
+  /* border:1px solid green; */
+  
+  flex-direction: row;
+  align-items: flex-start;
+  display:flex;
+}
 
+.section-one__title h2{
+  /* border:1px solid red; */
 
+  font-size: 32px;
+  line-height: 38px;
+  text-align: right;
+  width:340px;
+  margin-right: 90px;
+}
 
+.section-one__body-text{
+  /* border:1px solid red; */
+  /* width:900px; */
+}
 
 
 
@@ -102,6 +135,38 @@
 
   .bannerMainBox{
     width:100vw;
+  }
+
+  .section-one{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:auto;
+    min-height:100vh;
+    background-color: #F7F5EF;
+  }
+
+  .section-one__content{
+    flex-direction: column;
+    align-items: flex-start;
+    display:flex;
+  }
+
+  .section-one__title h2{
+   text-align: left;
+    width:auto;
+    margin-right: 0px;
+    margin-bottom: 32px;
+  }
+
+  .bodyMainContent{
+    display:flex;
+    background:#F7F5EF;
+    margin:auto;
+    padding-left:16px;
+    padding-right:16px;
+    padding-bottom:16px;
+    padding-top:16px;
   }
 
 }
@@ -140,6 +205,16 @@
     width:100vw;
   }
 
+  .bodyMainContent{
+    display:flex;
+    background:#F7F5EF;
+    margin:auto;
+    padding-left:16px;
+    padding-right:16px;
+    padding-bottom:40px;
+    padding-top:40px;
+  }
+
 }
 
 @media (max-width: 375px) {
@@ -156,6 +231,16 @@
 
   .bannerMainBox{
     width:100vw;
+  }
+
+  .bodyMainContent{
+    display:flex;
+    background:#F7F5EF;
+    margin:auto;
+    padding-left:16px;
+    padding-right:16px;
+    padding-bottom:40px;
+    padding-top:40px;
   }
 
 }
@@ -176,4 +261,19 @@
     width:100vw;
   }
 
+  .bodyMainContent{
+    display:flex;
+    background:#F7F5EF;
+    margin:auto;
+    padding-left:16px;
+    padding-right:16px;
+    padding-bottom:40px;
+    padding-top:40px;
+  }
+
 }
+
+
+
+
+

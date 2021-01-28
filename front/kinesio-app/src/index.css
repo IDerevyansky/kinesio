@@ -28,6 +28,13 @@ a{
   text-decoration: none;
 }
 
+.more{
+  margin-top:18px;
+  color: #A4A6A8;
+  text-decoration-line: underline;
+  cursor: pointer;
+}
+
 .itemBoxFooter a {
   color: #707885;
   text-decoration: none;
