@@ -102,8 +102,7 @@
 }
 
 .section-one__body-text{
-  /* border:1px solid red; */
-  /* width:900px; */
+  white-space: pre-wrap;
 }
 
 
@@ -116,7 +115,16 @@
     background-size: auto 100%;
     background-repeat: no-repeat;
     background-position: 30% center;
-  
+  }
+
+  .bodyMainContent{
+    display:flex;
+    background:#F7F5EF;
+    margin:auto;
+    padding-left:32px;
+    padding-right:32px;
+    padding-bottom:16px;
+    padding-top:16px;
   }
 
 }
@@ -130,7 +138,7 @@
   .textBannerContainer{
     align-self: flex-start;
     width:auto;
-    margin:16px;
+    margin:32px;
   }
 
   .bannerMainBox{
@@ -163,10 +171,10 @@
     display:flex;
     background:#F7F5EF;
     margin:auto;
-    padding-left:16px;
-    padding-right:16px;
-    padding-bottom:16px;
-    padding-top:16px;
+    padding-left:32px;
+    padding-right:32px;
+    padding-bottom:32px;
+    padding-top:32px;
   }
 
 }
@@ -180,7 +188,7 @@
   .textBannerContainer{
     align-self: flex-start;
     width:auto;
-    margin:16px;
+    margin:32px;
   }
 
   .bannerMainBox{
@@ -198,7 +206,7 @@
   .textBannerContainer{
     align-self: flex-start;
     width:auto;
-    margin:16px;
+    margin:32px;
   }
 
   .bannerMainBox{
@@ -209,8 +217,8 @@
     display:flex;
     background:#F7F5EF;
     margin:auto;
-    padding-left:16px;
-    padding-right:16px;
+    padding-left:32px;
+    padding-right:32px;
     padding-bottom:40px;
     padding-top:40px;
   }
@@ -226,7 +234,7 @@
   .textBannerContainer{
     align-self: flex-start;
     width:auto;
-    margin:16px;
+    margin:32px;
   }
 
   .bannerMainBox{
@@ -237,8 +245,8 @@
     display:flex;
     background:#F7F5EF;
     margin:auto;
-    padding-left:16px;
-    padding-right:16px;
+    padding-left:32px;
+    padding-right:32px;
     padding-bottom:40px;
     padding-top:40px;
   }

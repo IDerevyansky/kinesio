@@ -21,7 +21,7 @@ class Main extends Component {
   componentDidMount = async () => {
 
     // const respons = fetch(url, {method:"GET"}).then(res => res.json()).then(data => data.pages);
-    const respons = await fetch(url, { headers: {'Content-Type': 'multipart/form-data'} } ).then(pages => pages.json());
+    const respons = await fetch(url).then(pages => pages.json());
     this.setState({
       dataMainBanner:respons.pages.main.section.MainBanner,
       section_one_title:respons.pages.main.section.Body.section_one.section_one_title,
