@@ -34,7 +34,7 @@ class Main extends Component {
 
   render(){
 
-    
+var text = '<b>aaa bbb&nbsp;</b><i>cccc </i><br/><u>dddddd <i>iiiiii <b>fffffff</b></i></u>';   
     return(
     <>
           <div className="contentBanner">
@@ -69,10 +69,10 @@ class Main extends Component {
                     <h2>{this.state.section_one_title}</h2> 
 
                   </div>
-                  <div className="section-one__body-text">
+                  <div className="section-one__body-text" >
 
-                    <p>{this.state.section_one_body_text}</p>
-                    
+                  <p><div dangerouslySetInnerHTML={{__html: this.state.section_one_body_text}}></div></p>
+                   
                     <Link  to={'/whatIs'} rel="noopener noreferrer" ><p className="more">{this.state.link_more_ru}</p></Link>
 
                   </div>
