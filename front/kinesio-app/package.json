@@ -38,12 +38,12 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/IDerevyansky/kinesio.git"
+    "url": "git+https://github.com/IDerevyansky/deploy.git"
   },
   "author": "IDerevyansky",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/IDerevyansky/kinesio/issues"
+    "url": "https://github.com/IDerevyansky/deploy/issues"
   },
-  "homepage": "https://github.com/IDerevyansky/kinesio#readme"
+  "homepage": "https://github.com/IDerevyansky/deploy#readme"
 }
