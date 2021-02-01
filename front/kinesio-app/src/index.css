@@ -23,6 +23,16 @@ p{
   font-weight: 500;
 }
 
+h1{
+  font-size: 40px;
+  line-height: 42px;
+}
+
+h2{
+  font-size: 32px;
+  line-height: 38px;
+}
+
 a{
   color: #525862;
   text-decoration: none;

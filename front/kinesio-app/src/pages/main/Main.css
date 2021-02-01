@@ -46,10 +46,11 @@
 .bodyMainContent{
   /* border:1px solid black; */
   display:flex;
+  flex-direction: column;
   /* justify-content: center; */
   /* align-items: center; */
-
-  max-width: 1330px;
+  margin: auto;
+  /* max-width: 1330px; */
   /* height:1000px; */
   background:#F7F5EF;
   margin:auto;
@@ -86,6 +87,7 @@
 .section-one__content{
   /* border:1px solid green; */
   
+  max-width: 1330px;
   flex-direction: row;
   align-items: flex-start;
   display:flex;
@@ -103,6 +105,8 @@
 
 .section-one__body-text{
 }
+
+
 
 
 
