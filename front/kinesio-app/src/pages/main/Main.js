@@ -59,11 +59,11 @@ class Main extends Component {
 
         <div className="bodyMainContent">
 
-          <div className="section-one">
+          <div className="section">
 
-            <div className="section-one__content">
+            <div className="section-content">
 
-                  <div className="section-one__title">
+                  <div className="section-one__title m24-b">
 
                     <h2>{this.state.section_one_title}</h2> 
 
@@ -77,6 +77,37 @@ class Main extends Component {
                   </div>
 
             </div>
+
+          </div>
+
+          <div className="section two">
+
+              <div className="section-content revers center">
+                
+                <div className="section-two__text">
+
+                  <div className="section-two__title m24-b">
+                    <h2>Немного о себе</h2>
+                  </div>
+                  
+                  <div className="section-two__body-text">
+
+                      <p>
+                        Его взгляд снова скользнул к отчужденной, но удивительно милой незнакомке. Девушка все так же стояла в дверях, наблюдая за его сотрудниками. У нее в руках не было бокала. И это нужно исправить.
+                        Мужчина опять потер подбородок. Следующей задачей было слияние с компанией «Спорта Ко» и удвоение объема продаж их спортивного оборудования. 
+                      </p>
+
+                      <Link  to={'/about'} rel="noopener noreferrer" ><p className="more">{this.state.link_more_ru}</p></Link>
+
+                  </div>  
+
+                  
+
+                </div>
+
+                <div className="section-two__img"></div>
+
+              </div>
 
           </div>
 

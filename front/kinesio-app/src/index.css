@@ -98,6 +98,7 @@ a{
 }
 
 
+
 .m24-b{
   margin-bottom:24px;
 }
@@ -107,12 +108,33 @@ a{
 }
 
 .m24-l{
-  margin-left:24px;
+  margin-left:32px;
 }
 
 .m24-r{
-  margin-right:24px;
+  margin-right:32px;
 }
+
+
+
+.m32-b{
+  margin-bottom:32px;
+}
+
+.m32-t{
+  margin-top:32px;
+}
+
+.m32-l{
+  margin-left:32px;
+}
+
+.m32-r{
+  margin-right:32px;
+}
+
+
+
 /* code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
