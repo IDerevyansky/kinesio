@@ -17,7 +17,8 @@
             }
           },
           "options":{
-            "link_more_ru":"Подробнее"
+            "link_more_ru":"Подробнее",
+            "appointment":"Записаться"
           }
         }
       }
