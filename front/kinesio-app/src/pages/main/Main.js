@@ -14,6 +14,8 @@ class Main extends Component {
       dataMainBanner:'',
       section_one_title:'',
       section_one_body_text:'',
+      section_two_title:"",
+      section_two_body_text:"",
       link_more_ru:''
     }
   }
@@ -26,6 +28,8 @@ class Main extends Component {
       dataMainBanner:respons.pages.main.section.MainBanner,
       section_one_title:respons.pages.main.section.Body.section_one.section_one_title,
       section_one_body_text:respons.pages.main.section.Body.section_one.section_one_body_text,
+      section_two_title:respons.pages.main.section.Body.section_two.section_two_title,
+      section_two_body_text:respons.pages.main.section.Body.section_two.section_two_body_text,
       link_more_ru:respons.pages.main.section.options.link_more_ru
     });
     // console.log(respons.pages.main.section.MainBanner.h1);
@@ -87,15 +91,12 @@ class Main extends Component {
                 <div className="section-two__text">
 
                   <div className="section-two__title m24-b">
-                    <h2>Немного о себе</h2>
+                    <h2>{this.state.section_two_title}</h2>
                   </div>
                   
                   <div className="section-two__body-text">
 
-                      <p>
-                        Его взгляд снова скользнул к отчужденной, но удивительно милой незнакомке. Девушка все так же стояла в дверях, наблюдая за его сотрудниками. У нее в руках не было бокала. И это нужно исправить.
-                        Мужчина опять потер подбородок. Следующей задачей было слияние с компанией «Спорта Ко» и удвоение объема продаж их спортивного оборудования. 
-                      </p>
+                      <div dangerouslySetInnerHTML={{__html: this.state.section_two_body_text}}></div>
 
                       <Link  to={'/about'} rel="noopener noreferrer" ><p className="more">{this.state.link_more_ru}</p></Link>
 
