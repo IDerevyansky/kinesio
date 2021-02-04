@@ -89,6 +89,10 @@
   background-color: #F5F3ED;
 }
 
+.section.three{
+  background-color: #F7F5EF;
+}
+
 
 .section-content{
   /* border:1px solid green; */
@@ -100,6 +104,11 @@
   justify-content:space-between;
   
 }
+
+.section-content.three{
+  flex-direction: column;
+}
+
 
 .section-one__title h2{
   /* border:1px solid red; */
@@ -143,6 +152,19 @@
 
 .section-two__body-text{
   max-width:610px;
+}
+
+.section-three__title{
+  border:1px solid red;
+}
+
+.section-three__card{
+  border:1px solid green;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  width: 100%;
 }
 
 

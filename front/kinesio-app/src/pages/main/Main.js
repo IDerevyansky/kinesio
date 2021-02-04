@@ -2,21 +2,24 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './Main.css'
 
+import Cards from "../../components/cards/Cards";
+
 // import CallBack from '../../components/callBack/callBack';
 
-// const dataMain = dataPages.pages.main.section;
+
 const url = "https://iderevyansky.github.io/kinesio/back/pageStorage.json";
 
 class Main extends Component {
   constructor(props){
     super(props);
     this.state = {
-      dataMainBanner:'',
-      section_one_title:'',
-      section_one_body_text:'',
+      dataMainBanner:"",
+      section_one_title:"",
+      section_one_body_text:"",
       section_two_title:"",
       section_two_body_text:"",
-      link_more_ru:''
+      link_more_ru:"",
+      appointment:""
     }
   }
 
@@ -30,7 +33,8 @@ class Main extends Component {
       section_one_body_text:respons.pages.main.section.Body.section_one.section_one_body_text,
       section_two_title:respons.pages.main.section.Body.section_two.section_two_title,
       section_two_body_text:respons.pages.main.section.Body.section_two.section_two_body_text,
-      link_more_ru:respons.pages.main.section.options.link_more_ru
+      link_more_ru:respons.pages.main.section.options.link_more_ru,
+      appointment:respons.pages.main.section.options.appointment
     });
     // console.log(respons.pages.main.section.MainBanner.h1);
   }
@@ -84,6 +88,9 @@ class Main extends Component {
 
           </div>
 
+
+
+
           <div className="section two">
 
               <div className="section-content revers center">
@@ -112,7 +119,44 @@ class Main extends Component {
 
           </div>
 
-          
+
+
+          <div className="section three">
+
+                <div className="section-content three">
+
+                      <div className="section-three__title m24-b">
+                        <h2>Темы для работы</h2>
+                      </div>
+
+                      <div className="section-three__card">
+
+                        <Cards
+                        title="Руки ножницы"
+                        text_body="Он знал всех своих сотрудников – если не по имени, то хотя бы в лицо. Интересно, эта девушка была новой сотрудницей или просто случайно заглянула сюда? Как бы то ни было, он быстро разгадает ее."
+                        statusPopUp={this.props.statusPopUp}
+                        appointment={this.state.appointment} 
+                        />
+
+                        <Cards
+                        title="Ноги ножницы"
+                        text_body="Он знал всех своих сотрудников – если не по имени, то хотя бы в лицо. Интересно, эта девушка была новой сотрудницей или просто случайно заглянула сюда? "
+                        statusPopUp={this.props.statusPopUp}
+                        appointment={this.state.appointment}
+                        />
+
+                        <Cards
+                        title="Руки из не положенного места"
+                        text_body="Он знал всех своих сотрудников – если не по имени, то хотя бы в лицо.  Как бы то ни было, он быстро разгадает ее."
+                        statusPopUp={this.props.statusPopUp}
+                        appointment={this.state.appointment}
+                        />
+
+                      </div>
+
+                </div>
+
+          </div>
 
         </div>
     </>
