@@ -46,6 +46,12 @@ a{
   cursor: pointer;
 }
 
+.center-text-in-block{
+  text-align: center;
+  width: 100%;
+}
+
+
 .itemBoxFooter a {
   color: #707885;
   text-decoration: none;

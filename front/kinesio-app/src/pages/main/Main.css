@@ -90,6 +90,8 @@
 }
 
 .section.three{
+  padding-top:0px;
+  padding-bottom:0px;
   background-color: #F7F5EF;
 }
 
@@ -155,14 +157,16 @@
 }
 
 .section-three__title{
-  border:1px solid red;
+  /* border:1px solid red; */
 }
 
 .section-three__card{
-  border:1px solid green;
-  display:flex;
-  flex-direction: row;
-  justify-content: space-between;
+  /* display:flex; */
+  /* flex-direction: row; */
+  /* justify-content: space-between; */
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 20px;
 
   width: 100%;
 }
@@ -195,6 +199,14 @@
     padding-right:32px;
     padding-bottom:16px;
     padding-top:16px;
+  }
+
+  .section-three__card{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 20px;
+    
+    width: auto;
   }
 
 
@@ -272,6 +284,20 @@
     flex-direction: column-reverse;
   }
 
+  .section.three{
+    padding-top:100px;
+    padding-bottom:100px;
+    background-color: #F7F5EF;
+  }
+
+  .section-three__card{
+    display: grid;
+    grid-template-columns: auto auto ;
+    gap: 20px;
+    
+    width: auto;
+  }
+
 
 }
 
@@ -299,6 +325,28 @@
     background-repeat: no-repeat;
     background-position: 25% center;
 
+  }
+
+  .section.three{
+    padding-top:0px;
+    padding-bottom:0px;
+    background-color: #F7F5EF;
+  }
+
+  .section-three__card{
+    /* border:1px solid green; */
+    padding-left: 3px;
+    padding-right: 3px;
+    display: grid;
+    grid-auto-flow: column;
+    overflow-x:scroll;
+    overflow-y:hidden;
+    width: 98vw;
+    height: auto;
+  }
+
+  .section-three__title{
+    margin-left: 24px;
   }
   
 
@@ -345,6 +393,12 @@
     padding-right: 32px;
   }
 
+  .section.three{
+    padding-top:0px;
+    padding-bottom:0px;
+    background-color: #F7F5EF;
+  }
+
 
 }
 
@@ -379,6 +433,12 @@
     padding-right:24px;
   }
 
+  .section.three{
+    padding-top:0px;
+    padding-bottom:0px;
+    background-color: #F7F5EF;
+  }
+
 }
 
 @media (max-width: 320px) {
@@ -410,6 +470,12 @@
   .section-two__text{
     padding-left: 16px;
     padding-right: 16px;
+  }
+
+  .section.three{
+    padding-top:0px;
+    padding-bottom:0px;
+    background-color: #F7F5EF;
   }
 
 }

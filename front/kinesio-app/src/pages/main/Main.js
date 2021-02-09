@@ -129,7 +129,28 @@ class Main extends Component {
                         <h2>Темы для работы</h2>
                       </div>
 
-                      <div className="section-three__card">
+                      <div className="section-three__card ">
+
+                        <Cards
+                        title="Руки ножницы"
+                        text_body="Он знал всех своих сотрудников – если не по имени, то хотя бы в лицо. Интересно, эта девушка была новой сотрудницей или просто случайно заглянула сюда? Как бы то ни было, он быстро разгадает ее."
+                        statusPopUp={this.props.statusPopUp}
+                        appointment={this.state.appointment} 
+                        />
+
+                        <Cards
+                        title="Ноги ножницы"
+                        text_body="Он знал всех своих сотрудников – если не по имени, то хотя бы в лицо. Интересно, эта девушка была новой сотрудницей или просто случайно заглянула сюда? "
+                        statusPopUp={this.props.statusPopUp}
+                        appointment={this.state.appointment}
+                        />
+
+                        <Cards
+                        title="Руки из не положенного места"
+                        text_body="Он знал всех своих сотрудников – если не по имени, то хотя бы в лицо.  Как бы то ни было, он быстро разгадает ее."
+                        statusPopUp={this.props.statusPopUp}
+                        appointment={this.state.appointment}
+                        />
 
                         <Cards
                         title="Руки ножницы"
@@ -153,6 +174,13 @@ class Main extends Component {
                         />
 
                       </div>
+
+                      
+                      <div className="center-text-in-block">
+                        <Link  to={'/product'} rel="noopener noreferrer" ><p className="more">{this.state.link_more_ru}</p></Link>
+                      </div>
+
+                      
 
                 </div>
 
