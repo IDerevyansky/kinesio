@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
-import "./Cards.css";
+import "./Card.css";
 
 
-class Cards extends Component {
+class Card extends Component {
    
     render(){
         return(
 
             <>
 
-                <div className="cards">
+                <div className="card">
 
                     <div className="discription_card">
 
@@ -17,14 +17,14 @@ class Cards extends Component {
                             <h3>{this.props.title}</h3>
                         </div>
 
-                        <div className="text_cards">
+                        <div className="text_card">
                             <p>{this.props.text_body}</p>
                         </div>
 
                     </div>
                     
                             
-                    <div className="cards_more">
+                    <div className="card_more">
                         <p  onClick={()=>{this.props.statusPopUp(true)}} className="more">{this.props.appointment}</p>
                     </div>
 
@@ -36,4 +36,4 @@ class Cards extends Component {
     }
 }
 
-export default Cards;
+export default Card;

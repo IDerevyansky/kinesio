@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './Main.css'
 
-import Cards from "../../components/cards/Cards";
+import Card from "../../components/card/Card";
 
 // import CallBack from '../../components/callBack/callBack';
 
@@ -18,6 +18,8 @@ class Main extends Component {
       section_one_body_text:"",
       section_two_title:"",
       section_two_body_text:"",
+      section_three_title:"",
+      section_three_content:[],
       link_more_ru:"",
       appointment:""
     }
@@ -33,14 +35,32 @@ class Main extends Component {
       section_one_body_text:respons.pages.main.section.Body.section_one.section_one_body_text,
       section_two_title:respons.pages.main.section.Body.section_two.section_two_title,
       section_two_body_text:respons.pages.main.section.Body.section_two.section_two_body_text,
+      section_three_title:respons.pages.main.section.Body.section_three.section_three_title,
+      section_three_content:respons.pages.main.section.Body.section_three.content,
       link_more_ru:respons.pages.main.section.options.link_more_ru,
       appointment:respons.pages.main.section.options.appointment
     });
-    // console.log(respons.pages.main.section.MainBanner.h1);
+    // console.log(this.state.section_three_content[0].title);
   }
 
 
   render(){
+
+    let Cards=this.state.section_three_content.map(
+      (Cards, i)=>{
+
+       return(
+        <Card
+          key={i}
+          title={Cards.title}
+          text_body={Cards.text_body}
+          statusPopUp={this.props.statusPopUp}
+          appointment={this.state.appointment} 
+        />
+       )
+
+      });
+      
 
     return(
     <>
@@ -125,53 +145,13 @@ class Main extends Component {
 
                 <div className="section-content three">
 
-                      <div className="section-three__title m24-b">
-                        <h2>Темы для работы</h2>
+                      <div className="section-three__title m24-b" dangerouslySetInnerHTML={{__html: this.state.section_three_title}}>
+                        
                       </div>
 
                       <div className="section-three__card ">
 
-                        <Cards
-                        title="Руки ножницы"
-                        text_body="Он знал всех своих сотрудников – если не по имени, то хотя бы в лицо. Интересно, эта девушка была новой сотрудницей или просто случайно заглянула сюда? Как бы то ни было, он быстро разгадает ее."
-                        statusPopUp={this.props.statusPopUp}
-                        appointment={this.state.appointment} 
-                        />
-
-                        <Cards
-                        title="Ноги ножницы"
-                        text_body="Он знал всех своих сотрудников – если не по имени, то хотя бы в лицо. Интересно, эта девушка была новой сотрудницей или просто случайно заглянула сюда? "
-                        statusPopUp={this.props.statusPopUp}
-                        appointment={this.state.appointment}
-                        />
-
-                        <Cards
-                        title="Руки из не положенного места"
-                        text_body="Он знал всех своих сотрудников – если не по имени, то хотя бы в лицо.  Как бы то ни было, он быстро разгадает ее."
-                        statusPopUp={this.props.statusPopUp}
-                        appointment={this.state.appointment}
-                        />
-
-                        <Cards
-                        title="Руки ножницы"
-                        text_body="Он знал всех своих сотрудников – если не по имени, то хотя бы в лицо. Интересно, эта девушка была новой сотрудницей или просто случайно заглянула сюда? Как бы то ни было, он быстро разгадает ее."
-                        statusPopUp={this.props.statusPopUp}
-                        appointment={this.state.appointment} 
-                        />
-
-                        <Cards
-                        title="Ноги ножницы"
-                        text_body="Он знал всех своих сотрудников – если не по имени, то хотя бы в лицо. Интересно, эта девушка была новой сотрудницей или просто случайно заглянула сюда? "
-                        statusPopUp={this.props.statusPopUp}
-                        appointment={this.state.appointment}
-                        />
-
-                        <Cards
-                        title="Руки из не положенного места"
-                        text_body="Он знал всех своих сотрудников – если не по имени, то хотя бы в лицо.  Как бы то ни было, он быстро разгадает ее."
-                        statusPopUp={this.props.statusPopUp}
-                        appointment={this.state.appointment}
-                        />
+                        {Cards}
 
                       </div>
 
