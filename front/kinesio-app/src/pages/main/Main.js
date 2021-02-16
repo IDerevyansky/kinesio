@@ -91,7 +91,7 @@ class Main extends Component {
 
             <div className="section-content">
 
-                  <div className="section-one__title m24-b">
+                  <div className="section-title textRight m24-b">
 
                     <h2>{this.state.section_one_title}</h2> 
 
@@ -117,7 +117,7 @@ class Main extends Component {
                 
                 <div className="section-two__text">
 
-                  <div className="section-two__title m24-b">
+                  <div className="section-title m24-b">
                     <h2>{this.state.section_two_title}</h2>
                   </div>
                   
@@ -145,11 +145,11 @@ class Main extends Component {
 
                 <div className="section-content three">
 
-                      <div className="section-three__title m24-b" dangerouslySetInnerHTML={{__html: this.state.section_three_title}}>
+                      <div className="section-title m24-b" dangerouslySetInnerHTML={{__html: this.state.section_three_title}}>
                         
                       </div>
 
-                      <div className="section-three__card ">
+                      <div className="section-three__card">
 
                         {Cards}
 
@@ -158,6 +158,37 @@ class Main extends Component {
                       
                       <div className="center-text-in-block">
                         <Link  to={'/product'} rel="noopener noreferrer" ><p className="more">{this.state.link_more_ru}</p></Link>
+                      </div>
+
+                      
+
+                </div>
+
+          </div>
+
+
+
+          <div className="section four">
+
+                <div className="section-content four">
+
+                      <div className="section-title m24-b">
+                        <h2>Мои новости</h2>
+                      </div>
+
+                      <div className="section-news-card">
+
+                        <div className="one-card card">111111</div>
+                        <div className="two-card card">22222</div>
+                        <div className="three-card card">33333</div>
+                        <div className="four-card card">44444</div>
+                        <div className="five-card card">55555</div>
+
+                      </div>
+
+                      
+                      <div className="center-text-in-block">
+                        <Link  to={'/news'} rel="noopener noreferrer" ><p className="more">{this.state.link_more_ru}</p></Link>
                       </div>
 
                       

@@ -111,13 +111,16 @@
   flex-direction: column;
 }
 
+.section-content.four{
+  flex-direction: column;
+}
 
-.section-one__title h2{
+
+.section-title h2{
   /* border:1px solid red; */
 
   font-size: 32px;
   line-height: 38px;
-  text-align: right;
   width:340px;
   margin-right: 90px;
 }
@@ -148,7 +151,7 @@
   align-items: center;
 }
 
-.section-two__title{
+.section-title{
   
 }
 
@@ -156,7 +159,7 @@
   max-width:610px;
 }
 
-.section-three__title{
+.section-title{
   /* border:1px solid red; */
 }
 
@@ -171,6 +174,40 @@
   width: 100%;
 }
 
+.section-four__card{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 20px;
+
+  width: 100%;
+}
+
+.section-news-card{
+  border:1px solid green;
+  display:grid;
+  gap: 20px;
+  width: 100%;
+}
+
+.one-card{
+  border:1px solid red;
+}
+
+.two-card{
+  border:1px solid red;
+}
+
+.three-card{
+  border:1px solid red;
+}
+
+.four-card{
+  border:1px solid red;
+}
+
+.five-card{
+  border:1px solid red;
+}
 
 @media (max-width: 1440px) {
 
@@ -244,7 +281,7 @@
     display:flex;
   }
 
-  .section-one__title h2{
+  .section-title h2{
    text-align: left;
     width:auto;
     margin-right: 0px;
@@ -290,6 +327,12 @@
     background-color: #F7F5EF;
   }
 
+  .section.four{
+    padding-top:100px;
+    padding-bottom:100px;
+    background-color: #F7F5EF;
+  }
+
   .section-three__card{
     display: grid;
     grid-template-columns: auto auto ;
@@ -298,6 +341,13 @@
     width: auto;
   }
 
+  .section-four__card{
+    display: grid;
+    grid-template-columns: auto auto ;
+    gap: 20px;
+    
+    width: auto;
+  }
 
 }
 
@@ -333,6 +383,13 @@
     background-color: #F7F5EF;
   }
 
+  .section.four{
+    padding-top:0px;
+    padding-bottom:0px;
+    background-color: #F7F5EF;
+  }
+
+
   .section-three__card{
     /* border:1px solid green; */
     padding-left: 3px;
@@ -345,7 +402,20 @@
     height: auto;
   }
 
-  .section-three__title{
+
+  .section-four__card{
+    /* border:1px solid green; */
+    padding-left: 3px;
+    padding-right: 3px;
+    display: grid;
+    grid-auto-flow: column;
+    overflow-x:scroll;
+    overflow-y:hidden;
+    width: 98vw;
+    height: auto;
+  }
+
+  .section-title{
     margin-left: 24px;
   }
   
