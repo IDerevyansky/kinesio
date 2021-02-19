@@ -112,7 +112,7 @@
 }
 
 .section-content.four{
-  flex-direction: column;
+ 
 }
 
 
@@ -174,17 +174,12 @@
   width: 100%;
 }
 
-.section-four__card{
-  display: grid;
-  grid-template-columns: auto auto auto;
-  gap: 20px;
-
-  width: 100%;
-}
 
 .section-news-card{
   border:1px solid green;
   display:grid;
+  grid-template-columns: auto auto auto;
+
   gap: 20px;
   width: 100%;
 }
