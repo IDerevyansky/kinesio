@@ -5,16 +5,9 @@ class CardNews extends Component {
 
     render(){
 
-        var style ={
-            background:"url("+this.props.bg+")",
-            backgroundPosition:"center",
-            backgroundRepeat:"no-repeat",
-            backgroundSize:"auto 200%"
-        };
-
         return(
 
-            <div className="CardNews" style={style}>
+            <div className="CardNews" style={{background:"url("+this.props.bg+") center center / auto 200% no-repeat"}}>
 
                 <div className="Gradient-card-news">
                     <div className="text-content">
