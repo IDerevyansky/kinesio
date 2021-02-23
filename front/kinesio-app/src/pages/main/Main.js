@@ -192,7 +192,7 @@ class Main extends Component {
                         <div className="two-card-template">
 
                             <CardNews
-                            bg="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b"
+                            bg="https://images.unsplash.com/photo-1454496522488-7a8e488e8606"
                             title="Заголовок этой новости"
                             text_body="Он знал всех своих сотрудников – если не по имени, то хотя бы в лицо. Интересно, эта девушка была новой сотрудницей или просто случайно заглянула сюда? "
                             />
@@ -201,7 +201,7 @@ class Main extends Component {
                         <div className="three-card-template">
 
                             <CardNews
-                            bg="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b"
+                            bg="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429"
                             title="Заголовок этой новости в две строчки"
                             text_body="Он знал всех своих сотрудников – если не по имени, то хотя бы в лицо. Интересно, эта девушка была новой сотрудницей или просто случайно заглянула сюда? "
                             />
@@ -210,7 +210,7 @@ class Main extends Component {
                         <div className="four-card-template">
 
                             <CardNews
-                            bg="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b"
+                            bg="https://images.unsplash.com/photo-1456428199391-a3b1cb5e93ab"
                             title="Заголовок этой новости"
                             text_body="Он знал всех своих сотрудников – если не по имени, то хотя бы в лицо. Интересно, эта девушка была новой сотрудницей или просто случайно заглянула сюда? "
                             />
@@ -219,7 +219,7 @@ class Main extends Component {
                         <div className="five-card-template">
 
                             <CardNews
-                            bg="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b"
+                            bg="https://images.unsplash.com/photo-1434394354979-a235cd36269d"
                             title="Заголовок этой новости в две строчки "
                             text_body="Он знал всех своих сотрудников – если не по имени, то хотя бы в лицо. Интересно, эта девушка была новой сотрудницей или просто случайно заглянула сюда? "
                             />
