@@ -1,0 +1,81 @@
+.CardNews{
+border-radius: 10px;
+height: 100%;
+background:url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b");
+background-position: center;
+background-repeat: no-repeat;
+background-size: auto 200%;
+}
+
+.CardNews h3{
+    color:#F7F5EF;
+    margin-bottom: 8px;
+
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.CardNews p{
+    color:#F7F5EF;
+
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.Gradient-card-news{
+    width: 100%;
+    height:100%;
+    background:url("../img/gradient.png");
+
+    display:flex;
+    align-items: flex-end;
+    border-radius:10px;
+}
+
+.text-content{
+    /* border:1px solid red; */
+    /* border-radius: 0px 0px 10px 10px; */
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom:32px ;
+}
+
+@media (max-width: 1440px) {
+
+}
+
+@media (max-width: 1024px) {
+
+    .CardNews{
+        border-radius: 10px;
+        height: 100%;
+        background:url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b") ;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: auto 200%;
+        display:flex;
+        align-items: flex-end;
+        }
+
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 425px) {
+
+}
+
+@media (max-width: 375px) {
+
+}
+
+@media (max-width: 320px) {
+
+}

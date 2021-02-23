@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import './Main.css'
 
 import Card from "../../components/card/Card";
+import CardNews from "../../components/card_news/CardNews";
 
 // import CallBack from '../../components/callBack/callBack';
 
@@ -178,11 +179,52 @@ class Main extends Component {
 
                       <div className="section-news-card">
 
-                        <div className="one-card card">111111</div>
-                        <div className="two-card card">22222</div>
-                        <div className="three-card card">33333</div>
-                        <div className="four-card card">44444</div>
-                        <div className="five-card card">55555</div>
+                        <div className="one-card-template">
+
+                            <CardNews
+                            bg="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b"
+                            title="Заголовок этой новости"
+                            text_body="Он знал всех своих сотрудников – если не по имени, то хотя бы в лицо. Интересно, эта девушка была новой сотрудницей или просто случайно заглянула сюда? "
+                            />
+
+                        </div>
+
+                        <div className="two-card-template">
+
+                            <CardNews
+                            bg="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b"
+                            title="Заголовок этой новости"
+                            text_body="Он знал всех своих сотрудников – если не по имени, то хотя бы в лицо. Интересно, эта девушка была новой сотрудницей или просто случайно заглянула сюда? "
+                            />
+
+                        </div>
+                        <div className="three-card-template">
+
+                            <CardNews
+                            bg="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b"
+                            title="Заголовок этой новости в две строчки"
+                            text_body="Он знал всех своих сотрудников – если не по имени, то хотя бы в лицо. Интересно, эта девушка была новой сотрудницей или просто случайно заглянула сюда? "
+                            />
+
+                        </div>
+                        <div className="four-card-template">
+
+                            <CardNews
+                            bg="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b"
+                            title="Заголовок этой новости"
+                            text_body="Он знал всех своих сотрудников – если не по имени, то хотя бы в лицо. Интересно, эта девушка была новой сотрудницей или просто случайно заглянула сюда? "
+                            />
+
+                        </div>
+                        <div className="five-card-template">
+
+                            <CardNews
+                            bg="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b"
+                            title="Заголовок этой новости в две строчки "
+                            text_body="Он знал всех своих сотрудников – если не по имени, то хотя бы в лицо. Интересно, эта девушка была новой сотрудницей или просто случайно заглянула сюда? "
+                            />
+
+                        </div>
 
                       </div>
 
