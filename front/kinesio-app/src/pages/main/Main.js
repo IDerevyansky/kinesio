@@ -90,7 +90,7 @@ class Main extends Component {
 
           <div className="section">
 
-            <div className="section-content">
+            <div className="section-content body-margin">
 
                   <div className="section-title textRight m24-b">
 
@@ -146,7 +146,7 @@ class Main extends Component {
 
                 <div className="section-content three">
 
-                      <div className="section-title m24-b" dangerouslySetInnerHTML={{__html: this.state.section_three_title}}>
+                      <div className="section-title title-margin m24-b" dangerouslySetInnerHTML={{__html: this.state.section_three_title}}>
                         
                       </div>
 
@@ -173,7 +173,7 @@ class Main extends Component {
 
                 <div className="section-content four">
 
-                      <div className="section-title m24-b">
+                      <div className="section-title title-margin m24-b">
                         <h2>Мои новости</h2>
                       </div>
 

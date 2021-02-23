@@ -105,6 +105,39 @@ a{
 }
 
 
+.m8-b{
+  margin-bottom:8px;
+}
+
+.m8-t{
+  margin-top:8px;
+}
+
+.m8-l{
+  margin-left:8px;
+}
+
+.m8-r{
+  margin-right:8px;
+}
+
+
+.m16-b{
+  margin-bottom:16px;
+}
+
+.m16-t{
+  margin-top:16px;
+}
+
+.m16-l{
+  margin-left:16px;
+}
+
+.m16-r{
+  margin-right:16px;
+}
+
 
 .m24-b{
   margin-bottom:24px;
