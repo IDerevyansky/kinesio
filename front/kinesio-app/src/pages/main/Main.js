@@ -21,6 +21,8 @@ class Main extends Component {
       section_two_body_text:"",
       section_three_title:"",
       section_three_content:[],
+      section_four_title:"",
+      section_four_content:[],
       link_more_ru:"",
       appointment:""
     }
@@ -38,6 +40,8 @@ class Main extends Component {
       section_two_body_text:respons.pages.main.section.Body.section_two.section_two_body_text,
       section_three_title:respons.pages.main.section.Body.section_three.section_three_title,
       section_three_content:respons.pages.main.section.Body.section_three.content,
+      section_four_title:respons.pages.main.section.Body.section_four.section_four_title,
+      section_four_content:respons.pages.main.section.Body.section_four.content,
       link_more_ru:respons.pages.main.section.options.link_more_ru,
       appointment:respons.pages.main.section.options.appointment
     });
@@ -46,6 +50,23 @@ class Main extends Component {
 
 
   render(){
+
+    let CardsNews = this.state.section_four_content.map(
+      (CardsNews, i)=>{ 
+
+        return(
+
+          <Link to={CardsNews.url} rel="noopener noreferrer">
+            <CardNews
+            bg={CardsNews.img}
+            title={CardsNews.title}
+            text_body={CardsNews.text_body}
+            />
+          </Link>
+
+        )
+
+      });
 
     let Cards=this.state.section_three_content.map(
       (Cards, i)=>{
@@ -61,7 +82,6 @@ class Main extends Component {
        )
 
       });
-      
 
     return(
     <>
@@ -178,61 +198,39 @@ class Main extends Component {
 
                 <div className="section-content four">
 
-                      <div className="section-title title-margin m24-b">
-                        <h2>Мои новости</h2>
-                      </div>
+                      <div className="section-title title-margin m24-b" dangerouslySetInnerHTML={{__html: this.state.section_four_title}}></div>
 
                     
 
                             <div className="section-news-card">
-
+                              
                                             <div className="one-card-template">
 
-                                                <Link to={'news/qwe'} rel="noopener noreferrer">
-                                                  <CardNews
-                                                  bg="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b"
-                                                  title="Заголовок этой новости"
-                                                  text_body="Он знал всех своих сотрудников – если не по имени, то хотя бы в лицо. Интересно, эта девушка была новой сотрудницей или просто случайно заглянула сюда? "
-                                                  />
-                                                </Link>
-                                                
+                                               {CardsNews[0]}
 
                                             </div>
 
-                                            <div className="two-card-template">
+                                            <div className="two-card-template"> 
 
-                                                <CardNews
-                                                bg="https://images.unsplash.com/photo-1454496522488-7a8e488e8606"
-                                                title="Заголовок этой новости"
-                                                text_body="Он знал всех своих сотрудников – если не по имени, то хотя бы в лицо. Интересно, эта девушка была новой сотрудницей или просто случайно заглянула сюда? "
-                                                />
+                                                {CardsNews[1]}
 
                                             </div>
+
                                             <div className="three-card-template">
 
-                                                <CardNews
-                                                bg="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429"
-                                                title="Заголовок этой новости в две строчки"
-                                                text_body="Он знал всех своих сотрудников – если не по имени, то хотя бы в лицо. Интересно, эта девушка была новой сотрудницей или просто случайно заглянула сюда? "
-                                                />
+                                                {CardsNews[2]}
 
                                             </div>
+
                                             <div className="four-card-template">
-
-                                                <CardNews
-                                                bg="https://images.unsplash.com/photo-1456428199391-a3b1cb5e93ab"
-                                                title="Заголовок этой новости"
-                                                text_body="Он знал всех своих сотрудников – если не по имени, то хотя бы в лицо. Интересно, эта девушка была новой сотрудницей или просто случайно заглянула сюда? "
-                                                />
+                                              
+                                                {CardsNews[3]}
 
                                             </div>
+
                                             <div className="five-card-template">
 
-                                                <CardNews
-                                                bg="https://images.unsplash.com/photo-1434394354979-a235cd36269d"
-                                                title="Заголовок этой новости в две строчки "
-                                                text_body="Он знал всех своих сотрудников – если не по имени, то хотя бы в лицо. Интересно, эта девушка была новой сотрудницей или просто случайно заглянула сюда? "
-                                                />
+                                                {CardsNews[4]} 
 
                                             </div>
 
