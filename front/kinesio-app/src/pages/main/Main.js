@@ -171,16 +171,12 @@ class Main extends Component {
                       </div>
 
 
-                          
+                          <div className="section-three__card">
 
-                              <div className="section-three__card">
+                            {Cards}
 
-                                {Cards}
+                          </div>
 
-                              </div>
-
-                          
-                       
 
                       <div className="center-text-in-block">
                         <Link  to={'/product'} rel="noopener noreferrer" ><p className="more">{this.state.link_more_ru}</p></Link>
@@ -201,44 +197,45 @@ class Main extends Component {
                       <div className="section-title title-margin m24-b" dangerouslySetInnerHTML={{__html: this.state.section_four_title}}></div>
 
                     
-
-                            <div className="section-news-card">
-                              
-                                            <div className="one-card-template">
-
-                                               {CardsNews[0]}
-
-                                            </div>
-
-                                            <div className="two-card-template"> 
-
-                                                {CardsNews[1]}
-
-                                            </div>
-
-                                            <div className="three-card-template">
-
-                                                {CardsNews[2]}
-
-                                            </div>
-
-                                            <div className="four-card-template">
-                                              
-                                                {CardsNews[3]}
-
-                                            </div>
-
-                                            <div className="five-card-template">
-
-                                                {CardsNews[4]} 
-
-                                            </div>
-
-                            </div>
-
-
-                      
                         
+
+                              <div className="section-news-card">
+                                  
+                                  <div className="one-card-template">
+
+                                    {CardsNews[0]}
+
+                                  </div>
+
+                                  <div className="two-card-template"> 
+
+                                      {CardsNews[1]}
+
+                                  </div>
+
+                                  <div className="three-card-template">
+
+                                      {CardsNews[2]}
+
+                                  </div>
+
+                                  <div className="four-card-template">
+                                    
+                                      {CardsNews[3]}
+
+                                  </div>
+
+                                  <div className="five-card-template">
+
+                                      {CardsNews[4]} 
+
+                                  </div>
+
+                              </div>
+
+                          
+                            
+
                       <div className="center-text-in-block">
                         <Link  to={'/news'} rel="noopener noreferrer" ><p className="more">{this.state.link_more_ru}</p></Link>
                       </div>
