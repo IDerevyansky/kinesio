@@ -150,13 +150,18 @@ class Main extends Component {
                         
                       </div>
 
-                      <div className="section-three__card">
 
-                        {Cards}
+                          
 
-                      </div>
+                              <div className="section-three__card">
 
-                      
+                                {Cards}
+
+                              </div>
+
+                          
+                       
+
                       <div className="center-text-in-block">
                         <Link  to={'/product'} rel="noopener noreferrer" ><p className="more">{this.state.link_more_ru}</p></Link>
                       </div>
@@ -177,58 +182,65 @@ class Main extends Component {
                         <h2>Мои новости</h2>
                       </div>
 
-                      <div className="section-news-card">
+                    
 
-                        <div className="one-card-template">
+                            <div className="section-news-card">
 
-                            <CardNews
-                            bg="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b"
-                            title="Заголовок этой новости"
-                            text_body="Он знал всех своих сотрудников – если не по имени, то хотя бы в лицо. Интересно, эта девушка была новой сотрудницей или просто случайно заглянула сюда? "
-                            />
+                                            <div className="one-card-template">
 
-                        </div>
+                                                <Link to={'news/qwe'} rel="noopener noreferrer">
+                                                  <CardNews
+                                                  bg="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b"
+                                                  title="Заголовок этой новости"
+                                                  text_body="Он знал всех своих сотрудников – если не по имени, то хотя бы в лицо. Интересно, эта девушка была новой сотрудницей или просто случайно заглянула сюда? "
+                                                  />
+                                                </Link>
+                                                
 
-                        <div className="two-card-template">
+                                            </div>
 
-                            <CardNews
-                            bg="https://images.unsplash.com/photo-1454496522488-7a8e488e8606"
-                            title="Заголовок этой новости"
-                            text_body="Он знал всех своих сотрудников – если не по имени, то хотя бы в лицо. Интересно, эта девушка была новой сотрудницей или просто случайно заглянула сюда? "
-                            />
+                                            <div className="two-card-template">
 
-                        </div>
-                        <div className="three-card-template">
+                                                <CardNews
+                                                bg="https://images.unsplash.com/photo-1454496522488-7a8e488e8606"
+                                                title="Заголовок этой новости"
+                                                text_body="Он знал всех своих сотрудников – если не по имени, то хотя бы в лицо. Интересно, эта девушка была новой сотрудницей или просто случайно заглянула сюда? "
+                                                />
 
-                            <CardNews
-                            bg="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429"
-                            title="Заголовок этой новости в две строчки"
-                            text_body="Он знал всех своих сотрудников – если не по имени, то хотя бы в лицо. Интересно, эта девушка была новой сотрудницей или просто случайно заглянула сюда? "
-                            />
+                                            </div>
+                                            <div className="three-card-template">
 
-                        </div>
-                        <div className="four-card-template">
+                                                <CardNews
+                                                bg="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429"
+                                                title="Заголовок этой новости в две строчки"
+                                                text_body="Он знал всех своих сотрудников – если не по имени, то хотя бы в лицо. Интересно, эта девушка была новой сотрудницей или просто случайно заглянула сюда? "
+                                                />
 
-                            <CardNews
-                            bg="https://images.unsplash.com/photo-1456428199391-a3b1cb5e93ab"
-                            title="Заголовок этой новости"
-                            text_body="Он знал всех своих сотрудников – если не по имени, то хотя бы в лицо. Интересно, эта девушка была новой сотрудницей или просто случайно заглянула сюда? "
-                            />
+                                            </div>
+                                            <div className="four-card-template">
 
-                        </div>
-                        <div className="five-card-template">
+                                                <CardNews
+                                                bg="https://images.unsplash.com/photo-1456428199391-a3b1cb5e93ab"
+                                                title="Заголовок этой новости"
+                                                text_body="Он знал всех своих сотрудников – если не по имени, то хотя бы в лицо. Интересно, эта девушка была новой сотрудницей или просто случайно заглянула сюда? "
+                                                />
 
-                            <CardNews
-                            bg="https://images.unsplash.com/photo-1434394354979-a235cd36269d"
-                            title="Заголовок этой новости в две строчки "
-                            text_body="Он знал всех своих сотрудников – если не по имени, то хотя бы в лицо. Интересно, эта девушка была новой сотрудницей или просто случайно заглянула сюда? "
-                            />
+                                            </div>
+                                            <div className="five-card-template">
 
-                        </div>
+                                                <CardNews
+                                                bg="https://images.unsplash.com/photo-1434394354979-a235cd36269d"
+                                                title="Заголовок этой новости в две строчки "
+                                                text_body="Он знал всех своих сотрудников – если не по имени, то хотя бы в лицо. Интересно, эта девушка была новой сотрудницей или просто случайно заглянула сюда? "
+                                                />
 
-                      </div>
+                                            </div>
+
+                            </div>
+
 
                       
+                        
                       <div className="center-text-in-block">
                         <Link  to={'/news'} rel="noopener noreferrer" ><p className="more">{this.state.link_more_ru}</p></Link>
                       </div>
