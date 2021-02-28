@@ -23,6 +23,8 @@ class Main extends Component {
       section_three_content:[],
       section_four_title:"",
       section_four_content:[],
+      section_five_title:"",
+      section_five_content:[],
       link_more_ru:"",
       appointment:""
     }
@@ -42,6 +44,8 @@ class Main extends Component {
       section_three_content:respons.pages.main.section.Body.section_three.content,
       section_four_title:respons.pages.main.section.Body.section_four.section_four_title,
       section_four_content:respons.pages.main.section.Body.section_four.content,
+      section_five_title:respons.pages.main.section.Body.section_five.section_five_title,
+      section_five_content:respons.pages.main.section.Body.section_five.content,
       link_more_ru:respons.pages.main.section.options.link_more_ru,
       appointment:respons.pages.main.section.options.appointment
     });
@@ -50,6 +54,17 @@ class Main extends Component {
 
 
   render(){
+
+    let moreInform = this.state.section_five_content.map(
+      (moreInform, i)=>{
+        return(
+          <div key={i}>
+            <h3>{moreInform.title}</h3>
+            <p>{moreInform.text_body}</p>
+          </div>
+        )
+      }
+    );
 
     let CardsNews = this.state.section_four_content.map(
       (CardsNews, i)=>{ 
@@ -203,7 +218,7 @@ class Main extends Component {
                                   
                                   <div className="one-card-template">
 
-                                    {CardsNews[0]}
+                                      {CardsNews[0]}
 
                                   </div>
 
@@ -245,6 +260,22 @@ class Main extends Component {
                 </div>
 
           </div>
+
+
+        <div className="section">
+
+          <div className="section-content five">
+            
+                 
+             <h2 dangerouslySetInnerHTML={{__html: this.state.section_five_title}}></h2>
+
+             {moreInform}
+
+          </div>
+
+        </div>
+
+
 
         </div>
     </>

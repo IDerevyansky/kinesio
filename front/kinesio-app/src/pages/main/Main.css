@@ -120,6 +120,19 @@ div{
   flex-direction: column;
 }
 
+.five{
+  padding-left:0px;
+  padding-right:0px;
+}
+
+.section-content.five{
+  flex-direction: column;
+}
+
+.five h3{
+  margin-top:32px;
+  margin-bottom:16px;
+}
 
 .section-title h2{
   /* border:1px solid red; */
@@ -242,6 +255,11 @@ div{
 
 @media (max-width: 1440px) {
 
+  .five{
+    padding-left:24px;
+    padding-right:24px;
+  }
+  
   .card-margin{
     margin:auto;
     width:96vw;
@@ -615,6 +633,11 @@ div{
 }
 
 @media (max-width: 425px) {
+
+  .five{
+    padding-left:16px;
+    padding-right:16px;
+  }
 
   .card-margin{
     margin:auto;
