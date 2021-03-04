@@ -1,0 +1,59 @@
+.header-banner{
+    width:auto;
+    height:500px;
+    background:url("./img/banner_WhatIs.png") center center / auto 300% no-repeat;
+}
+
+
+
+@media (max-width: 1440px) {
+
+    .header-banner{
+        background-position:center center;
+        background-repeat: no-repeat;
+        background-size: auto 150%;
+    }
+
+}
+
+@media (max-width: 1024px) {
+
+    .header-banner{
+        
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .header-banner{
+        background-position:center center;
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+    }
+
+}
+
+@media (max-width: 425px) {
+
+    .header-banner{
+        
+    }
+
+}
+
+@media (max-width: 375px) {
+
+    .header-banner{
+        
+    }
+
+}
+
+@media (max-width: 320px) {
+
+    .header-banner{
+        
+    }
+
+}

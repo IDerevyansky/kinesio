@@ -4,9 +4,15 @@ import './WhatIs.css';
 class WhatIs extends Component {
 
     render(){
+
         return(
-            <p>{this.props.text}</p>
+
+
+            <div className="header-banner"></div>
+    
+
         )
+        
     }
 
 }
