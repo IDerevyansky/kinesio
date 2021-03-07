@@ -4,7 +4,29 @@
     background:url("./img/banner_WhatIs.png") center center / auto 300% no-repeat;
 }
 
+.back_btn{
+    /* border:1px solid black; */
+    display: flex;
+    align-items: center;
+    width: 90px;
+    height: 30px;
+    margin-top: 32px;
+    margin-bottom: 42px;
+}
 
+.icon-back{
+    width:30px;
+    height:30px;
+    background:url("../../components/img/Back_btn.svg");
+}
+
+.icon-text{
+    margin-left: 8px;
+}
+
+.whatIs-content h1{
+    margin-bottom: 24px;
+}
 
 @media (max-width: 1440px) {
 
