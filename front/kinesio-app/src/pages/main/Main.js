@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './Main.css'
 
-import Card from "../../components/card/Card";
+import Cards from "../../components/card/Cards";
 import CardNews from "../../components/card_news/CardNews";
 
 // import CallBack from '../../components/callBack/callBack';
@@ -19,8 +19,6 @@ class Main extends Component {
       section_one_body_text:"",
       section_two_title:"",
       section_two_body_text:"",
-      section_three_title:"",
-      section_three_content:[],
       section_four_title:"",
       section_four_content:[],
       section_five_title:"",
@@ -39,9 +37,7 @@ class Main extends Component {
       section_one_title:respons.pages.main.section.Body.section_one.section_one_title,
       section_one_body_text:respons.pages.main.section.Body.section_one.section_one_body_text,
       section_two_title:respons.pages.main.section.Body.section_two.section_two_title,
-      section_two_body_text:respons.pages.main.section.Body.section_two.section_two_body_text,
-      section_three_title:respons.pages.main.section.Body.section_three.section_three_title,
-      section_three_content:respons.pages.main.section.Body.section_three.content,
+      section_two_body_text:respons.pages.main.section.Body.section_two.section_two_body_text,  
       section_four_title:respons.pages.main.section.Body.section_four.section_four_title,
       section_four_content:respons.pages.main.section.Body.section_four.content,
       section_five_title:respons.pages.main.section.Body.section_five.section_five_title,
@@ -83,22 +79,8 @@ class Main extends Component {
 
       });
 
-    let Cards=this.state.section_three_content.map(
-      (Cards, i)=>{
-
-       return(
-        <Card
-          key={i}
-          title={Cards.title}
-          text_body={Cards.text_body}
-          statusPopUp={this.props.statusPopUp}
-          appointment={this.state.appointment} 
-        />
-       )
-
-      });
-
     return(
+
     <>
           <div className="contentBanner">
 
@@ -179,27 +161,15 @@ class Main extends Component {
 
           <div className="section three">
 
-                <div className="section-content three">
-
-                      <div className="section-title title-margin m24-b" dangerouslySetInnerHTML={{__html: this.state.section_three_title}}>
-                        
-                      </div>
+               
 
 
-                          <div className="section-three__card">
 
-                            {Cards}
-
-                          </div>
+            <Cards statusPopUp={this.props.statusPopUp}/>
 
 
-                      <div className="center-text-in-block">
-                        <Link  to={'/product'} rel="noopener noreferrer" ><p className="more">{this.state.link_more_ru}</p></Link>
-                      </div>
 
-                      
 
-                </div>
 
           </div>
 
@@ -278,7 +248,9 @@ class Main extends Component {
 
 
         </div>
+
     </>
+
     )
   }
 }

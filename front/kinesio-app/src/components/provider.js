@@ -30,10 +30,10 @@ class Provider extends Component {
        
             <Switch>
                 <Route exact path='/'>
-                    <Main statusPopUp={this.props.statusPopUp}/>
+                    <Main statusPopUp={this.props.statusPopUp} />
                 </Route>
                 <Route path='/whatIs'>
-                    <WhatIs text='WhatIsKineziology'/>
+                    <WhatIs statusPopUp={this.props.statusPopUp} />
                 </Route>
                 <Route path='/about'>
                     <About text='About'/>

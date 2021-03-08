@@ -28,6 +28,23 @@
     margin-bottom: 24px;
 }
 
+.whatIs-content img{
+    margin-top: 32px;
+    margin-bottom: 32px;
+    border-radius:10px;
+}
+
+.whatIs-text{
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+.margin-whatIs-block{
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+
 @media (max-width: 1440px) {
 
     .header-banner{
