@@ -21,6 +21,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.container{
+  max-width: 1330px;
+}
+
 p{
   font-size: 18px;
   font-weight: 500;
@@ -107,6 +111,9 @@ a{
   font-weight: 600;
 }
 
+.m-auto{
+  margin:auto;
+}
 
 .m8-b{
   margin-bottom:8px;
@@ -175,6 +182,42 @@ a{
 .m32-r{
   margin-right:32px;
 }
+
+
+
+
+
+
+@media (max-width: 1440px) {
+
+  .container{
+    padding-right:16px;
+    padding-left:16px;
+  }
+
+}
+
+@media (max-width: 1024px) {
+
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 425px) {
+
+}
+
+@media (max-width: 375px) {
+
+}
+
+@media (max-width: 320px) {
+
+}
+
+
 
 
 

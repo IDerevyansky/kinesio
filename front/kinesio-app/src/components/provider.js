@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Switch, Route} from 'react-router-dom';
 
+import MainOld from '../pages/main/MainOld';
+
 import Main from '../pages/main/Main';
 import WhatIs from '../pages/whatIsKineziology/WhatIs';
 import About from '../pages/about/About';
@@ -31,6 +33,9 @@ class Provider extends Component {
             <Switch>
                 <Route exact path='/'>
                     <Main statusPopUp={this.props.statusPopUp} />
+                </Route>
+                <Route exact path='/old'>
+                    <MainOld statusPopUp={this.props.statusPopUp} />
                 </Route>
                 <Route path='/whatIs'>
                     <WhatIs statusPopUp={this.props.statusPopUp} />

@@ -1,0 +1,56 @@
+.content-box{
+    width:auto;
+    height:100vh;
+    display:grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    grid-template-rows: 100vh;
+    /* gap:20px; */
+
+}
+
+.img-box{
+
+background: url("./img/face_main_banner.png") 20% center / auto 100% no-repeat; 
+
+grid-column: 1 / 4;
+grid-row: 1;
+
+}
+
+.text-box{
+ 
+background: rebeccapurple;    
+
+grid-column: 4 / 7;
+grid-row: 1;
+
+}
+
+.cont-text{
+    border:1px solid red;
+    /* width: 500px; */
+    /* height: 300px; */
+    /* grid-column: 4 / 7; */
+    
+
+}
+
+@media (max-width: 1024px) {
+
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 425px) {
+
+}
+
+@media (max-width: 375px) {
+
+}
+
+@media (max-width: 320px) {
+
+}

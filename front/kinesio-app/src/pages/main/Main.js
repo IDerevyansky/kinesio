@@ -2,8 +2,10 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './Main.css'
 
-import Cards from "../../components/card/Cards";
-import CardNews from "../../components/card_news/CardNews";
+
+import HeaderBanner from "../../components/header-banner/headerBanner";
+// import Cards from "../../components/card/Cards";
+// import CardNews from "../../components/card_news/CardNews";
 
 // import CallBack from '../../components/callBack/callBack';
 
@@ -14,238 +16,43 @@ class Main extends Component {
   constructor(props){
     super(props);
     this.state = {
-      dataMainBanner:"",
-      section_one_title:"",
-      section_one_body_text:"",
-      section_two_title:"",
-      section_two_body_text:"",
-      section_four_title:"",
-      section_four_content:[],
-      section_five_title:"",
-      section_five_content:[],
-      link_more_ru:"",
-      appointment:""
+    
     }
   }
 
   componentDidMount = async () => {
 
-    // const respons = fetch(url, {method:"GET"}).then(res => res.json()).then(data => data.pages);
     const respons = await fetch(url).then(pages => pages.json());
     this.setState({
-      dataMainBanner:respons.pages.main.section.MainBanner,
-      section_one_title:respons.pages.main.section.Body.section_one.section_one_title,
-      section_one_body_text:respons.pages.main.section.Body.section_one.section_one_body_text,
-      section_two_title:respons.pages.main.section.Body.section_two.section_two_title,
-      section_two_body_text:respons.pages.main.section.Body.section_two.section_two_body_text,  
-      section_four_title:respons.pages.main.section.Body.section_four.section_four_title,
-      section_four_content:respons.pages.main.section.Body.section_four.content,
-      section_five_title:respons.pages.main.section.Body.section_five.section_five_title,
-      section_five_content:respons.pages.main.section.Body.section_five.content,
-      link_more_ru:respons.pages.main.section.options.link_more_ru,
-      appointment:respons.pages.main.section.options.appointment
+
     });
-    // console.log(this.state.section_three_content[0].title);
+    
   }
 
 
   render(){
-
-    let moreInform = this.state.section_five_content.map(
-      (moreInform, i)=>{
-        return(
-          <div key={i}>
-            <h3>{moreInform.title}</h3>
-            <p>{moreInform.text_body}</p>
-          </div>
-        )
-      }
-    );
-
-    let CardsNews = this.state.section_four_content.map(
-      (CardsNews, i)=>{ 
-
-        return(
-
-          <Link to={CardsNews.url} rel="noopener noreferrer">
-            <CardNews
-            bg={CardsNews.img}
-            title={CardsNews.title}
-            text_body={CardsNews.text_body}
-            />
-          </Link>
-
-        )
-
-      });
+    
 
     return(
 
     <>
-          <div className="contentBanner">
 
-                <div className="bannerMainBox"></div>
+        <HeaderBanner 
+        title="Вам достаточно знать номер телефона данного человека."
+        text="Вам достаточно знать номер телефона данного человека, и вы можете создать ссылку, которая позволит начать с ним чат. Вам достаточно знать номер телефона данного человека, и вы можете создать ссылку, которая позволит начать с ним чат."
+        />
+          
+        <div style={{border:"1px solid red"}} className="container m-auto">
 
-                    <div className="textBannerContainer">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae elit augue. Duis volutpat euismod nulla, non euismod ipsum eleifend in. Sed vehicula, turpis eget cursus lacinia, urna purus scelerisque justo, et dictum augue sem id dui. Vivamus non lacinia erat. Aenean eu convallis velit. Maecenas at posuere erat, sed vestibulum urna. Sed mattis lorem vitae augue aliquet cursus at id erat. Sed in purus metus. Donec in justo posuere, maximus ligula eget, vulputate magna. Nunc tincidunt metus non mi sagittis, non maximus dui suscipit. Pellentesque ut tellus sit amet purus accumsan auctor id quis enim. Aliquam nisi lacus, consectetur sit amet suscipit nec, molestie ut nulla. Suspendisse potenti. Vestibulum scelerisque risus et lectus sodales, nec condimentum tortor condimentum.
 
-                            <div className="textMainBanner">
+Aliquam erat volutpat. Morbi laoreet, velit et tristique lobortis, eros nibh gravida leo, vel accumsan dolor nisl vel eros. Suspendisse pellentesque vitae massa ac dictum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec ut orci sagittis, convallis tellus eu, semper neque. Nunc turpis risus, rutrum nec ultrices rutrum, placerat quis diam. Morbi ipsum quam, dictum ut turpis ut, tristique fermentum eros. Vestibulum aliquam mauris eu arcu interdum dictum. Phasellus eros ipsum, hendrerit id dapibus vitae, pellentesque id mi. Aenean volutpat turpis erat, sit amet scelerisque massa lacinia vitae.
 
-                              <h1>{this.state.dataMainBanner.h1}</h1>
-                              <p>{this.state.dataMainBanner.p}</p>
+Mauris ligula eros, elementum eget nulla ut, elementum iaculis ante. Mauris consectetur, erat quis tempus consequat, tortor ex lacinia felis, ut hendrerit massa massa quis dolor. Suspendisse lectus nulla, dictum eu bibendum ut, tincidunt a enim. Aenean nunc ipsum, egestas semper ultricies ac, tincidunt efficitur nibh. Praesent dignissim ligula quis nisi posuere, ut consectetur ex blandit. Quisque eget libero neque. Maecenas elementum dui risus, et ultrices ex semper quis. Nunc tincidunt finibus ante, rutrum lacinia turpis. Curabitur vitae purus eu metus bibendum rhoncus id non diam. Phasellus consequat blandit augue congue bibendum. Duis at auctor tortor.
 
-                            </div>
+Donec convallis gravida vestibulum. Sed eu tortor eu odio maximus porttitor. Nam luctus dui vitae laoreet pharetra. Aliquam et pharetra nisi. Pellentesque in rhoncus metus. Aliquam vitae cursus felis, sit amet semper justo. Vivamus iaculis urna a tristique aliquam. Ut maximus varius massa, auctor aliquet lacus blandit sit amet. Donec blandit, tortor ac fringilla placerat, erat nulla hendrerit nunc, sed sollicitudin libero dolor vel lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec sapien magna, vulputate quis pellentesque sed, consectetur sed quam. Proin ac tincidunt ante. Donec sagittis odio eleifend justo viverra semper.
 
-                            <div onClick={()=>{this.props.statusPopUp(true)}} className="btnSingUpMainBanner"></div>
-
-                    </div>
-
-                
-
-          </div>
-
-        <div className="bodyMainContent">
-
-          <div className="section">
-
-            <div className="section-content body-margin">
-
-                  <div className="section-title textRight m24-b">
-
-                    <h2>{this.state.section_one_title}</h2> 
-
-                  </div>
-                  <div className="section-one__body-text" >
-
-                  <div dangerouslySetInnerHTML={{__html: this.state.section_one_body_text}}></div>
-                   
-                    <Link  to={'/whatIs'} rel="noopener noreferrer" ><p className="more">{this.state.link_more_ru}</p></Link>
-
-                  </div>
-
-            </div>
-
-          </div>
-
-
-
-
-          <div className="section two">
-
-              <div className="section-content revers center">
-                
-                <div className="section-two__text">
-
-                  <div className="section-title m24-b">
-                    <h2>{this.state.section_two_title}</h2>
-                  </div>
-                  
-                  <div className="section-two__body-text">
-
-                      <div dangerouslySetInnerHTML={{__html: this.state.section_two_body_text}}></div>
-
-                      <Link  to={'/about'} rel="noopener noreferrer" ><p className="more">{this.state.link_more_ru}</p></Link>
-
-                  </div>  
-
-                  
-
-                </div>
-
-                <div className="section-two__img"></div>
-
-              </div>
-
-          </div>
-
-
-
-          <div className="section three">
-
-               
-
-
-
-            <Cards statusPopUp={this.props.statusPopUp}/>
-
-
-
-
-
-          </div>
-
-
-
-          <div className="section four">
-
-                <div className="section-content four">
-
-                      <div className="section-title title-margin m24-b" dangerouslySetInnerHTML={{__html: this.state.section_four_title}}></div>
-
-                    
-                        
-
-                              <div className="section-news-card">
-                                  
-                                  <div className="one-card-template">
-
-                                      {CardsNews[0]}
-
-                                  </div>
-
-                                  <div className="two-card-template"> 
-
-                                      {CardsNews[1]}
-
-                                  </div>
-
-                                  <div className="three-card-template">
-
-                                      {CardsNews[2]}
-
-                                  </div>
-
-                                  <div className="four-card-template">
-                                    
-                                      {CardsNews[3]}
-
-                                  </div>
-
-                                  <div className="five-card-template">
-
-                                      {CardsNews[4]} 
-
-                                  </div>
-
-                              </div>
-
-                          
-                            
-
-                      <div className="center-text-in-block">
-                        <Link  to={'/news'} rel="noopener noreferrer" ><p className="more">{this.state.link_more_ru}</p></Link>
-                      </div>
-
-                      
-
-                </div>
-
-          </div>
-
-
-        <div className="section">
-
-          <div className="section-content five">
-            
-                 
-             <h2 dangerouslySetInnerHTML={{__html: this.state.section_five_title}}></h2>
-
-             {moreInform}
-
-          </div>
-
-        </div>
-
-
+Donec tempus est ac eros venenatis, fringilla tincidunt lacus vulputate. Nam odio metus, vestibulum a tortor vel, vulputate faucibus lorem. Cras ultrices ex eget efficitur congue. Nam molestie viverra magna, in faucibus libero convallis in. Nunc interdum quam eu condimentum hendrerit. Suspendisse potenti. Vestibulum eget sem sit amet orci rutrum volutpat eu eu dolor. Vestibulum ut mi eget nunc accumsan dictum non id orci. Sed venenatis, augue eu blandit mollis, lectus elit egestas augue, lobortis fringilla risus quam ornare nibh. Pellentesque et mollis neque, eu finibus tortor. Vestibulum quis nibh est. Donec eu rutrum lacus. In ullamcorper sagittis metus, at mollis magna gravida in.
 
         </div>
 
