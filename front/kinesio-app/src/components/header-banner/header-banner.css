@@ -5,7 +5,6 @@
     grid-template-columns: auto auto auto auto auto auto;
     grid-template-rows: 100vh;
     /* gap:20px; */
-
 }
 
 .img-box{
@@ -19,7 +18,7 @@ grid-row: 1;
 
 .text-box{
  
-background: rebeccapurple;    
+/* background: rebeccapurple;     */
 
 grid-column: 4 / 7;
 grid-row: 1;
@@ -27,11 +26,10 @@ grid-row: 1;
 }
 
 .cont-text{
-    border:1px solid red;
-    /* width: 500px; */
-    /* height: 300px; */
-    /* grid-column: 4 / 7; */
     
+    border:1px solid red;
+    width: 500px;
+    /* height: 300px; */
 
 }
 
