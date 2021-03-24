@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 
+import Button from '../button/Button';
+
 import "./header-banner.css";
 
 class HeaderBanner extends Component{
@@ -10,9 +12,10 @@ class HeaderBanner extends Component{
                 <div className="img-box"></div>
                 <div className="text-box">
 
-                    <div className="cont-text">
+                    <div className="cont-text container">
                         <h1>{this.props.title}</h1>
-                        <p>{this.props.text}</p>
+                        <p className="m16-t m16-b">{this.props.text}</p>
+                        <Button statusPopUp={this.props.statusPopUp} text="Записаться"/>
                     </div>
                    
                 </div>
