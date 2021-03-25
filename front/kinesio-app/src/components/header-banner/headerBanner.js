@@ -15,7 +15,7 @@ class HeaderBanner extends Component{
                     <div className="cont-text container">
                         <h1>{this.props.title}</h1>
                         <p className="m16-t m16-b">{this.props.text}</p>
-                        <Button statusPopUp={this.props.statusPopUp} text="Записаться"/>
+                        <Button link="" statusPopUp={this.props.statusPopUp} text="Записаться"/>
                     </div>
                    
                 </div>
