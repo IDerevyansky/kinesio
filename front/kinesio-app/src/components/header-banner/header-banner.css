@@ -1,3 +1,4 @@
+
 .content-box{
     width:auto;
     /* height:100vh; */
@@ -10,7 +11,7 @@
 .img-box{
     background: url("./img/face_main_banner.png") 20% center / auto 100% no-repeat; 
     width:50vw;
-    height:100vh;
+    min-height:100vh;
 
 }
 
@@ -30,7 +31,7 @@
     .img-box{
         background: url("./img/face_main_banner.png") 30% center / auto 100% no-repeat; 
         width:50vw;
-        height:100vh;
+        min-height:100vh;
     
     }
 
@@ -41,7 +42,7 @@
     .img-box{
         background: url("./img/face_main_banner.png") 32% center / auto 100% no-repeat; 
         width:50vw;
-        height:70vh;
+        min-height:70vh;
     
     }
 
@@ -66,7 +67,7 @@
     .img-box{
         background: url("./img/face_main_banner.png") 25% center / auto 100% no-repeat; 
         width:100vw;
-        height:70vh;
+        min-height:70vh;
     
     }
 
