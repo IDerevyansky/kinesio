@@ -7,19 +7,28 @@ import './TextImgBox.css';
 class TextImgBox extends Component {
     render(){
         return(
-            <>
-               
-                    <h2 dangerouslySetInnerHTML={{__html:this.props.title}}></h2>
-           
-                <p dangerouslySetInnerHTML={{__html:this.props.text}}></p>
 
-                <div className="m24-t">
-                     <Link to={this.props.link?this.props.link:''} className="more"><p>Подробнее</p></Link>
-                </div>
-                
-                <div className="TextImgBox-img"></div> 
+            <div className="container m-auto">
 
-            </>
+                    <div className="TextImgBox-content">
+
+                    <div className="TextImgBox-text margin-container"> 
+
+                        <h2 className="m32-b" dangerouslySetInnerHTML={{__html:this.props.title}}></h2>
+                        <p dangerouslySetInnerHTML={{__html:this.props.text}}></p>
+
+                        <div className="m24-t">
+                            <Link to={this.props.link?this.props.link:''} className="more"><p>Подробнее</p></Link>
+                        </div>
+
+                    </div>
+
+                    <div className="TextImgBox-img"></div> 
+
+                    </div>
+
+            </div>
+
         )
     }
 }

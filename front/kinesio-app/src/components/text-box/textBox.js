@@ -10,22 +10,29 @@ class TextBox extends Component {
         
 
         return(
-            <div className="container-text-box">
-                <div className={ this.props.orientation == 'y'?'content-text-box-column':'content-text-box-row' }>
-                    <div className={ this.props.orientation == 'y'?'title-text-box-column':'title-text-box-row' }>
-                        <h2 dangerouslySetInnerHTML={{__html:this.props.title}}></h2>
-                    </div>
-                    <div className= { this.props.orientation == 'y'?'textBody-text-box-column':'textBody-text-box-row' } >
+            <div className="margin-container container m-auto">
 
-                        <p dangerouslySetInnerHTML={{__html:this.props.text}} ></p>
 
-                            <div className="m24-t">
-                                <Link to={this.props.link?this.props.link:''} className="more"><p>Подробнее</p></Link>
-                            </div>
-                    </div>
-                </div>    
+                <div className="container-text-box">
+                    <div className={ this.props.orientation === 'y'?'content-text-box-column':'content-text-box-row' }>
+                        <div className={ this.props.orientation === 'y'?'title-text-box-column':'title-text-box-row' }>
+                            <h2 dangerouslySetInnerHTML={{__html:this.props.title}}></h2>
+                        </div>
+                        <div className= { this.props.orientation === 'y'?'textBody-text-box-column':'textBody-text-box-row' } >
+
+                            <p dangerouslySetInnerHTML={{__html:this.props.text}} ></p>
+
+                                <div className="m24-t">
+                                    <Link to={this.props.link?this.props.link:''} className="more"><p>Подробнее</p></Link>
+                                </div>
+                        </div>
+                    </div>    
+
+                </div>
+
 
             </div>
+           
         )
     }
 }

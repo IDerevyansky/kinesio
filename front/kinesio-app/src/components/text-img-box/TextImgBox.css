@@ -1,21 +1,64 @@
 
-.TextImgBox-img{
-    border:1px solid red;
-    width:620px;
-    height:413px;
-    background:url("https://images.unsplash.com/photo-1611095973362-88e8e2557e58?ixid=MXwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=620&q=10") ;
+.TextImgBox-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:center; 
+    min-height: 100vh;
 }
+
+.TextImgBox-text{
+    width:610px;
+    margin-right:32px;
+}
+
+.TextImgBox-img{
+    width:614px;
+    height:640px;
+    background:url("../../pages/main/img/about.png") center center / auto 100% no-repeat ;
+}
+
+
 
 
 @media (max-width: 1440px) {
 
+    .TextImgBox-img{
+        width:614px;
+        height:640px;
+        background:url("../../pages/main/img/about.png") 0px center / auto 100% no-repeat ;
+    }
+
 }
 
 @media (max-width: 1024px) {
+    
+   
 
 }
 
 @media (max-width: 768px) {
+
+
+    .TextImgBox-content{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items:center; 
+        min-height: 100vh;
+    }
+
+    .TextImgBox-img{
+        width:614px;
+        height:640px;
+        background:url("../../pages/main/img/about.png") 50px center / auto 100% no-repeat ;
+    }
+
+    .TextImgBox-text{
+        width:auto;
+        margin-right:0px;
+    }
+
 
 }
 

@@ -25,6 +25,11 @@ body {
   max-width: 1330px;
 }
 
+.margin-container{
+    padding-right:0px;
+    padding-left:0px;
+}
+
 p{
   font-size: 18px;
   font-weight: 500;
@@ -190,10 +195,10 @@ a{
 
 @media (max-width: 1440px) {
 
-  .container{
+  .margin-container{
     padding-right:16px;
     padding-left:16px;
-  }
+}
 
 }
 

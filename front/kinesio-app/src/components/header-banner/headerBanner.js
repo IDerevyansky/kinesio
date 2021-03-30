@@ -12,7 +12,7 @@ class HeaderBanner extends Component{
                 <div className="img-box"></div>
                 <div className="text-box">
 
-                    <div className="cont-text container">
+                    <div className="cont-text margin-container">
                         <h1>{this.props.title}</h1>
                         <p className="m16-t m16-b">{this.props.text}</p>
                         <Button statusPopUp={this.props.statusPopUp} text="Записаться"/>

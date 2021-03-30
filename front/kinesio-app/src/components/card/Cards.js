@@ -53,7 +53,7 @@ class Cards extends Component {
 
         return(
 
-            <div className="section-content three">
+            <div className="margin-container container m-auto     section-content three">
 
                       <div className="section-title title-margin m24-b" dangerouslySetInnerHTML={{__html: this.state.section_three_title}}></div>
 
