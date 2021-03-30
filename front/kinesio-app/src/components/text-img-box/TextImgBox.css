@@ -1,0 +1,36 @@
+
+.TextImgBox-img{
+    border:1px solid red;
+    width:620px;
+    height:413px;
+    background:url("https://images.unsplash.com/photo-1611095973362-88e8e2557e58?ixid=MXwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=620&q=10") ;
+}
+
+
+@media (max-width: 1440px) {
+
+}
+
+@media (max-width: 1024px) {
+
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 540px) {
+
+}
+
+@media (max-width: 425px) {
+
+}
+
+@media (max-width: 375px) {
+
+}
+
+@media (max-width: 320px) {
+
+} 

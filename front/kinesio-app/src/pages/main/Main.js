@@ -5,6 +5,7 @@ import './Main.css'
 
 import HeaderBanner from "../../components/header-banner/headerBanner";
 import TextBox from "../../components/text-box/textBox";
+import TextImgBox from "../../components/text-img-box/TextImgBox"
 // import Cards from "../../components/card/Cards";
 // import CardNews from "../../components/card_news/CardNews";
 
@@ -62,6 +63,18 @@ class Main extends Component {
           их спортивного оборудования. Разумеется, было весьма рискованно предпринимать этот шаг так быстро, 
           но Рик не мог ждать."
           />
+
+
+          <TextImgBox 
+          url="/about"
+          title="Немного о себе"
+          text="Его взгляд снова скользнул к отчужденной, но удивительно милой незнакомке. 
+          Девушка все так же стояла в дверях, наблюдая за его сотрудниками. У нее в руках 
+          не было бокала. И это нужно исправить. Мужчина опять потер подбородок. Следующей 
+          задачей было слияние с компанией «Спорта Ко» и удвоение объема продаж их спортивного 
+          оборудования."
+          />
+
 
         </div>
         
