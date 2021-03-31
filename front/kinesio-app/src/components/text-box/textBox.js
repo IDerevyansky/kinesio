@@ -13,7 +13,7 @@ class TextBox extends Component {
             <div className="margin-container container m-auto">
 
 
-                <div className="container-text-box">
+                <div className="container-text-box h-full">
                     <div className={ this.props.orientation === 'y'?'content-text-box-column':'content-text-box-row' }>
                         <div className={ this.props.orientation === 'y'?'title-text-box-column':'title-text-box-row' }>
                             <h2 dangerouslySetInnerHTML={{__html:this.props.title}}></h2>

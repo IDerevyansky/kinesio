@@ -2,7 +2,7 @@
     
     display:flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-cbetween;
     padding:32px 40px 32px 40px;
     background: #F5F3EE;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
@@ -47,221 +47,36 @@
 
 }
 
-.section-content{
-    /* border:1px solid green; */
-    
-    width: 1330px;
-    flex-direction: row;
-    align-items: flex-start;
-    display:flex;
-    justify-content:space-between;
-  }
 
-  .section-content.three{
-    flex-direction: column;
-  }
 
-  .section-title h2{
-    /* border:1px solid red; */
+
+
+
+
+  @media (max-width: 1440px) {
+
+  }
   
-    font-size: 32px;
-    line-height: 38px;
-    width:340px;
-    margin-right: 90px;
-  }
-
-  .title-margin{
-    margin-left: 0px;
-  }
-
-  .section-three__card{
-    /* border:1px solid red; */
-    /* display:flex; */
-    /* flex-direction: row; */
-    /* justify-content: space-between; */
-    display: grid;
-    grid-template-columns: auto auto auto;
-    gap: 20px;
+  @media (max-width: 1024px) {
   
-    width: 100%;
   }
-
-
-@media (max-width: 1440px) {
-
-    .section-content{
-        /* border:1px solid green; */
-        
-        width: 100vw;
-      }
-
-      .title-margin{
-        margin-left: 24px;
-      }
-
-      .section-three__card{
-        display: grid;
-        grid-template-columns: auto auto auto;
-        gap: 20px;
-        
-        width: 97vw;
-        margin:auto;
-      }
-
-}
-
-@media (max-width: 1024px) {
-
-    .section-content{
-        flex-direction: column;
-        align-items: flex-start;
-        display:flex;
-    
-        width: 100Vw;
-      }
-
-      .section-title h2{
-        text-align: left;
-         width:auto;
-         margin-right: 0px;
-         /* margin-bottom: 32px; */
-       }
-
-       .title-margin{
-        margin-left: 24px;
-      }
-
-      .section-three__card{
-        display: grid;
-        grid-template-columns: auto auto ;
-        gap: 20px;
-        
-        width: 97vw;
-        margin:auto;
-      }
-
-}
-
-@media (max-width: 768px) {
-
-    .card{
-    
-        display:flex;
-        flex-direction: column;
-        justify-content: space-between;
-        padding:32px 40px 32px 40px;
-        background: #F5F3EE;
-        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
-        border-radius: 10px;
-        margin-top: 3px;
-        margin-bottom: 3px;
-    
-    
-        /* width:350px; */
-        /* height:280px; */
-        width:60vw;
-        height:auto;
-    }
-
-    .title-margin{
-        margin-left: 24px;
-    }
-
-    .section-three__card{
-        /* border:1px solid green; */
-        padding-left: 3px;
-        padding-right: 3px;
-        display: grid;
-        grid-auto-flow: column;
-        overflow-x:scroll;
-        overflow-y:hidden;
-        width: 98%;
-        height: auto;
-        border-radius: 10px;
-      }
-
-}
-
-@media (max-width: 425px) {
-
-
-    .card{
-    
-        display:flex;
-        flex-direction: column;
-        justify-content: space-between;
-        padding:32px 40px 32px 40px;
-        background: #F5F3EE;
-        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
-        border-radius: 10px;
-        margin-top: 3px;
-        margin-bottom: 3px;
-    
-    
-        /* width:350px; */
-        /* height:280px; */
-        width:60vw;
-        height:auto;
-    }
-
-    .title-margin{
-        margin-left: 16px;
-      }
-
-}
-
-@media (max-width: 375px) {
-
-
-    .card{
-    
-        display:flex;
-        flex-direction: column;
-        justify-content: space-between;
-        padding:32px 40px 32px 40px;
-        background: #F5F3EE;
-        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
-        border-radius: 10px;
-        margin-top: 3px;
-        margin-bottom: 3px;
-    
-    
-        /* width:350px; */
-        /* height:280px; */
-        width:60vw;
-        height:auto;
-    }
-
-    .title-margin{
-        margin-left: 16px;
-    }
-
-}
-
-@media (max-width: 320px) {
-
-
-    .card{
-    
-        display:flex;
-        flex-direction: column;
-        justify-content: space-between;
-        padding:32px 40px 32px 40px;
-        background: #F5F3EE;
-        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
-        border-radius: 10px;
-        margin-top: 3px;
-        margin-bottom: 3px;
-    
-    
-        /* width:350px; */
-        /* height:280px; */
-        width:60vw;
-        height:auto;
-    }
-
-    .title-margin{
-        margin-left: 16px;
-    }
-
-}
+  
+  @media (max-width: 768px) {
+  
+  }
+  
+  @media (max-width: 540px) {
+  
+  }
+  
+  @media (max-width: 425px) {
+  
+  }
+  
+  @media (max-width: 375px) {
+  
+  }
+  
+  @media (max-width: 320px) {
+  
+  } 

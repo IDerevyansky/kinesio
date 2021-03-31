@@ -5,8 +5,9 @@ import './Main.css'
 
 import HeaderBanner from "../../components/header-banner/headerBanner";
 import TextBox from "../../components/text-box/textBox";
-import TextImgBox from "../../components/text-img-box/TextImgBox"
-// import Cards from "../../components/card/Cards";
+import TextImgBox from "../../components/text-img-box/TextImgBox";
+// import Card from "../../components/card/Card";
+import Cards from "../../components/card/Cards";
 // import CardNews from "../../components/card_news/CardNews";
 
 // import CallBack from '../../components/callBack/callBack';
@@ -66,7 +67,7 @@ class Main extends Component {
 
         <div style={{backgroundColor:'#F5F3ED'}}>
 
-            <TextImgBox 
+              <TextImgBox 
               link="/about"
               title="Немного о себе"
               text="Его взгляд снова скользнул к отчужденной, но удивительно милой незнакомке. 
@@ -77,6 +78,11 @@ class Main extends Component {
               />
 
         </div>
+
+        <Cards
+        statusPopUp={this.props.statusPopUp}
+        />
+        
 
     </>
 

@@ -9,7 +9,7 @@ class HeaderBanner extends Component{
         return(
 
             <div className="content-box">
-                <div className="img-box"></div>
+                <div className="img-box h-full"></div>
                 <div className="text-box">
 
                     <div className="cont-text margin-container">

@@ -18,7 +18,7 @@ class Card extends Component {
                         </div>
 
                         <div className="text_card">
-                            <p>{this.props.text_body}</p>
+                            <p>{this.props.text}</p>
                         </div>
 
                     </div>
