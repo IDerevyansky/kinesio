@@ -10,7 +10,7 @@ class TextImgBox extends Component {
 
             <div className="container m-auto">
 
-                    <div className="TextImgBox-content h-full">
+                    <div className="TextImgBox-content h-full m72-b m72-t">
 
                     <div className="TextImgBox-text margin-container"> 
 

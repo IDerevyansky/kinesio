@@ -10,7 +10,7 @@ class TextBox extends Component {
         
 
         return(
-            <div className="margin-container container m-auto">
+            <div className="margin-container container m-auto m72-t m72-b">
 
 
                 <div className="container-text-box h-full">

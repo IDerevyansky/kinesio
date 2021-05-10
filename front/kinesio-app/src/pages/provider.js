@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import { Switch, Route} from 'react-router-dom';
 
-import MainOld from '../pages/main/MainOld';
+import MainOld from './main/MainOld';
 
-import Main from '../pages/main/Main';
-import WhatIs from '../pages/whatIsKineziology/WhatIs';
-import About from '../pages/about/About';
-import Product from '../pages/product/Product';
-import News from '../pages/news/News';
-import NewsView from '../pages/newsView/NewsView';
-import Page404 from '../pages/404/page404';
+import Main from './main/Main';
+import WhatIs from './whatIsKineziology/WhatIs';
+import About from './about/About';
+import Product from './product/Product';
+import News from './news/News';
+import NewsView from './newsView/NewsView';
+import Page404 from './404/page404';
 
 // import CallBack from './callBack/callBack';
 

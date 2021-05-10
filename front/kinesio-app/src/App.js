@@ -6,7 +6,7 @@ import PopUp from './components/popUpBlocks/PopUp';
 import Menu from './components/menu/menu';
 import Footer from './components/footer/footer';
 
-import Provider from './components/provider';
+import Provider from './pages/provider';
 
 const url = "https://iderevyansky.github.io/kinesio/back/storage.json";
 

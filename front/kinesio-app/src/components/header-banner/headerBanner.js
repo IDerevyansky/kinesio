@@ -8,11 +8,11 @@ class HeaderBanner extends Component{
     render(){
         return(
 
-            <div className="content-box">
+            <div className="content-box ">
                 <div className="img-box h-full"></div>
                 <div className="text-box">
 
-                    <div className="cont-text margin-container">
+                    <div className="cont-text margin-container m72-t m72-b">
                         <h1>{this.props.title}</h1>
                         <p className="m16-t m16-b">{this.props.text}</p>
                         <Button statusPopUp={this.props.statusPopUp} text="Записаться"/>

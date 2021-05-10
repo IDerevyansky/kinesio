@@ -13,7 +13,7 @@ import Cards from "../../components/card/Cards";
 // import CallBack from '../../components/callBack/callBack';
 
 
-const url = "https://iderevyansky.github.io/kinesio/back/pageStorage.json";
+// const url = "https://iderevyansky.github.io/kinesio/back/pageStorage.json";
 
 class Main extends Component {
   constructor(props){
@@ -25,10 +25,10 @@ class Main extends Component {
 
   componentDidMount = async () => {
 
-    const respons = await fetch(url).then(pages => pages.json());
-    this.setState({
+    // const respons = await fetch(url).then(pages => pages.json());
+    // this.setState({
 
-    });
+    // });
     
   }
 
@@ -80,7 +80,9 @@ class Main extends Component {
         </div>
 
         <Cards
-        statusPopUp={this.props.statusPopUp}
+          statusPopUp={this.props.statusPopUp}
+          title="Темы для работы"
+          more="Подробнее"
         />
         
 
