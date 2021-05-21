@@ -1,7 +1,39 @@
-.test_block{
-    border:1px solid black;
+.CardsNews{
+    /* border:1px solid black; */
+
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 340px 340px;
+    gap:20px;
+    /* overflow-x: auto; */
+    grid-template-areas: 
+    "one one two"
+    "three four five";
+
     width:100%;
 }
+
+
+.card-news-one{
+    grid-area: one;
+}
+
+.card-news-two{
+    grid-area: two;
+}
+
+.card-news-three{
+    grid-area: three;
+}
+
+.card-news-four{
+    grid-area: four;
+}
+
+.card-news-five{
+    grid-area: five;
+}
+
 
 @media (max-width: 1440px) {
 

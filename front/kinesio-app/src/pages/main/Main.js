@@ -86,7 +86,9 @@ class Main extends Component {
           more="Подробнее"
         />
         
-        <CardsNews/>
+        <CardsNews
+        more="Подробнее"
+        />
 
     </>
 
