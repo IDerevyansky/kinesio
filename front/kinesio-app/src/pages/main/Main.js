@@ -8,7 +8,8 @@ import TextBox from "../../components/text-box/textBox";
 import TextImgBox from "../../components/text-img-box/TextImgBox";
 // import Card from "../../components/card/Card";
 import Cards from "../../components/card/Cards";
-// import CardNews from "../../components/card_news/CardNews";
+import CardNews from "../../components/card_news/CardNews";
+import CardsNews from "../../components/card_news/CardsNews";
 
 // import CallBack from '../../components/callBack/callBack';
 
@@ -85,10 +86,11 @@ class Main extends Component {
           more="Подробнее"
         />
         
+        <CardsNews/>
 
     </>
 
-    )
+    ) 
   }
 }
 
