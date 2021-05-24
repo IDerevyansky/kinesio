@@ -38,9 +38,9 @@
     /* border:1px solid red; */
     /* border-radius: 0px 0px 10px 10px; */
     width: 90%;
-    margin-left: auto;
+    margin-left: 24px;
     margin-right: auto;
-    margin-bottom:32px ;
+    margin-bottom:24px ;
 }
 
 @media (max-width: 1440px) {

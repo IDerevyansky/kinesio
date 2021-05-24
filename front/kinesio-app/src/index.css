@@ -28,7 +28,8 @@ body {
 .container{
   max-width: 1330px;
   display:flex;
-  align-items:center;
+  justify-content: center;
+  flex-direction:column;
 }
 
 .margin-container{
@@ -87,8 +88,20 @@ a{
   text-align:center;
 }
 
+.textLeft{
+  text-align:left;
+}
+
 .textRight{
   text-align:right;
+}
+
+.floatRight{
+  float: right;
+}
+
+.floatLeft{
+  float: left;
 }
 
 .f-12{

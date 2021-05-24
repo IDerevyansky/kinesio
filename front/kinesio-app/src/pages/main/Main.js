@@ -87,7 +87,8 @@ class Main extends Component {
         />
         
         <CardsNews
-        more="Подробнее"
+          title="Мои новости"
+          more="Подробнее"
         />
 
     </>
