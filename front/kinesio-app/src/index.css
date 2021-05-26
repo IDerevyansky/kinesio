@@ -353,6 +353,16 @@ a{
 
 @media (max-width: 768px) {
 
+  .box-cards-scroll{
+    /* border:1px solid red; */
+    margin-left: -16px;
+    width: 100vw;
+    overflow-x: scroll;
+    /* overflow-y: visible; */
+    /* padding-top:8px; */
+    /* padding-bottom:8px; */
+}
+
 }
 
 @media (max-width: 540px) {

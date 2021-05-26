@@ -11,6 +11,9 @@
     "three four five";
 
     width:100%;
+
+    margin-left: 0px;
+
 }
 
 
@@ -41,9 +44,45 @@
 
 @media (max-width: 1024px) {
 
+    .CardsNews{
+        /* border:1px solid black; */
+    
+        display:grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 340px 340px 340px;
+        gap:20px;
+        /* overflow-x: auto; */
+        grid-template-areas: 
+        "one one"
+        "two three"
+        "four five";
+    
+        width:100%;
+
+        margin-left: 0px;
+    }
+    
+    
+
 }
 
 @media (max-width: 768px) {
+
+    .CardsNews{
+        /* border:1px solid black; */
+    
+        display:grid;
+        grid-template-columns: repeat(5, 80vw);
+        grid-template-rows: 340px;
+        gap:20px;
+        /* overflow-x: auto; */
+        grid-template-areas: 
+        "one two three four five";
+    
+        width:100%;
+
+        margin-left: 16px;
+    }
 
 }
 
