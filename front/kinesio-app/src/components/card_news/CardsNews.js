@@ -9,6 +9,28 @@ class CardsNews extends Component {
 
 
 render(){
+    
+let CardsNews_Post = this.props.content.map(
+    (CardsNews_Post, i)=>{ 
+
+      return(
+
+        <Link to={CardsNews_Post.url} rel="noopener noreferrer">
+          <CardNews
+          bg={CardsNews_Post.img}
+          title={CardsNews_Post.title}
+          text_body={CardsNews_Post.text_body}
+          />
+        </Link>
+
+      )
+
+    });
+
+
+
+
+
 
     return(
 
@@ -26,52 +48,32 @@ render(){
 
                                                 <div className="card-news-one">
 
-                                                    <CardNews
-                                                    bg="https://images.unsplash.com/photo-1574790398664-0cb03682ed1c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=70"
-                                                    title="Title long very long Title long very long Title long very long Title long very longTitle long very long Title long very long Title long very long"
-                                                    text_body="Text text text text text text text text text  text text text text"
-                                                    />
+                                                    {CardsNews_Post[0]}
 
                                                 </div>
                                         
                                                 <div className="card-news-two">
 
-                                                    <CardNews
-                                                    bg="https://images.unsplash.com/photo-1617074075610-3afc101babe4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=70"
-                                                    title="Title long very long"
-                                                    text_body="Text text text text text text text text text text text text text text text text text Text text text text text text text text text text text text text text text text text"
-                                                    />
+                                                    {CardsNews_Post[1]}
 
                                                 </div>
 
 
                                                 <div className="card-news-three">
 
-                                                    <CardNews
-                                                    bg="https://images.unsplash.com/photo-1613389423867-df8386d13a64?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=70"
-                                                    title="Title long very long Title long very long Title long very long Title long very long Title long very long Title long very long"
-                                                    text_body="Text text text text text text text text text Text text text text text text text text text text text text text text text text textText text text text text text text text text text text text text text text text text"
-                                                    />
+                                                    {CardsNews_Post[2]}
 
                                                 </div>
 
                                                 <div className="card-news-four">
 
-                                                    <CardNews
-                                                    bg="https://images.unsplash.com/photo-1615238168944-6ed817aeb4ae?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=70"
-                                                    title="Title long very long Title long very long Title long very long"
-                                                    text_body="Text text text text text text text text text"
-                                                    />
+                                                    {CardsNews_Post[3]}
 
                                                 </div>
 
                                                 <div className="card-news-five">
 
-                                                    <CardNews
-                                                    bg="https://images.unsplash.com/photo-1612296727166-b44f0be45463?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=70"
-                                                    title="Title long very long"
-                                                    text_body="Text text text text text text text text text"
-                                                    />
+                                                    {CardsNews_Post[4]}
 
                                                 </div>
 

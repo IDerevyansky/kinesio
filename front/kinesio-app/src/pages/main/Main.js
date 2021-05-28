@@ -14,22 +14,26 @@ import CardsNews from "../../components/card_news/CardsNews";
 // import CallBack from '../../components/callBack/callBack';
 
 
-// const url = "https://iderevyansky.github.io/kinesio/back/pageStorage.json";
+const url = "https://iderevyansky.github.io/kinesio/back/pageStorage.json";
 
 class Main extends Component {
   constructor(props){
     super(props);
     this.state = {
-    
+      news_title:"",
+      news_content:[],
     }
   }
 
   componentDidMount = async () => {
 
-    // const respons = await fetch(url).then(pages => pages.json());
-    // this.setState({
-
-    // });
+    const respons = await fetch(url).then(pages => pages.json());
+    // console.log(respons.pages.main.section); 
+    this.setState({
+      news_title:respons.pages.main.section.Body.section_four.section_four_title,
+      news_content:respons.pages.main.section.Body.section_four.content,
+      more:respons.pages.main.section.options.link_more_ru
+    });
     
   }
 
@@ -83,12 +87,13 @@ class Main extends Component {
         <Cards
           statusPopUp={this.props.statusPopUp}
           title="Темы для работы"
-          more="Подробнее"
+          more={this.state.more}
         />
         
         <CardsNews
-          title="Мои новости"
-          more="Подробнее"
+          title={this.state.news_title}
+          more={this.state.more}
+          content={this.state.news_content}
         />
 
     </>
