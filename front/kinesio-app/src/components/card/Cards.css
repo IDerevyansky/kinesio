@@ -31,7 +31,7 @@
     .grid{
         display:grid;
         /* grid-column: 1; */
-        grid-template-columns: repeat(6, 70vw);
+        grid-template-columns: repeat(6, 80vw);
         /* width:1000px; */
         grid-auto-flow:column;
         gap:20px;
@@ -52,7 +52,7 @@
     .grid{
         display:grid;
         /* grid-column: 1; */
-        grid-template-columns: repeat(6, 85vw);
+        grid-template-columns: repeat(6, 80vw);
         /* width:1000px; */
         grid-auto-flow:column;
         gap:20px;
