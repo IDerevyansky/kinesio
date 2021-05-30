@@ -22,17 +22,23 @@ class Main extends Component {
     this.state = {
       news_title:"",
       news_content:[],
+      question_title:"",
+      question_content:[]
     }
   }
 
   componentDidMount = async () => {
 
     const respons = await fetch(url).then(pages => pages.json());
-    // console.log(respons.pages.main.section); 
+    console.log(respons.pages.main.section.Body.section_five.content); 
     this.setState({
       news_title:respons.pages.main.section.Body.section_four.section_four_title,
       news_content:respons.pages.main.section.Body.section_four.content,
+      question_title:respons.pages.main.section.Body.section_five.section_five_title,
+      question_content:respons.pages.main.section.Body.section_five.content,
+
       more:respons.pages.main.section.options.link_more_ru
+
     });
     
   }
@@ -96,7 +102,10 @@ class Main extends Component {
           content={this.state.news_content}
         />
 
-        <Questions/>
+        <Questions
+        title={this.state.question_title}
+        content={this.state.question_content}
+        />
 
     </>
 

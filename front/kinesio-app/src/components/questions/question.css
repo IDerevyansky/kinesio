@@ -1,0 +1,47 @@
+.box-item{
+    /* border:1px solid black; */
+    background: #FFFCF5;
+    border-radius: 10px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+
+    padding-top:16px;
+    padding-bottom:16px;
+    padding-left:24px;
+    padding-right:24px;
+
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0);
+    transition: 500ms;
+
+    z-index: 997;
+}
+
+.box-item:hover{
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: 500ms;
+}
+
+.icon_more{
+    /* border:1px solid black; */
+    background-image: url(../img/more.svg);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    min-width: 13px;
+    height: 13px;
+    
+}
+
+.box_title{
+    display: flex;
+    align-items: center;
+    gap:8px;
+    justify-content: space-between;
+}
+
+.body_more{
+    border-top:1px solid #F2EFE9;
+    display: none;
+    padding-top: 16px;
+    margin-top: 16px;
+}
+
