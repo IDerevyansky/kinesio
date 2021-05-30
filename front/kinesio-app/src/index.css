@@ -37,6 +37,10 @@ body {
     padding-left:0px;
 }
 
+.m-auto{
+  margin:auto;
+}
+
 .h-full{
   min-height: 100vh;
 }
@@ -139,9 +143,7 @@ a{
   font-weight: 600;
 }
 
-.m-auto{
-  margin:auto;
-}
+
 
 .m8-b{
   margin-bottom:8px;
