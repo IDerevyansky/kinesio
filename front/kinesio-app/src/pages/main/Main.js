@@ -20,8 +20,18 @@ class Main extends Component {
   constructor(props){
     super(props);
     this.state = {
+      header_banner_title:"",
+      header_banner_content:"",
+
+      whatIs_title:"",
+      whatIs_content:"",
+
+      about_title:"",
+      about_content:"",
+
       news_title:"",
       news_content:[],
+      
       question_title:"",
       question_content:[]
     }
@@ -30,10 +40,21 @@ class Main extends Component {
   componentDidMount = async () => {
 
     const respons = await fetch(url).then(pages => pages.json());
-    console.log(respons.pages.main.section.Body.section_five.content); 
+    // console.log(respons.pages.main.section.Body.section_two); 
     this.setState({
+
+      header_banner_title:respons.pages.main.section.MainBanner.h1,
+      header_banner_content:respons.pages.main.section.MainBanner.p,
+
+      whatIs_title:respons.pages.main.section.Body.section_one.section_one_title,
+      whatIs_content:respons.pages.main.section.Body.section_one.section_one_body_text,
+
+      about_title:respons.pages.main.section.Body.section_two.section_two_title,
+      about_content:respons.pages.main.section.Body.section_two.section_two_body_text,
+
       news_title:respons.pages.main.section.Body.section_four.section_four_title,
       news_content:respons.pages.main.section.Body.section_four.content,
+
       question_title:respons.pages.main.section.Body.section_five.section_five_title,
       question_content:respons.pages.main.section.Body.section_five.content,
 
@@ -53,8 +74,8 @@ class Main extends Component {
 
         <HeaderBanner 
         statusPopUp={this.props.statusPopUp}
-        title="Вам достаточно знать номер телефона данного человека."
-        text="Вам достаточно знать номер телефона данного человека, и вы можете создать ссылку, которая позволит начать с ним чат. Вам достаточно знать номер телефона данного человека, и вы можете создать ссылку, которая позволит начать с ним чат."
+        title={this.state.header_banner_title}
+        text={this.state.header_banner_content}
         />
           
         
@@ -62,30 +83,16 @@ class Main extends Component {
           <TextBox
           orientation="x"
           link="/whatIs"
-          title="Что нужно знать о кинезиологии"
-          text="Он вкалывал все эти десять лет не для того, чтобы теперь замедлить ход к уже близкой победе. 
-          Я хочу поздравить вас всех с успешным завершением нашего дела – проект «Хинни и Смит» закончился 
-          очень удачно для всех нас. Теперь мы можем сами доставлять товары во все уголки страны, сокращая 
-          расходы и увеличивая прибыль. – Рик поднял бокал с шампанским. – За замечательную команду с блестящим 
-          будущим! Он сделал глоток из бокала под гул всеобщего одобрения.<br/><br/>
-
-          Его взгляд снова скользнул к отчужденной, но удивительно милой незнакомке. Девушка все так же стояла 
-          в дверях, наблюдая за его сотрудниками. У нее в руках не было бокала. И это нужно исправить. Мужчина 
-          опять потер подбородок. Следующей задачей было слияние с компанией «Спорта Ко» и удвоение объема продаж 
-          их спортивного оборудования. Разумеется, было весьма рискованно предпринимать этот шаг так быстро, 
-          но Рик не мог ждать."
+          title={this.state.whatIs_title}
+          text={this.state.whatIs_content}
           />
 
         <div style={{backgroundColor:'#F5F3ED'}}>
 
               <TextImgBox 
               link="/about"
-              title="Немного о себе"
-              text="Его взгляд снова скользнул к отчужденной, но удивительно милой незнакомке. 
-              Девушка все так же стояла в дверях, наблюдая за его сотрудниками. У нее в руках 
-              не было бокала. И это нужно исправить. Мужчина опять потер подбородок. Следующей 
-              задачей было слияние с компанией «Спорта Ко» и удвоение объема продаж их спортивного 
-              оборудования."
+              title={this.state.about_title}
+              text={this.state.about_content}
               />
 
         </div>

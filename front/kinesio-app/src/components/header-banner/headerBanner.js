@@ -13,8 +13,8 @@ class HeaderBanner extends Component{
                 <div className="text-box">
 
                     <div className="cont-text margin-container m72-t m72-b">
-                        <h1>{this.props.title}</h1>
-                        <p className="m16-t m16-b">{this.props.text}</p>
+                        <h1 dangerouslySetInnerHTML={{__html: this.props.title}}></h1>
+                        <p className="m16-t m16-b" dangerouslySetInnerHTML={{__html:this.props.text}}></p>
                         <Button statusPopUp={this.props.statusPopUp} text="Записаться"/>
                     </div>
                    

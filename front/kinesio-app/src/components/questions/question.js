@@ -18,7 +18,7 @@ class Question extends Component{
     
         var item_more = document.getElementsByClassName('body_more');
 
-        if(this.state.item_more == true){
+        if(this.state.item_more === true){
 
             this.setState({item_more:false});
             document.getElementById(q).style.transform = "rotate(0deg)";
